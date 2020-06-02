@@ -1,0 +1,100 @@
+{
+    "MediaContainer": {
+        "size": 1,
+        "totalSize": 1000,
+        "allowSync": true,
+        "art": "/:/resources/show-fanart.jpg",
+        "identifier": "com.plexapp.plugins.library",
+        "librarySectionID": 2,
+        "librarySectionTitle": "TV Shows",
+        "librarySectionUUID": "fe6d6cca-91b2-4881-b03c-c3541476d7d6",
+        "mediaTagPrefix": "/system/bundle/media/flags/",
+        "mediaTagVersion": 1590058356,
+        "nocache": true,
+        "offset": 0,
+        "sortAsc": true,
+        "thumb": "/:/resources/show.png",
+        "title1": "TV Shows",
+        "title2": "All Shows",
+        "viewGroup": "show",
+        "viewMode": 131122,
+        "Metadata": [
+            {
+                "ratingKey": "37262",
+                "key": "/library/metadata/37262",
+                "parentRatingKey": "37251",
+                "grandparentRatingKey": "37250",
+                "guid": "com.plexapp.agents.thetvdb://74205/1/1?lang=en",
+                "parentGuid": "com.plexapp.agents.thetvdb://74205/1?lang=en",
+                "grandparentGuid": "com.plexapp.agents.thetvdb://74205?lang=en",
+                "type": "episode",
+                "title": "Currahee",
+                "grandparentKey": "/library/metadata/37250",
+                "parentKey": "/library/metadata/37251",
+                "grandparentTitle": "Band of Brothers",
+                "parentTitle": "Season 1",
+                "contentRating": "TV-MA",
+                "summary": "Easy Company is introduced to Captain Sobel, who has the group undergo hard and unfair training. As a result, Sobel comes into conflict with his men, including Richard Winters, his executive officer. The company is shipped to England to prepare for D-Day. ",
+                "index": 1,
+                "parentIndex": 1,
+                "rating": 8.4,
+                "viewCount": 1,
+                "lastViewedAt": 1472114415,
+                "year": 2001,
+                "thumb": "/library/metadata/37262/thumb/1590057326",
+                "art": "/library/metadata/37250/art/1559967326",
+                "parentThumb": "/library/metadata/37251/thumb/1559967326",
+                "grandparentThumb": "/library/metadata/37250/thumb/1559967326",
+                "grandparentArt": "/library/metadata/37250/art/1559967326",
+                "grandparentTheme": "/library/metadata/37250/theme/1559967326",
+                "duration": 4394123,
+                "originallyAvailableAt": "2001-09-09",
+                "addedAt": 1427434150,
+                "updatedAt": 1590057326,
+                "Media": [
+                    {
+                        "id": 32610,
+                        "duration": 4394123,
+                        "bitrate": 8000,
+                        "width": 1280,
+                        "height": 720,
+                        "aspectRatio": 1.78,
+                        "audioChannels": 6,
+                        "audioCodec": "dca",
+                        "videoCodec": "h264",
+                        "videoResolution": "720",
+                        "container": "mkv",
+                        "videoFrameRate": "24p",
+                        "audioProfile": "dts",
+                        "videoProfile": "high",
+                        "Part": [
+                            {
+                                "id": 35221,
+                                "key": "/library/parts/35221/1427352014/file.mkv",
+                                "duration": 4394123,
+                                "file": "/mnt/tv/Band of Brothers/Season 1/Band of Brothers - 01x01 - Currahee.mkv",
+                                "size": 4394246749,
+                                "audioProfile": "dts",
+                                "container": "mkv",
+                                "videoProfile": "high"
+                            }
+                        ]
+                    }
+                ],
+                "Director": [
+                    {
+                        "tag": "Phil Alden Robinson"
+                    }
+                ],
+                "Writer": [
+                    {
+                        "tag": "Erik Jendreson"
+                    },
+                    {
+                        "tag": "Tom Hanks"
+                    }
+                ]
+            }
+        ]
+    }
+}

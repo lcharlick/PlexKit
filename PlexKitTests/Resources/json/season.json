@@ -1,0 +1,46 @@
+{
+  "MediaContainer": {
+    "size": 1,
+    "totalSize": 479,
+    "allowSync": true,
+    "art": "/:/resources/show-fanart.jpg",
+    "identifier": "com.plexapp.plugins.library",
+    "librarySectionID": 2,
+    "librarySectionTitle": "TV Shows",
+    "librarySectionUUID": "fe6d6cca-91b2-4881-b03c-c3541476d7d6",
+    "mediaTagPrefix": "/system/bundle/media/flags/",
+    "mediaTagVersion": 1590058356,
+    "nocache": true,
+    "offset": 50,
+    "sortAsc": true,
+    "thumb": "/:/resources/show.png",
+    "title1": "TV Shows",
+    "title2": "All Shows",
+    "viewGroup": "show",
+    "viewMode": 131122,
+    "Metadata": [
+      {
+        "ratingKey": "37251",
+        "key": "/library/metadata/37251/children",
+        "parentRatingKey": "37250",
+        "guid": "com.plexapp.agents.thetvdb://74205/1?lang=en",
+        "parentGuid": "com.plexapp.agents.thetvdb://74205?lang=en",
+        "type": "season",
+        "title": "Season 1",
+        "parentKey": "/library/metadata/37250",
+        "parentTitle": "Band of Brothers",
+        "summary": "",
+        "index": 1,
+        "parentIndex": 1,
+        "viewCount": 8,
+        "lastViewedAt": 1477036961,
+        "thumb": "/library/metadata/37251/thumb/1559967326",
+        "art": "/library/metadata/37250/art/1559967326",
+        "parentThumb": "/library/metadata/37250/thumb/1559967326",
+        "parentTheme": "/library/metadata/37250/theme/1559967326",
+        "addedAt": 1427433010,
+        "updatedAt": 1559967326
+      }
+    ]
+  }
+}

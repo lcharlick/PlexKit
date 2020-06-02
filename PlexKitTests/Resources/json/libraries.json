@@ -1,0 +1,396 @@
+{
+  "MediaContainer": {
+    "size": 16,
+    "allowSync": false,
+    "identifier": "com.plexapp.plugins.library",
+    "mediaTagPrefix": "/system/bundle/media/flags/",
+    "mediaTagVersion": 1530105926,
+    "title1": "Plex Library",
+    "Directory": [
+      {
+        "allowSync": true,
+        "art": "/:/resources/show-fanart.jpg",
+        "composite": "/library/sections/4/composite/1533376940",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/show.png",
+        "key": "4",
+        "type": "show",
+        "title": "title",
+        "agent": "com.plexapp.agents.thetvdb",
+        "scanner": "Plex Series Scanner",
+        "language": "en",
+        "uuid": "uuid",
+        "updatedAt": 1461235732,
+        "createdAt": 1396499945,
+        "scannedAt": 1533376940,
+        "Location": [
+          {
+            "id": 24,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/movie-fanart.jpg",
+        "composite": "/library/sections/5/composite/1533390382",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/movie.png",
+        "key": "5",
+        "type": "movie",
+        "title": "title",
+        "agent": "com.plexapp.agents.imdb",
+        "scanner": "Plex Movie Scanner",
+        "language": "en",
+        "uuid": "uuid",
+        "updatedAt": 1515848507,
+        "createdAt": 1396504945,
+        "scannedAt": 1533390382,
+        "Location": [
+          {
+            "id": 23,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/artist-fanart.jpg",
+        "composite": "/library/sections/31/composite/1533452160",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/artist.png",
+        "key": "31",
+        "type": "artist",
+        "title": "title",
+        "agent": "com.plexapp.agents.none",
+        "scanner": "Plex Music Scanner",
+        "language": "xn",
+        "uuid": "uuid",
+        "updatedAt": 1513603081,
+        "createdAt": 1468987182,
+        "scannedAt": 1533452160,
+        "Location": [
+          {
+            "id": 51,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/movie-fanart.jpg",
+        "composite": "/library/sections/21/composite/1533390383",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/movie.png",
+        "key": "21",
+        "type": "movie",
+        "title": "title",
+        "agent": "com.plexapp.agents.themoviedb",
+        "scanner": "Plex Movie Scanner",
+        "language": "en",
+        "uuid": "uuid",
+        "updatedAt": 1461191030,
+        "createdAt": 1446038005,
+        "scannedAt": 1533390383,
+        "Location": [
+          {
+            "id": 39,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/movie-fanart.jpg",
+        "composite": "/library/sections/7/composite/1533390383",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/movie.png",
+        "key": "7",
+        "type": "movie",
+        "title": "title",
+        "agent": "com.plexapp.agents.imdb",
+        "scanner": "Plex Movie Scanner",
+        "language": "en",
+        "uuid": "uuid",
+        "updatedAt": 1468654024,
+        "createdAt": 1396504999,
+        "scannedAt": 1533390383,
+        "Location": [
+          {
+            "id": 21,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/movie-fanart.jpg",
+        "composite": "/library/sections/3/composite/1533390384",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/movie.png",
+        "key": "3",
+        "type": "movie",
+        "title": "title",
+        "agent": "com.plexapp.agents.imdb",
+        "scanner": "Plex Movie Scanner",
+        "language": "en",
+        "uuid": "uuid",
+        "updatedAt": 1515849000,
+        "createdAt": 1396499907,
+        "scannedAt": 1533390384,
+        "Location": [
+          {
+            "id": 20,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/artist-fanart.jpg",
+        "composite": "/library/sections/29/composite/1533454149",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/artist.png",
+        "key": "29",
+        "type": "artist",
+        "title": "title",
+        "agent": "com.plexapp.agents.lastfm",
+        "scanner": "Plex Music Scanner",
+        "language": "en",
+        "uuid": "uuid",
+        "updatedAt": 1513603096,
+        "createdAt": 1461341110,
+        "scannedAt": 1533454149,
+        "Location": [
+          {
+            "id": 49,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/artist-fanart.jpg",
+        "composite": "/library/sections/30/composite/1533449462",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/artist.png",
+        "key": "30",
+        "type": "artist",
+        "title": "title",
+        "agent": "com.plexapp.agents.lastfm",
+        "scanner": "Plex Music Scanner",
+        "language": "en",
+        "uuid": "uuid",
+        "updatedAt": 1533195150,
+        "createdAt": 1466580600,
+        "scannedAt": 1533449462,
+        "Location": [
+          {
+            "id": 55,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/artist-fanart.jpg",
+        "composite": "/library/sections/33/composite/1533452161",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/artist.png",
+        "key": "33",
+        "type": "artist",
+        "title": "title",
+        "agent": "com.plexapp.agents.none",
+        "scanner": "Plex Music Scanner",
+        "language": "xn",
+        "uuid": "uuid",
+        "updatedAt": 1522738397,
+        "createdAt": 1522735890,
+        "scannedAt": 1533452161,
+        "Location": [
+          {
+            "id": 56,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/movie-fanart.jpg",
+        "composite": "/library/sections/17/composite/1533390384",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/movie.png",
+        "key": "17",
+        "type": "movie",
+        "title": "title",
+        "agent": "com.plexapp.agents.themoviedb",
+        "scanner": "Plex Movie Scanner",
+        "language": "en",
+        "uuid": "uuid",
+        "updatedAt": 1461191058,
+        "createdAt": 1439894427,
+        "scannedAt": 1533390384,
+        "Location": [
+          {
+            "id": 34,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/movie-fanart.jpg",
+        "composite": "/library/sections/18/composite/1533390384",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/movie.png",
+        "key": "18",
+        "type": "movie",
+        "title": "title",
+        "agent": "com.plexapp.agents.themoviedb",
+        "scanner": "Plex Movie Scanner",
+        "language": "en",
+        "uuid": "uuid",
+        "updatedAt": 1461191059,
+        "createdAt": 1439895122,
+        "scannedAt": 1533390384,
+        "Location": [
+          {
+            "id": 35,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/movie-fanart.jpg",
+        "composite": "/library/sections/9/composite/1533390659",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/video.png",
+        "key": "9",
+        "type": "movie",
+        "title": "title",
+        "agent": "com.plexapp.agents.none",
+        "scanner": "Plex Video Files Scanner",
+        "language": "xn",
+        "uuid": "uuid",
+        "updatedAt": 1461191069,
+        "createdAt": 1411383287,
+        "scannedAt": 1533390659,
+        "Location": [
+          {
+            "id": 26,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/show-fanart.jpg",
+        "composite": "/library/sections/2/composite/1533376943",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/show.png",
+        "key": "2",
+        "type": "show",
+        "title": "title",
+        "agent": "com.plexapp.agents.thetvdb",
+        "scanner": "Plex Series Scanner",
+        "language": "en",
+        "uuid": "uuid",
+        "updatedAt": 1461235735,
+        "createdAt": 1396499262,
+        "scannedAt": 1533376943,
+        "Location": [
+          {
+            "id": 19,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/show-fanart.jpg",
+        "composite": "/library/sections/32/composite/1533376943",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/show.png",
+        "key": "32",
+        "type": "show",
+        "title": "title",
+        "agent": "com.plexapp.agents.thetvdb",
+        "scanner": "Plex Series Scanner",
+        "language": "en",
+        "uuid": "uuid",
+        "updatedAt": 1516109352,
+        "createdAt": 1516109166,
+        "scannedAt": 1533376943,
+        "Location": [
+          {
+            "id": 54,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/show-fanart.jpg",
+        "composite": "/library/sections/6/composite/1533376943",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/show.png",
+        "key": "6",
+        "type": "show",
+        "title": "title",
+        "agent": "com.plexapp.agents.thetvdb",
+        "scanner": "Plex Series Scanner",
+        "language": "en",
+        "uuid": "uuid",
+        "updatedAt": 1470390659,
+        "createdAt": 1396504970,
+        "scannedAt": 1533376943,
+        "Location": [
+          {
+            "id": 22,
+            "path": "/mnt/test_path"
+          }
+        ]
+      },
+      {
+        "allowSync": true,
+        "art": "/:/resources/show-fanart.jpg",
+        "composite": "/library/sections/16/composite/1533376943",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/show.png",
+        "key": "16",
+        "type": "show",
+        "title": "title",
+        "agent": "com.plexapp.agents.thetvdb",
+        "scanner": "Plex Series Scanner",
+        "language": "en",
+        "uuid": "uuid",
+        "updatedAt": 1461235739,
+        "createdAt": 1439271158,
+        "scannedAt": 1533376943,
+        "Location": [
+          {
+            "id": 33,
+            "path": "/mnt/test_path"
+          }
+        ]
+      }
+    ]
+  }
+}

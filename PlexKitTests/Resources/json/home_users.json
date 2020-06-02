@@ -1,0 +1,24 @@
+{
+    "id": 1,
+    "name": "my home",
+    "guestUserID": 1000,
+    "guestUserUUID": "guestUserUUID",
+    "guestEnabled": false,
+    "subscription": true,
+    "users": [
+        {
+            "id": 1234,
+            "uuid": "uuid",
+            "title": "title",
+            "username": "username",
+            "email": "email",
+            "thumb": "thumb",
+            "hasPassword": true,
+            "restricted": false,
+            "restrictionProfile": null,
+            "admin": true,
+            "guest": false,
+            "protected": true
+        }
+    ]
+}

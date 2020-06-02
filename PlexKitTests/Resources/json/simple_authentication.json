@@ -1,0 +1,28 @@
+{
+    "user": {
+        "id": 123456,
+        "uuid": "uuid",
+        "email": "email",
+        "joined_at": "2012-07-20T15:56:55Z",
+        "username": "username",
+        "title": "title",
+        "thumb": "thumb",
+        "hasPassword": true,
+        "authToken": "authToken",
+        "authentication_token": "authentication_token",
+        "subscription": {
+            "active": true,
+            "status": "Active",
+            "plan": "lifetime",
+            "features": ["webhooks", "content_filter", "camera_upload", "home", "music_videos", "trailers", "pass", "dvr", "session_bandwidth_restrictions", "adaptive_bitrate", "collections", "photos-metadata-edition", "premium_music_metadata", "cloudsync", "lyrics", "photo_autotags", "sync", "hardware_transcoding", "session_kick", "radio", "tuner-sharing", "hwtranscode", "photos-favorites", "photosV6-tv-albums", "photosV6-edit", "mediaproviders-news-platform-specific", "federated-auth", "item_clusters", "livetv", "Android - PiP", "livetv-platform-specific", "publishing_platform", "news", "photos-v5", "unsupportedtuners", "type-first", "kevin-bacon", "live-tv-channels-grid", "Subtitles on Demand", "web-log-viewer", "client-radio-stations", "imagga-v2", "silence-removal", "boost-voices", "volume-leveling", "sweet-fades", "sleep-timer", "TREBLE-show-features", "web_server_dashboard", "visualizers", "chromecast-music-mp", "premium-dashboard", "conan_redirect_qa", "conan_redirect_alpha", "conan_redirect_beta", "conan_redirect_public", "save-to-library", "news_local_now", "nominatim", "transcoder_cache", "companions_sonos", "allow_dvr"]
+        },
+        "roles": {
+            "roles": ["plexpass"]
+        },
+        "entitlements": ["windows", "windows_phone", "ios", "ios_beta", "all", "roku", "android", "xbox_one", "xbox_360"],
+        "confirmedAt": "2012-08-09T09:37:16Z",
+        "forumId": null,
+        "ssoCookie": true,
+        "rememberMe": true
+    }
+}

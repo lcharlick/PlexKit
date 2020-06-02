@@ -1,0 +1,123 @@
+{
+  "MediaContainer": {
+    "size": 1,
+    "allowSync": true,
+    "augmentationKey": "/library/metadata/augmentations/747",
+    "identifier": "com.plexapp.plugins.library",
+    "librarySectionID": 29,
+    "librarySectionTitle": "Music",
+    "librarySectionUUID": "63c7dcc8-4d41-41f1-b103-6fe124ca324c",
+    "mediaTagPrefix": "/system/bundle/media/flags/",
+    "mediaTagVersion": 1590058356,
+    "Metadata": [
+      {
+        "ratingKey": "417205",
+        "key": "/library/metadata/417205/children",
+        "parentRatingKey": "340600",
+        "guid": "plex://album/5d6e94388b1c056cc0b71b88",
+        "parentGuid": "plex://artist/5d07beeb403c6402906f0581",
+        "studio": "Season of Mist",
+        "type": "album",
+        "title": "Outstrider",
+        "parentKey": "/library/metadata/340600",
+        "librarySectionTitle": "Music",
+        "librarySectionID": 29,
+        "librarySectionKey": "/library/sections/29",
+        "parentTitle": "Abbath",
+        "summary": "The eponymous 2016 debut from the ex-Immortal frontman and guitarist Abbath Doom Occulta (Olve Eikemo) relied heavily on material that was originally intended to appear on his former group's next album. As Immortal-esque as that set was, it showed a willingness to infuse the frosty bleakness of black metal with a bit of classic metal pomp and circumstance, an approach that the group takes even further on the punishing and confident Outstrider. Commencing with the aptly named \"Calm in Ire (Of Hurricane),\" which rolls in like a colossal Nor'easter, the nine-track set spends just as much time applying meaty riffs as it does corpse paint. At any given moment, neck-snapping blastbeats give way to crushing midtempo grooves and gnarly, NWOBHM-inspired guitar solos. To be fair, this was kind of Immortal's modus operandi, but Abbath feels a little bit more locked in to the sonic architecture of trad-metal-skewing black metallers like Dark Tranquillity -- sans the keyboards -- especially on the lumbering title cut. Still, this is an Abbath Doom Occulta joint, so the majority of the album is spent in the icy realms of tonsils-be-damned black metal. Standout cuts like \"Bridge of Spasms\" and \"Harvest Pyre\" are ripped from the Immortal handbook, which should please fans who are non-plussed about the current Demonaz-led iteration of the group. Innovation is pretty much anathema to the genre, and Eikemo and company are stalwart black metal enthusiasts, but Outstrider somehow feels both familiar and forward-thinking; a fresh peek into the eternal abyss. ~ James Christopher Monger",
+        "index": 1,
+        "rating": 7.0,
+        "viewCount": 51,
+        "lastViewedAt": 1574951796,
+        "year": 2019,
+        "thumb": "/library/metadata/417205/thumb/1570589115",
+        "art": "/library/metadata/340600/art/1590339429",
+        "parentThumb": "/library/metadata/340600/thumb/1590339429",
+        "originallyAvailableAt": "2019-07-05",
+        "leafCount": 9,
+        "viewedLeafCount": 9,
+        "addedAt": 1562216152,
+        "updatedAt": 1570589115,
+        "Genre": [
+          {
+            "id": 28364,
+            "filter": "genre=28364",
+            "tag": "Black Metal"
+          }
+        ],
+        "Style": [
+          {
+            "id": 120654,
+            "filter": "style=120654",
+            "tag": "Heavy Metal"
+          },
+          {
+            "id": 120644,
+            "filter": "style=120644",
+            "tag": "Black Metal"
+          },
+          {
+            "id": 120685,
+            "filter": "style=120685",
+            "tag": "Scandinavian Metal"
+          }
+        ],
+        "Mood": [
+          {
+            "id": 120664,
+            "filter": "mood=120664",
+            "tag": "Bleak"
+          },
+          {
+            "id": 120679,
+            "filter": "mood=120679",
+            "tag": "Cathartic"
+          },
+          {
+            "id": 120680,
+            "filter": "mood=120680",
+            "tag": "Cold"
+          },
+          {
+            "id": 120681,
+            "filter": "mood=120681",
+            "tag": "Confrontational"
+          },
+          {
+            "id": 120666,
+            "filter": "mood=120666",
+            "tag": "Malevolent"
+          },
+          {
+            "id": 120682,
+            "filter": "mood=120682",
+            "tag": "Menacing"
+          },
+          {
+            "id": 120683,
+            "filter": "mood=120683",
+            "tag": "Nihilistic"
+          },
+          {
+            "id": 120671,
+            "filter": "mood=120671",
+            "tag": "Visceral"
+          },
+          {
+            "id": 120662,
+            "filter": "mood=120662",
+            "tag": "Aggressive"
+          },
+          {
+            "id": 120684,
+            "filter": "mood=120684",
+            "tag": "Harsh"
+          }
+        ],
+        "Extras": {
+          "size": 0
+        }
+      }
+    ]
+  }
+}

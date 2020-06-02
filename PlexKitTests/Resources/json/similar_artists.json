@@ -1,0 +1,105 @@
+{
+    "MediaContainer": {
+        "size": 1,
+        "allowSync": true,
+        "identifier": "com.plexapp.plugins.library",
+        "librarySectionID": 30,
+        "librarySectionTitle": "Music (Demo)",
+        "librarySectionUUID": "c36e3669-ce94-4905-a7f2-622a6706a3da",
+        "Hub": [
+            {
+                "hubKey": "/library/metadata/395618,397800,381252",
+                "key": "/library/metadata/474495/similar",
+                "title": "Similar Artists",
+                "type": "artist",
+                "hubIdentifier": "artist.similar",
+                "context": "hub.artist.similar",
+                "size": 3,
+                "more": false,
+                "style": "shelf",
+                "Metadata": [
+                    {
+                        "ratingKey": "395618",
+                        "key": "/library/metadata/395618/children",
+                        "guid": "plex://artist/5d07bc70403c6402905056f4",
+                        "type": "artist",
+                        "title": "Wolves in the Throne Room",
+                        "librarySectionTitle": "Music (Demo)",
+                        "librarySectionID": 30,
+                        "librarySectionKey": "/library/sections/30",
+                        "index": 1,
+                        "viewCount": 111,
+                        "lastViewedAt": 1569915565,
+                        "thumb": "/library/metadata/395618/thumb/1590339841",
+                        "art": "/library/metadata/395618/art/1590339841",
+                        "addedAt": 1492839992,
+                        "updatedAt": 1590339841,
+                        "Genre": [
+                            {
+                                "tag": "Pop/Rock"
+                            }
+                        ],
+                        "Country": [
+                            {
+                                "tag": "United States"
+                            }
+                        ]
+                    },
+                    {
+                        "ratingKey": "397800",
+                        "key": "/library/metadata/397800/children",
+                        "guid": "plex://artist/5d07bcd4403c640290558dac",
+                        "type": "artist",
+                        "title": "Kauan",
+                        "librarySectionTitle": "Music (Demo)",
+                        "librarySectionID": 30,
+                        "librarySectionKey": "/library/sections/30",
+                        "index": 1,
+                        "viewCount": 41,
+                        "lastViewedAt": 1587627738,
+                        "thumb": "/library/metadata/397800/thumb/1590339752",
+                        "addedAt": 1498270642,
+                        "updatedAt": 1590339752,
+                        "Genre": [
+                            {
+                                "tag": "Pop/Rock"
+                            }
+                        ],
+                        "Country": [
+                            {
+                                "tag": "Russia"
+                            }
+                        ]
+                    },
+                    {
+                        "ratingKey": "381252",
+                        "key": "/library/metadata/381252/children",
+                        "guid": "plex://artist/5d07bc05403c6402904abfed",
+                        "type": "artist",
+                        "title": "Ulver",
+                        "librarySectionTitle": "Music (Demo)",
+                        "librarySectionID": 30,
+                        "librarySectionKey": "/library/sections/30",
+                        "index": 1,
+                        "viewCount": 137,
+                        "lastViewedAt": 1589211497,
+                        "thumb": "/library/metadata/381252/thumb/1590339932",
+                        "art": "/library/metadata/381252/art/1590339932",
+                        "addedAt": 1466582317,
+                        "updatedAt": 1590339932,
+                        "Genre": [
+                            {
+                                "tag": "Norway"
+                            }
+                        ],
+                        "Country": [
+                            {
+                                "tag": "Norway"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

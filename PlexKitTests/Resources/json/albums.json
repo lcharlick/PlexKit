@@ -1,0 +1,2123 @@
+{
+  "MediaContainer": {
+    "size": 50,
+    "totalSize": 192,
+    "allowSync": true,
+    "art": "/:/resources/artist-fanart.jpg",
+    "identifier": "com.plexapp.plugins.library",
+    "librarySectionID": 30,
+    "librarySectionTitle": "Music (Demo)",
+    "librarySectionUUID": "c36e3669-ce94-4905-a7f2-622a6706a3da",
+    "mediaTagPrefix": "/system/bundle/media/flags/",
+    "mediaTagVersion": 1590058356,
+    "nocache": true,
+    "offset": 0,
+    "thumb": "/:/resources/artist.png",
+    "title1": "Music (Demo)",
+    "title2": "All Artists",
+    "viewGroup": "artist",
+    "viewMode": 65592,
+    "Meta": {
+      "Type": [
+        {
+          "key": "/library/sections/30/all?type=8",
+          "type": "artist",
+          "title": "Artists",
+          "active": false,
+          "Filter": [
+            {
+              "filter": "genre",
+              "filterType": "string",
+              "key": "/library/sections/30/genre?type=8",
+              "title": "Genre",
+              "type": "filter"
+            },
+            {
+              "filter": "mood",
+              "filterType": "string",
+              "key": "/library/sections/30/mood?type=8",
+              "title": "Mood",
+              "type": "filter"
+            },
+            {
+              "filter": "style",
+              "filterType": "string",
+              "key": "/library/sections/30/style?type=8",
+              "title": "Style",
+              "type": "filter"
+            },
+            {
+              "filter": "country",
+              "filterType": "string",
+              "key": "/library/sections/30/country?type=8",
+              "title": "Country",
+              "type": "filter"
+            },
+            {
+              "filter": "collection",
+              "filterType": "string",
+              "key": "/library/sections/30/collection?type=8",
+              "title": "Collection",
+              "type": "filter"
+            },
+            {
+              "filter": "unmatched",
+              "filterType": "boolean",
+              "key": "/library/sections/30/unmatched",
+              "title": "Unmatched",
+              "type": "filter"
+            }
+          ],
+          "Sort": [
+            {
+              "default": "asc",
+              "defaultDirection": "asc",
+              "descKey": "titleSort:desc",
+              "firstCharacterKey": "/library/sections/30/firstCharacter",
+              "key": "titleSort",
+              "title": "Title"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "userRating:desc",
+              "key": "userRating",
+              "title": "Rating"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "addedAt:desc",
+              "key": "addedAt",
+              "title": "Date Added"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "lastViewedAt:desc",
+              "key": "lastViewedAt",
+              "title": "Date Played"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "viewCount:desc",
+              "key": "viewCount",
+              "title": "Plays"
+            }
+          ],
+          "Field": [
+            {
+              "key": "artist.title",
+              "title": "Artist Title",
+              "type": "string"
+            },
+            {
+              "key": "artist.userRating",
+              "subType": "rating",
+              "title": "Artist Rating",
+              "type": "integer"
+            },
+            {
+              "key": "artist.genre",
+              "title": "Artist Genre",
+              "type": "tag"
+            },
+            {
+              "key": "artist.collection",
+              "title": "Artist Collection",
+              "type": "tag"
+            },
+            {
+              "key": "artist.country",
+              "title": "Artist Country",
+              "type": "tag"
+            },
+            {
+              "key": "artist.mood",
+              "title": "Artist Mood",
+              "type": "tag"
+            },
+            {
+              "key": "artist.style",
+              "title": "Artist Style",
+              "type": "tag"
+            },
+            {
+              "key": "artist.addedAt",
+              "title": "Date Artist Added",
+              "type": "date"
+            }
+          ]
+        },
+        {
+          "key": "/library/sections/30/all?type=9",
+          "type": "album",
+          "title": "Albums",
+          "active": true,
+          "Filter": [
+            {
+              "filter": "genre",
+              "filterType": "string",
+              "key": "/library/sections/30/genre?type=9",
+              "title": "Genre",
+              "type": "filter"
+            },
+            {
+              "filter": "mood",
+              "filterType": "string",
+              "key": "/library/sections/30/mood?type=9",
+              "title": "Mood",
+              "type": "filter"
+            },
+            {
+              "filter": "style",
+              "filterType": "string",
+              "key": "/library/sections/30/style?type=9",
+              "title": "Style",
+              "type": "filter"
+            },
+            {
+              "filter": "year",
+              "filterType": "integer",
+              "key": "/library/sections/30/year?type=9",
+              "title": "Year",
+              "type": "filter"
+            },
+            {
+              "filter": "decade",
+              "filterType": "integer",
+              "key": "/library/sections/30/decade?type=9",
+              "title": "Decade",
+              "type": "filter"
+            },
+            {
+              "filter": "studio",
+              "filterType": "string",
+              "key": "/library/sections/30/studio?type=9",
+              "title": "Record Label",
+              "type": "filter"
+            },
+            {
+              "filter": "collection",
+              "filterType": "string",
+              "key": "/library/sections/30/collection?type=9",
+              "title": "Collection",
+              "type": "filter"
+            },
+            {
+              "filter": "label",
+              "filterType": "string",
+              "key": "/library/sections/30/label?type=9",
+              "title": "Labels",
+              "type": "filter"
+            },
+            {
+              "filter": "source",
+              "filterType": "string",
+              "key": "/library/sections/30/source?type=9",
+              "title": "Source",
+              "type": "filter"
+            },
+            {
+              "filter": "unmatched",
+              "filterType": "boolean",
+              "key": "/library/sections/30/unmatched",
+              "title": "Unmatched",
+              "type": "filter"
+            }
+          ],
+          "Sort": [
+            {
+              "defaultDirection": "desc",
+              "descKey": "titleSort:desc",
+              "firstCharacterKey": "/library/sections/30/firstCharacter?type=9",
+              "key": "titleSort",
+              "title": "Title"
+            },
+            {
+              "active": true,
+              "activeDirection": "asc",
+              "default": "asc",
+              "defaultDirection": "asc",
+              "descKey": "artist.titleSort:desc,album.titleSort,album.index,album.id,album.originallyAvailableAt",
+              "firstCharacterKey": "/library/sections/30/firstCharacter",
+              "key": "artist.titleSort,album.titleSort,album.index,album.id,album.originallyAvailableAt",
+              "title": "Album Artist"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "year:desc",
+              "key": "year",
+              "title": "Year"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "originallyAvailableAt:desc",
+              "key": "originallyAvailableAt",
+              "title": "Release Date"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "rating:desc",
+              "key": "rating",
+              "title": "Critic Rating"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "userRating:desc",
+              "key": "userRating",
+              "title": "Rating"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "addedAt:desc",
+              "key": "addedAt",
+              "title": "Date Added"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "lastViewedAt:desc",
+              "key": "lastViewedAt",
+              "title": "Date Played"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "viewCount:desc",
+              "key": "viewCount",
+              "title": "Plays"
+            }
+          ],
+          "Field": [
+            {
+              "key": "album.title",
+              "title": "Album Title",
+              "type": "string"
+            },
+            {
+              "key": "album.year",
+              "subType": "year",
+              "title": "Year",
+              "type": "integer"
+            },
+            {
+              "key": "album.genre",
+              "title": "Album Genre",
+              "type": "tag"
+            },
+            {
+              "key": "album.viewCount",
+              "title": "Album Plays",
+              "type": "integer"
+            },
+            {
+              "key": "album.lastViewedAt",
+              "title": "Album Last Played",
+              "type": "date"
+            },
+            {
+              "key": "album.userRating",
+              "subType": "rating",
+              "title": "Album Rating",
+              "type": "integer"
+            },
+            {
+              "key": "album.rating",
+              "subType": "rating",
+              "title": "Album Critic Rating",
+              "type": "integer"
+            },
+            {
+              "key": "album.decade",
+              "subType": "decade",
+              "title": "Album Decade",
+              "type": "integer"
+            },
+            {
+              "key": "album.studio",
+              "title": "Record Label",
+              "type": "string"
+            },
+            {
+              "key": "album.mood",
+              "title": "Album Mood",
+              "type": "tag"
+            },
+            {
+              "key": "album.style",
+              "title": "Album Style",
+              "type": "tag"
+            },
+            {
+              "key": "album.collection",
+              "title": "Album Collection",
+              "type": "tag"
+            },
+            {
+              "key": "album.addedAt",
+              "title": "Date Album Added",
+              "type": "date"
+            },
+            {
+              "key": "album.originallyAvailableAt",
+              "title": "Date Album Released",
+              "type": "date"
+            },
+            {
+              "key": "album.source",
+              "title": "Album Source",
+              "type": "tag"
+            },
+            {
+              "key": "album.label",
+              "title": "Label",
+              "type": "tag"
+            }
+          ]
+        },
+        {
+          "key": "/library/sections/30/all?type=10",
+          "type": "track",
+          "title": "Tracks",
+          "active": false,
+          "Filter": [
+            {
+              "filter": "mood",
+              "filterType": "string",
+              "key": "/library/sections/30/mood?type=10",
+              "title": "Mood",
+              "type": "filter"
+            },
+            {
+              "filter": "userRating",
+              "filterType": "string",
+              "key": "/library/sections/30/userRating?type=10",
+              "title": "Rating",
+              "type": "filter"
+            },
+            {
+              "filter": "source",
+              "filterType": "string",
+              "key": "/library/sections/30/source?type=10",
+              "title": "Source",
+              "type": "filter"
+            }
+          ],
+          "Sort": [
+            {
+              "defaultDirection": "desc",
+              "descKey": "titleSort:desc",
+              "firstCharacterKey": "/library/sections/30/firstCharacter?type=10",
+              "key": "titleSort",
+              "title": "Title"
+            },
+            {
+              "default": "asc",
+              "defaultDirection": "asc",
+              "descKey": "artist.titleSort:desc,album.titleSort,album.year,track.absoluteIndex,track.index,track.titleSort,track.id",
+              "firstCharacterKey": "/library/sections/30/firstCharacter",
+              "key": "artist.titleSort,album.titleSort,album.year,track.absoluteIndex,track.index,track.titleSort,track.id",
+              "title": "Album Artist"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "originalTitle:desc",
+              "key": "originalTitle",
+              "title": "Artist"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "album.titleSort:desc",
+              "key": "album.titleSort",
+              "title": "Album"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "year:desc",
+              "key": "year",
+              "title": "Year"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "userRating:desc",
+              "key": "userRating",
+              "title": "Rating"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "duration:desc",
+              "key": "duration",
+              "title": "Duration"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "viewCount:desc",
+              "key": "viewCount",
+              "title": "Plays"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "addedAt:desc",
+              "key": "addedAt",
+              "title": "Date Added"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "lastViewedAt:desc",
+              "key": "lastViewedAt",
+              "title": "Date Played"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "lastRatedAt:desc",
+              "key": "lastRatedAt",
+              "title": "Date Rated"
+            },
+            {
+              "defaultDirection": "desc",
+              "descKey": "mediaBitrate:desc",
+              "key": "mediaBitrate",
+              "title": "Bitrate"
+            }
+          ],
+          "Field": [
+            {
+              "key": "track.mood",
+              "title": "Track Mood",
+              "type": "tag"
+            },
+            {
+              "key": "track.title",
+              "title": "Track Title",
+              "type": "string"
+            },
+            {
+              "key": "track.viewCount",
+              "title": "Track Plays",
+              "type": "integer"
+            },
+            {
+              "key": "track.lastViewedAt",
+              "title": "Track Last Played",
+              "type": "date"
+            },
+            {
+              "key": "track.skipCount",
+              "title": "Track Skips",
+              "type": "integer"
+            },
+            {
+              "key": "track.lastSkippedAt",
+              "title": "Track Last Skipped",
+              "type": "date"
+            },
+            {
+              "key": "track.userRating",
+              "subType": "rating",
+              "title": "Track Rating",
+              "type": "integer"
+            },
+            {
+              "key": "track.lastRatedAt",
+              "title": "Track Last Rated",
+              "type": "date"
+            },
+            {
+              "key": "track.mediaSize",
+              "subType": "fileSize",
+              "title": "File Size",
+              "type": "integer"
+            },
+            {
+              "key": "track.mediaBitrate",
+              "subType": "bitrate",
+              "title": "Bitrate",
+              "type": "integer"
+            }
+          ]
+        },
+        {
+          "key": "/library/sections/30/folder",
+          "type": "folder",
+          "title": "Folders",
+          "active": true
+        }
+      ],
+      "FieldType": [
+        {
+          "type": "tag",
+          "Operator": [
+            {
+              "key": "=",
+              "title": "is"
+            },
+            {
+              "key": "!=",
+              "title": "is not"
+            }
+          ]
+        },
+        {
+          "type": "integer",
+          "Operator": [
+            {
+              "key": "=",
+              "title": "is"
+            },
+            {
+              "key": "!=",
+              "title": "is not"
+            },
+            {
+              "key": ">>=",
+              "title": "is greater than"
+            },
+            {
+              "key": "<<=",
+              "title": "is less than"
+            }
+          ]
+        },
+        {
+          "type": "string",
+          "Operator": [
+            {
+              "key": "=",
+              "title": "contains"
+            },
+            {
+              "key": "!=",
+              "title": "does not contain"
+            },
+            {
+              "key": "==",
+              "title": "is"
+            },
+            {
+              "key": "!==",
+              "title": "is not"
+            },
+            {
+              "key": "<=",
+              "title": "begins with"
+            },
+            {
+              "key": ">=",
+              "title": "ends with"
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "Operator": [
+            {
+              "key": "=",
+              "title": "is true"
+            },
+            {
+              "key": "!=",
+              "title": "is false"
+            }
+          ]
+        },
+        {
+          "type": "date",
+          "Operator": [
+            {
+              "key": "=",
+              "title": "is"
+            },
+            {
+              "key": "!=",
+              "title": "is not"
+            },
+            {
+              "key": "<<=",
+              "title": "is before"
+            },
+            {
+              "key": ">>=",
+              "title": "is after"
+            }
+          ]
+        },
+        {
+          "type": "subtitleLanguage",
+          "Operator": [
+            {
+              "key": "=",
+              "title": "is"
+            },
+            {
+              "key": "!=",
+              "title": "is not"
+            }
+          ]
+        },
+        {
+          "type": "audioLanguage",
+          "Operator": [
+            {
+              "key": "=",
+              "title": "is"
+            },
+            {
+              "key": "!=",
+              "title": "is not"
+            }
+          ]
+        },
+        {
+          "type": "resolution",
+          "Operator": [
+            {
+              "key": "=",
+              "title": "is"
+            }
+          ]
+        }
+      ]
+    },
+    "Metadata": [
+      {
+        "ratingKey": "474523",
+        "key": "/library/metadata/474523/children",
+        "parentRatingKey": "474522",
+        "guid": "com.plexapp.agents.lastfm://Agalloch%20/%20Nest/Agalloch%20/%20Nest?lang=en",
+        "parentGuid": "com.plexapp.agents.lastfm://Agalloch%20/%20Nest?lang=en",
+        "type": "album",
+        "title": "Agalloch / Nest",
+        "parentKey": "/library/metadata/474522",
+        "parentTitle": "Agalloch / Nest",
+        "summary": "",
+        "index": 1,
+        "viewCount": 24,
+        "lastViewedAt": 1558532350,
+        "year": 2004,
+        "thumb": "/library/metadata/474523/thumb/1581395273",
+        "art": "/library/metadata/474522/art/1590339695",
+        "parentThumb": "/library/metadata/474522/thumb/1590339695",
+        "originallyAvailableAt": "2004-01-01",
+        "addedAt": 1574832896,
+        "updatedAt": 1581395273
+      },
+      {
+        "ratingKey": "474537",
+        "key": "/library/metadata/474537/children",
+        "parentRatingKey": "474495",
+        "guid": "com.plexapp.agents.lastfm://Agalloch/Ashes%20Against%20the%20Grain?lang=en",
+        "parentGuid": "com.plexapp.agents.lastfm://Agalloch?lang=en",
+        "type": "album",
+        "title": "Ashes Against the Grain",
+        "parentKey": "/library/metadata/474495",
+        "parentTitle": "Agalloch",
+        "summary": "",
+        "index": 1,
+        "viewCount": 14,
+        "lastViewedAt": 1583376686,
+        "year": 2006,
+        "thumb": "/library/metadata/474537/thumb/1581395264",
+        "art": "/library/metadata/474495/art/1590339785",
+        "parentThumb": "/library/metadata/474495/thumb/1590339785",
+        "originallyAvailableAt": "2006-01-01",
+        "addedAt": 1574832897,
+        "updatedAt": 1581395264,
+        "Genre": [
+          {
+            "tag": "Doom Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "474535",
+        "key": "/library/metadata/474535/children",
+        "parentRatingKey": "474495",
+        "guid": "com.plexapp.agents.lastfm://Agalloch/Faustian%20Echoes?lang=en",
+        "parentGuid": "com.plexapp.agents.lastfm://Agalloch?lang=en",
+        "type": "album",
+        "title": "Faustian Echoes",
+        "parentKey": "/library/metadata/474495",
+        "parentTitle": "Agalloch",
+        "summary": "",
+        "index": 1,
+        "viewCount": 6,
+        "lastViewedAt": 1590745087,
+        "year": 2012,
+        "thumb": "/library/metadata/474535/thumb/1581395280",
+        "art": "/library/metadata/474495/art/1590339785",
+        "parentThumb": "/library/metadata/474495/thumb/1590339785",
+        "originallyAvailableAt": "2012-01-01",
+        "addedAt": 1574832896,
+        "updatedAt": 1581395280,
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "474563",
+        "key": "/library/metadata/474563/children",
+        "parentRatingKey": "474495",
+        "guid": "com.plexapp.agents.lastfm://Agalloch/The%20Grey%20EP?lang=en",
+        "parentGuid": "com.plexapp.agents.lastfm://Agalloch?lang=en",
+        "type": "album",
+        "title": "The Grey EP",
+        "titleSort": "Grey EP",
+        "parentKey": "/library/metadata/474495",
+        "parentTitle": "Agalloch",
+        "summary": "",
+        "index": 1,
+        "year": 2004,
+        "thumb": "/library/metadata/474563/thumb/1581395271",
+        "art": "/library/metadata/474495/art/1590339785",
+        "parentThumb": "/library/metadata/474495/thumb/1590339785",
+        "originallyAvailableAt": "2004-01-01",
+        "addedAt": 1574832897,
+        "updatedAt": 1581395271,
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "474525",
+        "key": "/library/metadata/474525/children",
+        "parentRatingKey": "474495",
+        "guid": "com.plexapp.agents.lastfm://Agalloch/The%20Mantle?lang=en",
+        "parentGuid": "com.plexapp.agents.lastfm://Agalloch?lang=en",
+        "type": "album",
+        "title": "The Mantle",
+        "titleSort": "Mantle",
+        "parentKey": "/library/metadata/474495",
+        "parentTitle": "Agalloch",
+        "summary": "",
+        "index": 1,
+        "userRating": 10.0,
+        "viewCount": 39,
+        "lastViewedAt": 1586424600,
+        "year": 2002,
+        "thumb": "/library/metadata/474525/thumb/1581395277",
+        "art": "/library/metadata/474495/art/1590339785",
+        "parentThumb": "/library/metadata/474495/thumb/1590339785",
+        "originallyAvailableAt": "2002-11-27",
+        "addedAt": 1574832896,
+        "updatedAt": 1581395277,
+        "Genre": [
+          {
+            "tag": "Neofolk"
+          }
+        ]
+      },
+      {
+        "ratingKey": "474506",
+        "key": "/library/metadata/474506/children",
+        "parentRatingKey": "474495",
+        "guid": "com.plexapp.agents.lastfm://Agalloch/Marrow%20of%20the%20Spirit?lang=en",
+        "parentGuid": "com.plexapp.agents.lastfm://Agalloch?lang=en",
+        "type": "album",
+        "title": "Marrow of the Spirit",
+        "parentKey": "/library/metadata/474495",
+        "parentTitle": "Agalloch",
+        "summary": "",
+        "index": 1,
+        "viewCount": 15,
+        "lastViewedAt": 1577511741,
+        "year": 2010,
+        "thumb": "/library/metadata/474506/thumb/1581395297",
+        "art": "/library/metadata/474495/art/1590339785",
+        "parentThumb": "/library/metadata/474495/thumb/1590339785",
+        "originallyAvailableAt": "2010-01-01",
+        "addedAt": 1574832895,
+        "updatedAt": 1581395297,
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "474513",
+        "key": "/library/metadata/474513/children",
+        "parentRatingKey": "474495",
+        "guid": "com.plexapp.agents.lastfm://Agalloch/Of%20Stone%2C%20Wind%2C%20and%20Pillor?lang=en",
+        "parentGuid": "com.plexapp.agents.lastfm://Agalloch?lang=en",
+        "type": "album",
+        "title": "Of Stone, Wind, and Pillor",
+        "parentKey": "/library/metadata/474495",
+        "parentTitle": "Agalloch",
+        "summary": "",
+        "index": 1,
+        "viewCount": 3,
+        "lastViewedAt": 1562636602,
+        "year": 2001,
+        "thumb": "/library/metadata/474513/thumb/1581395298",
+        "art": "/library/metadata/474495/art/1590339785",
+        "parentThumb": "/library/metadata/474495/thumb/1590339785",
+        "originallyAvailableAt": "2001-01-01",
+        "addedAt": 1574832896,
+        "updatedAt": 1581395298,
+        "Genre": [
+          {
+            "tag": "Doom Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "474546",
+        "key": "/library/metadata/474546/children",
+        "parentRatingKey": "474495",
+        "guid": "com.plexapp.agents.lastfm://Agalloch/Pale%20Folklore?lang=en",
+        "parentGuid": "com.plexapp.agents.lastfm://Agalloch?lang=en",
+        "type": "album",
+        "title": "Pale Folklore",
+        "parentKey": "/library/metadata/474495",
+        "parentTitle": "Agalloch",
+        "summary": "",
+        "index": 1,
+        "userRating": 10.0,
+        "viewCount": 1,
+        "lastViewedAt": 1564991177,
+        "year": 1999,
+        "thumb": "/library/metadata/474546/thumb/1581395300",
+        "art": "/library/metadata/474495/art/1590339785",
+        "parentThumb": "/library/metadata/474495/thumb/1590339785",
+        "originallyAvailableAt": "1999-11-27",
+        "addedAt": 1574832897,
+        "updatedAt": 1581395300,
+        "Genre": [
+          {
+            "tag": "Doom Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "474519",
+        "key": "/library/metadata/474519/children",
+        "parentRatingKey": "474495",
+        "guid": "com.plexapp.agents.lastfm://Agalloch/Tomorrow%20Will%20Never%20Come?lang=en",
+        "parentGuid": "com.plexapp.agents.lastfm://Agalloch?lang=en",
+        "type": "album",
+        "title": "Tomorrow Will Never Come",
+        "parentKey": "/library/metadata/474495",
+        "parentTitle": "Agalloch",
+        "summary": "",
+        "index": 1,
+        "year": 2003,
+        "thumb": "/library/metadata/474519/thumb/1581395301",
+        "art": "/library/metadata/474495/art/1590339785",
+        "parentThumb": "/library/metadata/474495/thumb/1590339785",
+        "originallyAvailableAt": "2003-01-01",
+        "addedAt": 1574832896,
+        "updatedAt": 1581395301,
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "474555",
+        "key": "/library/metadata/474555/children",
+        "parentRatingKey": "474495",
+        "guid": "com.plexapp.agents.lastfm://Agalloch/The%20White%20EP?lang=en",
+        "parentGuid": "com.plexapp.agents.lastfm://Agalloch?lang=en",
+        "type": "album",
+        "title": "The White EP",
+        "titleSort": "White EP",
+        "parentKey": "/library/metadata/474495",
+        "parentTitle": "Agalloch",
+        "summary": "",
+        "index": 1,
+        "userRating": 10.0,
+        "viewCount": 47,
+        "lastViewedAt": 1583049206,
+        "year": 2008,
+        "thumb": "/library/metadata/474555/thumb/1581395302",
+        "art": "/library/metadata/474495/art/1590339785",
+        "parentThumb": "/library/metadata/474495/thumb/1590339785",
+        "originallyAvailableAt": "2008-01-01",
+        "addedAt": 1574832897,
+        "updatedAt": 1581395302,
+        "Genre": [
+          {
+            "tag": "Neofolk"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403868",
+        "key": "/library/metadata/403868/children",
+        "parentRatingKey": "403867",
+        "guid": "plex://album/5d07c957403c640290c7da40",
+        "parentGuid": "plex://artist/5d07bc35403c6402904d32d4",
+        "studio": "Napalm Records",
+        "type": "album",
+        "title": "The Boats of the Glen Carrig",
+        "titleSort": "Boats of the Glen Carrig",
+        "parentKey": "/library/metadata/403867",
+        "parentTitle": "Ahab",
+        "summary": "",
+        "index": 1,
+        "viewCount": 13,
+        "lastViewedAt": 1578036173,
+        "year": 2015,
+        "thumb": "/library/metadata/403868/thumb/1581395296",
+        "art": "/library/metadata/403867/art/1590339692",
+        "parentThumb": "/library/metadata/403867/thumb/1590339692",
+        "originallyAvailableAt": "2015-08-28",
+        "addedAt": 1522735822,
+        "updatedAt": 1581395296,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Post-Metal"
+          },
+          {
+            "tag": "Funeral Doom Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403890",
+        "key": "/library/metadata/403890/children",
+        "parentRatingKey": "403867",
+        "guid": "plex://album/5d07c232403c6402908b2586",
+        "parentGuid": "plex://artist/5d07bc35403c6402904d32d4",
+        "studio": "Napalm Records",
+        "type": "album",
+        "title": "The Call of the Wretched Sea",
+        "titleSort": "Call of the Wretched Sea",
+        "parentKey": "/library/metadata/403867",
+        "parentTitle": "Ahab",
+        "summary": "With their ambitious debut album, 2006's The Call of the Wretched Sea, Germany's tellingly named Ahab embark on a treacherous voyage to reinterpret Herman Melville's immortal whaling adventure, Moby Dick, through the suitably equivalent sonic leviathan of funereal doom metal -- or, as they are eager to dub it themselves: \"Nautik Funeral Doom.\" Of course one need only look back a couple of years to find Mastodon's more oblique treatise on the very same literary subject, via their own Leviathan album; but what Ahab lacks in outright originality, they handily make up for with The Call of the Wretched Sea's meticulously assembled husks of words and music (plus, in terms of pure heaviness, this leviathan makes Mastodon's sound as light as a sparrow!). The titanic tandem of \"Below the Sun\" and \"The Pacific\" steers listeners away from port, and casts them directly down into the darkest ocean abyss with slothful, somber synthesizer melodies, cataclysmic downtuned guitar waves, and echoing percussive thunders. These provide a formidable frame for lyrics frequently adapted directly from Melville's writings and delivered in an impossibly deep, guttural vocal style that sounds as though it was performed by Moby Dick himself -- har-har! But it's surprisingly clean-droned baritones substituting these rumblings on \"Old Thunder,\" which features an unusually uplifting, orchestrated central portion, bridged by an atmospheric interlude called \"Of the Monstrous Pictures of Whales\" to yet another colossal epic in \"The Sermon,\" itself boasting a shimmering central passage of near-silent melodic ripples that temporarily interrupt the album's prevalent, monolithic guitar grinds. The Call of the Wretched Sea subsequently achieves a dual climax via \"The Hunt\" and \"Ahab's Oath,\" both of which are marked by keening, rather infectious melodies, but which still leave the listener feeling as if crushed under the pressure untold fathoms. What's more, their words reveal that Ahab's musical retelling of Moby Dick is only just begun here, with a lot more story from the novel's original argument yet to be set to music on ensuing albums. If and when that comes to pass, Ahab will have their work cut out for them, because The Call of the Wretched Sea has set the funereal doom bar especially high -- or low, as it were. ~ Eduardo Rivadavia",
+        "index": 1,
+        "rating": 8.0,
+        "viewCount": 35,
+        "lastViewedAt": 1588533151,
+        "year": 2006,
+        "thumb": "/library/metadata/403890/thumb/1581395295",
+        "art": "/library/metadata/403867/art/1590339692",
+        "parentThumb": "/library/metadata/403867/thumb/1590339692",
+        "originallyAvailableAt": "2006-10-09",
+        "addedAt": 1522735823,
+        "updatedAt": 1581395295,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Funeral Doom Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403882",
+        "key": "/library/metadata/403882/children",
+        "parentRatingKey": "403867",
+        "guid": "plex://album/5d07c3aa403c64029098df7d",
+        "parentGuid": "plex://artist/5d07bc35403c6402904d32d4",
+        "studio": "Napalm Records America",
+        "type": "album",
+        "title": "The Divinity of Oceans",
+        "titleSort": "Divinity of Oceans",
+        "parentKey": "/library/metadata/403867",
+        "parentTitle": "Ahab",
+        "summary": "Though they're lumped in with the doom subgenre, the German group Ahab are in fact much more interesting than that. Their music owes almost nothing to Black Sabbath or St. Vitus -- with its mournful baritone vocals and glacially slow drumming, it's frequently closer in spirit to Swans circa Cop, Greed, and Holy Money, and particularly live albums like Public Castration Is a Good Idea. At the same time, the literary nature of Ahab's lyrics nudges them in the direction of prog rock, though fans of Yes, Rush, or even Opeth are unlikely to find anything here they like. Daniel Droste's slow motion howls, inspired on the band's last album by Moby Dick and on this one by Nathaniel Philbrick's In the Heart of the Sea and Owen Chase's The Wreck of the Whaleship Essex, are reminiscent of Michael Gira's, except when he falls back on doom metal's usual guttural growls, an increasingly bankrupt tactic. The music juxtaposes huge riffs with delicate keyboards, chimes, etc., creating a dynamic that's more interesting than the usual chest-beating and despair-wallowing. Furthermore, Ahab's willingness to punish the listener at length -- four of this album's seven tracks pass the ten-minute mark with ease -- add to the feeling of rolling endlessness inspired by the ocean. This album is artier than one might expect, and worth the attention of listeners outside the doom metal cult. ~ Phil Freeman",
+        "index": 1,
+        "rating": 7.0,
+        "viewCount": 11,
+        "lastViewedAt": 1581171239,
+        "year": 2009,
+        "thumb": "/library/metadata/403882/thumb/1581395295",
+        "art": "/library/metadata/403867/art/1590339692",
+        "parentThumb": "/library/metadata/403867/thumb/1590339692",
+        "originallyAvailableAt": "2009-10-03",
+        "addedAt": 1522735823,
+        "updatedAt": 1581395295,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Funeral Doom Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403875",
+        "key": "/library/metadata/403875/children",
+        "parentRatingKey": "403867",
+        "guid": "plex://album/5d07c65f403c640290b0720f",
+        "parentGuid": "plex://artist/5d07bc35403c6402904d32d4",
+        "studio": "Napalm Records",
+        "type": "album",
+        "title": "The Giant",
+        "titleSort": "Giant",
+        "parentKey": "/library/metadata/403867",
+        "parentTitle": "Ahab",
+        "summary": "Germany's Ahab warned fans to prepare for imminent musical growth as they neared the release of third album, The Giant, but no one could be sure just how far the formerly steadfast funeral doom ensemble would waver from their predetermined course. The answer -- \"not too far\" -- at least comes swiftly (not a word typically associated with this lumbering crew), when the meditative gentility and frankly not overly confident melodic vocals of opener \"Further South\" duly give way to most of the familiar, heavier-than-God ingredients one has come to expect from this Teutonic behemoth. No, the true novelty here lies in Ahab's increasing willingness to rise out of those deepest ocean troughs, as often they wallow in it; there to swim amidst the more delicate ocean life in tranquil waters. So in keeping with the band's long-favored seafaring themes, let's just say that reliably protracted voyages such as \"Aeons Elapse,\" \"Antartica (The Polymorphess),\" and the title track repeatedly surge and wane between these diametrically opposed forces of metallic turbulence and atmospheric serenity. Like titanic waves rolling across the ocean surface, thousands of leagues from the nearest shores, they crest with tsunami-esque power and then dip, more often than crash, into equally restrained troughs, taking whatever vocal intonation best suits them (sung, whispered, crooned, shouted, growled, roared, etc.) along for the ride. That Ahab is able to navigate those drastic transitions with relative ease (the aforementioned strained melodic vocals notwithstanding) is the true measure of The Giant's evolutionary success; that they produced enough quality material that something as stupendous as \"Time's Like Molten Lead\" has to be sidelined as a bonus track says even more. In sum, while a few purists may understandably refuse to depart from funeral doom's safest ports on what amounts to Ahab's most daring expedition yet, they will risk renouncing the prospect of amazing adventures exploring new horizons and the inconceivable riches resulting therein. With or without them, Ahab's will clearly set sail again and again into uncharted waters with their future albums. ~ Eduardo Rivadavia",
+        "index": 1,
+        "rating": 8.0,
+        "viewCount": 27,
+        "lastViewedAt": 1582326914,
+        "year": 2012,
+        "thumb": "/library/metadata/403875/thumb/1581395318",
+        "art": "/library/metadata/403867/art/1590339692",
+        "parentThumb": "/library/metadata/403867/thumb/1590339692",
+        "originallyAvailableAt": "2012-05-25",
+        "addedAt": 1522735822,
+        "updatedAt": 1581395318,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Post-Metal"
+          },
+          {
+            "tag": "Funeral Doom Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "380362",
+        "key": "/library/metadata/380362/children",
+        "parentRatingKey": "380361",
+        "guid": "plex://album/5d07c425403c6402909d0dc8",
+        "parentGuid": "plex://artist/5d07bc71403c6402905062ee",
+        "studio": "Prophecy Productions",
+        "type": "album",
+        "title": "Écailles de lune",
+        "titleSort": "Ecailles de lune",
+        "parentKey": "/library/metadata/380361",
+        "parentTitle": "Alcest",
+        "summary": "If any proof were needed that anticipation was at a fever pitch for Alcest's second full-length album, it could be found in the fact that a clever leak of Écailles de Lune that made the rounds before its release was rabidly snapped up worldwide even though most of the tracks came from a compilation of Chinese black metal acts. But the fact that it was treated as the real thing shows how strong Alcest's own aesthetic mark has been made already, and Écailles de Lune makes the most of its compelling fusion of black metal's theatricality and the after-echoes of shoegaze's propensity for utterly enveloping a listener, even if bandleader Neige approached that sound unconsciously at first. The first half of the two-part title track that begins the album starts with a gentle guitar chime before the full skyscraping riff kicks in, but -- instead of getting even more intense as it goes -- it's happy to turn even more elegantly beautiful, letting moments of strutting rock brawl feel more like exaltation than destruction. Neige's singing is some of his loveliest at many points throughout the album, a soft keen toward the middle of the second half of the title track, a low and contemplative rumination elsewhere -- if not notably different from his earlier work in approach, it's at its most enjoyable here, and perhaps at its most beautifully serene on \"Solar Song,\" vocals overlaid to lovely effect. In contrast to how Justin Broadrick's work in Jesu feels like brutal songs gone blissed-out, here it feels like calmly performed songs given sometimes full-speed accelerants that never lose a central grace, even when Neige's vocals turn into a familiar hollow rasp and wail. ~ Ned Raggett",
+        "index": 1,
+        "rating": 8.0,
+        "viewCount": 2,
+        "lastViewedAt": 1575097304,
+        "year": 2010,
+        "thumb": "/library/metadata/380362/thumb/1581395323",
+        "art": "/library/metadata/380361/art/1590339725",
+        "parentThumb": "/library/metadata/380361/thumb/1590339725",
+        "originallyAvailableAt": "2010-10-03",
+        "addedAt": 1455545180,
+        "updatedAt": 1581395323,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Shoegaze"
+          }
+        ]
+      },
+      {
+        "ratingKey": "389336",
+        "key": "/library/metadata/389336/children",
+        "parentRatingKey": "380361",
+        "guid": "plex://album/5d07ca43403c640290d10f8a",
+        "parentGuid": "plex://artist/5d07bc71403c6402905062ee",
+        "studio": "Prophecy Productions",
+        "type": "album",
+        "title": "Kodama",
+        "parentKey": "/library/metadata/380361",
+        "parentTitle": "Alcest",
+        "summary": "On Shelter, 2014's precursor to Kodama, Alcest sounded like they had finally abandoned metal for dreamy indie pop. While the direction wasn't new -- founder /multi-instrumentalist Neige had been incorporating shoegaze elements with post- and black metal since the very beginning -- it seemed he and drummer Winterhalter had finally surrendered to them wholly. Apparently, two years makes a difference. Here, Neige has rediscovered dynamics and his love for metal without sacrificing his deeply aesthetic lyricism. The title Kodama is a Japanese word meaning \"tree spirit\" or \"echo.\" And true to form, this date is a conceptual offering heavily inspired by animator Hayao Miyazaki’s film Princess Mononoke, which explores the interrelationship of mankind and nature and their imbalance in post-industrial society. Here, like there, nature gets its due revenge. That said, unless you are fluent in French, you'll have to accept it on faith. The set's first single, \"Oiseaux De Próre,\" offers twin layers of staccato picking in a minor key before erupting into a blaze of rolling drums, hyper strumming, and humming basslines (courtesy of Indira Saray). It slows momentarily for the verse before bleeding over into the red as Neige screams and Winterhalter responds by double- and triple-timing him. They begin an exchange in furious tempo and clashing harmonics. The title-track opener melds shoegaze with an all-encompassing blast of Neige's signature noise guitar sound and Kathrine Shepard's gorgeous guest vocals. Over nine minutes long, it goes through several shapes and dynamic shifts. \"Éclosion\" more straightforwardly accesses black metal; the meld of minor keys and vocal screaming illuminates just how melodic the verse is. Bass and drums add a monstrous, thudding low end to the proceeding. It gives way to \"Je Suis D'Ailleurs,\" where furious strumming and plodding, forceful drums are the foundation for one of the more minimal yet blissful melodies here. The stacking of frontline and backing harmony vocals enter the terrain of the ecstatic. The slow spacious intro to \"Untouched\" breaks wide open to express a canorous, post-metal majesty. It's true that Alcest don't really offer anything musically new on Kodama; Neige does that in his lyrics. But the return of more physically intense music is welcome. The kinetic force that was missing on Shelter is a welcome (re)admission. Combined with the intense lyricism and dynamic contrasts, it makes for Alcest's most \"complete\" album since 2007's Souvenirs d'un Autre Monde. ~ Thom Jurek",
+        "index": 1,
+        "rating": 7.0,
+        "viewCount": 32,
+        "lastViewedAt": 1587094387,
+        "year": 2016,
+        "thumb": "/library/metadata/389336/thumb/1581395325",
+        "art": "/library/metadata/380361/art/1590339725",
+        "parentThumb": "/library/metadata/380361/thumb/1590339725",
+        "originallyAvailableAt": "2016-09-30",
+        "addedAt": 1475229689,
+        "updatedAt": 1581395325,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "380394",
+        "key": "/library/metadata/380394/children",
+        "parentRatingKey": "380361",
+        "guid": "plex://album/5d07c1c8403c6402908747e7",
+        "parentGuid": "plex://artist/5d07bc71403c6402905062ee",
+        "studio": "Drakkar Productions",
+        "type": "album",
+        "title": "Le Secret",
+        "parentKey": "/library/metadata/380361",
+        "parentTitle": "Alcest",
+        "summary": "After six years, the French group Alcest's now legendary Le Secret EP their first foray into what is now commonly known as \"shoegaze metal,\" gets re-recorded and re-released with the original EP in tow, creating a very unique, and beautifully unsettling 54-minute listening experience. The question of \"why re-record a classic?\" is answered by Neige -- who sang and played all of the instruments on the original: \"I was never really satisfied with the original production on it.\" In hearing the new versions of \"Le Secret\" and \"Élévation,\" it's easy to hear why. Though he followed the arrangements almost to the letter, Neige did employ a collaborator in drummer Winterhalter here, who is more proficient on the kit. The fidelity -- made possible by a bigger recording budget -- is infinitely better. This new version is more spacious and dynamic: it sonically conveys the seductive beauty and open-sky sense of awe that written language cannot communicate. His initial intention was to musically communicate the actual memory of the deep, nearly spiritual childhood experience of an \"elusive but brilliant 'Land of Light,'\" a world that lies, paradoxically, just outside the realm of the human body's five senses of perception. With both versions of the EP here where they can be compared, it's easy to hear slight differences: silences are more present, drums more dramatic, the bird-like sounds near the conclusion of the title track, or the choir in \"Élévation,\" that enters earlier in the piece, add to this already potent work. When Neige begins to scream his lyrics in the latter cut, one can actually hear now that his are the cries of ecstasy, not mourning (as they were originally perceived by critics). They evoke the vastness at the heart of the experience he is conveying. The excellent double-time drumming by Winterhalter in the middle section of  \"Élévation\" takes it over the edge into another realm, just before Neige's guitar hammers on, and ecstatically strummed power chords re-enter the fray. In sum, no matter which version of Le Secret you prefer, it remains a very special record, as it lays out in total the first aural manifesto that all the work of Alcest to date was based upon, and shows just how far apart the unit is, in content and form, from other shoegaze metal acts. This is the door to a powerful, poetic, unsettling world of bliss that still challenges the sense of hearing even as it delights. ~ Thom Jurek",
+        "index": 1,
+        "rating": 8.0,
+        "viewCount": 1,
+        "lastViewedAt": 1573388114,
+        "year": 2005,
+        "thumb": "/library/metadata/380394/thumb/1581395340",
+        "art": "/library/metadata/380361/art/1590339725",
+        "parentThumb": "/library/metadata/380361/thumb/1590339725",
+        "originallyAvailableAt": "2005-10-03",
+        "addedAt": 1455545178,
+        "updatedAt": 1581395340,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "380385",
+        "key": "/library/metadata/380385/children",
+        "parentRatingKey": "380361",
+        "guid": "plex://album/5d07c620403c640290ae5fac",
+        "parentGuid": "plex://artist/5d07bc71403c6402905062ee",
+        "studio": "Prophecy Productions",
+        "type": "album",
+        "title": "Les Voyages de l'âme",
+        "titleSort": "Les Voyages de l'ame",
+        "parentKey": "/library/metadata/380361",
+        "parentTitle": "Alcest",
+        "summary": "Though French black metal has always been full of experimental weirdness that pushes at the genre's narrow boundaries, none has pushed the envelope as far as Alcest, a band that willfully combines black metal's buzz, gorgeous shoegaze melodies, ambient soundscapes, and post rock feedback. Les Voyages de l'Âme, Alcest's third full-length, arrives with great expectations based on the shock-of-the-new that greeted their debut, Souvenirs d'un Autre Monde, and its follow-up Ecailles de Lune. Alcest stands in its own \"blackgaze\" space at the crossroads of Burzum's Filosofem and My Bloody Valentine's Loveless. But one wonders how black that space can actually be with melodies that are so consciously attractive and lyrics that reject negativity. Founder, songwriter, and guitarist Neige was a one-man show until recently when Winterhalter was added on drums. Here Alcest's sound continues to evolve, stripping away more and more of metal's tropes;  its production values have improved vasty as well. In its harmonic sophistication and layered sonic washes, its ability to create emotions that approach bliss in now part of its sonic architecture. Neige's vocals, decipherable at times, are all in French. They're meant to be another layer of that atmospheric palette; when they can be understood, they celebrate something spiritually positive though abstract. Multi-tracked electric and acoustic guitars and tension-tuned basses meet washes of synth and Winterhalter's tom-tom-heavy drum attack (no blastbeats) in songs that embrace the experience of an undefinable beauty in the shared terrain of spiritual, human, and natural worlds. The sense of \"heaviness\" in the mix is pronounced, but it employs aggression in a celebratory manner as evidenced by opener \"Autre Temps\" and closer \"Summer Glory.\" Even at its harshest, when Neige is screaming, as on “Là où Naissent les Couleurs Nouvelles” and “Faiseurs de Mondes,\" the melodic beauty of the guitars seems to open up that expression, ensuring balance. This is music created to invite listeners to enter into the band's soundworld aesthetic, not be dictated to by it. Les Voyages de l'Âme is a conscious synthesis of the music from their two previous albums, rather than a move forward. And that's fine: assessment and integration and perfecting previous ideas are important aspects of any serious attempt at making art and creating a forward motion trajectory. Whether Les Voyages de l'Âmeis the band's finest album is a debate listeners will no doubt have, but is a great record;it simultaneously self-defining and alluring. ~ Thom Jurek",
+        "index": 1,
+        "rating": 8.0,
+        "viewCount": 18,
+        "lastViewedAt": 1575096438,
+        "year": 2012,
+        "thumb": "/library/metadata/380385/thumb/1581395342",
+        "art": "/library/metadata/380361/art/1590339725",
+        "parentThumb": "/library/metadata/380361/thumb/1590339725",
+        "originallyAvailableAt": "2012-10-03",
+        "addedAt": 1455545179,
+        "updatedAt": 1581395342,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Shoegaze"
+          }
+        ]
+      },
+      {
+        "ratingKey": "380376",
+        "key": "/library/metadata/380376/children",
+        "parentRatingKey": "380361",
+        "guid": "plex://album/5d07c7f6403c640290bc00fe",
+        "parentGuid": "plex://artist/5d07bc71403c6402905062ee",
+        "studio": "Prophecy Productions",
+        "type": "album",
+        "title": "Shelter",
+        "parentKey": "/library/metadata/380361",
+        "parentTitle": "Alcest",
+        "summary": "Even with hindsight being 20/20, it was easy to predict that France's Alcest, would eventually cast off black metal's influence on its sound. While Burzum's Filosofem provided inspiration for 2007's full-length debut, Souvenirs d'un Autre, recordings by My Bloody Valentine, Ride, Slowdive, and Lush did too. Alcest may not have been the first \"blackgaze\" band, but until Deafheaven broke through with 2013's brilliant Sunbather, they were its most famous proponents. Shelter, Alcest's fourth album, finally transcends all of metal's musical, sonic, and aesthetic tropes. It is deeply indebted to its '90s British inspirational sources and wholly invested in the melodic sensibilities this group has displayed from the very beginning. Songwriter/multi-instrumentalist Neige (Stéphane Paut) and drummer Jean “Winterhalter” Deflandre enlisted Sigur Rós' Sundlaugin Studio, and its producer, Birgir Jón Birgisson. His sonic imprint is readily apparent on the brief, gauzy intro \"Wings,\" and remains constant. Other Icelandic participants include the string quartet from the group Amiina. Shelter is a straight, ecstatic homage to the shoegaze sound of the '90s -- Slowdive's Neil Halstead even provides lead vocals on \"Away.\" Shelter is meant to be played loud, with layers of swooning guitars, buttery yet forceful drums, \"pretty\" feedback, dreamily sung lyrics, and other woozy textural effects that erect an aural, watery warmth that the listener can get lost in for a time. Examples are in the charging, wide-open embrace of \"Opale,\" the harmonic layers of voices, guitars, keyboards, and ambient effects that are nearly erotic in their sensuality on \"La Nuit Marche Avec Moi,\" and in the deliberate, almost processional reverence and rhapsodic emotion that meld flesh and spirit in the title track. The set's longest number, \"Deliverance,\" is a nocturnal flood of acoustic and electric guitars washing together with dramatic drum flourishes, and Billie Lindahl's soaring backing vocals that very nearly close the album in a shattering union of beauty and intensity; that is, until Neige dials it all back and gently whispers it out on a single transcendent note. If there is criticism for Shelter, it's that it sounds as if Alcest are inching rather than stepping forward and stasis has a hold on them; but with the band's catalog as argument, that's deliberate. Musical movement aside, it's a lovely sounding record. Even in its self-conscious worship of shoegaze it could easily become a late addition to that genre's canon. Shelter is well-crafted, vulnerable, and honest. ~ Thom Jurek",
+        "index": 1,
+        "rating": 6.0,
+        "viewCount": 4,
+        "lastViewedAt": 1575004130,
+        "year": 2014,
+        "thumb": "/library/metadata/380376/thumb/1581395336",
+        "art": "/library/metadata/380361/art/1590339725",
+        "parentThumb": "/library/metadata/380361/thumb/1590339725",
+        "originallyAvailableAt": "2014-01-17",
+        "addedAt": 1455545179,
+        "updatedAt": 1581395336,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Shoegaze"
+          }
+        ]
+      },
+      {
+        "ratingKey": "380369",
+        "key": "/library/metadata/380369/children",
+        "parentRatingKey": "380361",
+        "guid": "plex://album/5d07c293403c6402908eb3fe",
+        "parentGuid": "plex://artist/5d07bc71403c6402905062ee",
+        "studio": "Prophecy Productions",
+        "type": "album",
+        "title": "Souvenirs d'un autre monde",
+        "parentKey": "/library/metadata/380361",
+        "parentTitle": "Alcest",
+        "summary": "The relationship between heavy metal and the so-called \"shoegazer\" movement of the early '90s might not be apparent in writing, but with Justin Broaderick's amazing transmutation of his grinding industrial metal in Napalm Death and Godflesh into the dark, sonic bliss of his current incarnation as Jesu, it doesn't seem so far-fetched anymore. Immediately upon first listen the connection between one-man band Neige's French \"black metal\" roots and his current neo-psychedelic explorations under the Alcest moniker doesn't seem so far-fetched, natural even. Playing all the instruments on Alcest's debut full-length Souvenirs d'Un Autre Monde (\"Memories of a Future World\") Neige builds layers upon layers of ecstatically distorted guitars that evoke obvious comparisons to My Bloody Valentine's sonic extravaganzas and less obvious nods to the brooding minor-key post-metal of Jesu, only perhaps a bit sunnier. There are only six songs on Souvenirs, and the formula deviates only slightly, but the mission statement is evident from the opening crunch of the first track \"Printemps Emeraude,\" as the foundation of majestic guitar swells and stately minimalist drums is laid and the journey begins, and the listener is seemingly transported over great distances and through lifetimes via hypnotic repetition and a series of dynamic shifts which are probably more important than the actual songs themselves. The feelings elicited are those of yearning, nostalgia, triumph and blissful peace, all without a single lyric in (discernible) English. And really, the best factor arising from the meeting of metal and shoegaze is that this is a guitar album -- a monstrous, churning, epic guitar album -- without a single guitar solo! ~ Brian Way",
+        "index": 1,
+        "rating": 8.0,
+        "viewCount": 6,
+        "lastViewedAt": 1567312045,
+        "year": 2007,
+        "thumb": "/library/metadata/380369/thumb/1581395350",
+        "art": "/library/metadata/380361/art/1590339725",
+        "parentThumb": "/library/metadata/380361/thumb/1590339725",
+        "originallyAvailableAt": "2007-10-03",
+        "addedAt": 1455545179,
+        "updatedAt": 1581395350,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Shoegaze"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403899",
+        "key": "/library/metadata/403899/children",
+        "parentRatingKey": "403898",
+        "guid": "plex://album/5d07c973403c640290c8e326",
+        "parentGuid": "plex://artist/5d07bde5403c64029062f7a0",
+        "studio": "Bindrune Recordings",
+        "type": "album",
+        "title": "Passage",
+        "parentKey": "/library/metadata/403898",
+        "parentTitle": "Alda",
+        "summary": "",
+        "index": 1,
+        "viewCount": 2,
+        "lastViewedAt": 1548225647,
+        "year": 2015,
+        "thumb": "/library/metadata/403899/thumb/1581395352",
+        "parentThumb": "/library/metadata/403898/thumb/1590339675",
+        "originallyAvailableAt": "2015-01-01",
+        "addedAt": 1522735823,
+        "updatedAt": 1581395352,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Atmospheric Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403905",
+        "key": "/library/metadata/403905/children",
+        "parentRatingKey": "403898",
+        "guid": "plex://album/5d07c66e403c640290b0f8cf",
+        "parentGuid": "plex://artist/5d07bde5403c64029062f7a0",
+        "studio": "Replenish Records",
+        "type": "album",
+        "title": "Tahoma",
+        "parentKey": "/library/metadata/403898",
+        "parentTitle": "Alda",
+        "summary": "",
+        "index": 1,
+        "viewCount": 7,
+        "lastViewedAt": 1554020933,
+        "year": 2011,
+        "thumb": "/library/metadata/403905/thumb/1581395352",
+        "parentThumb": "/library/metadata/403898/thumb/1590339675",
+        "originallyAvailableAt": "2011-01-01",
+        "addedAt": 1522735823,
+        "updatedAt": 1581395352,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Atmospheric Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403790",
+        "key": "/library/metadata/403790/children",
+        "parentRatingKey": "403758",
+        "guid": "plex://album/5d07c6be403c640290b36890",
+        "parentGuid": "plex://artist/5d07bd43403c6402905be729",
+        "studio": "Make Mine Music",
+        "type": "album",
+        "title": "All Sides EP",
+        "parentKey": "/library/metadata/403758",
+        "parentTitle": "Allseits",
+        "summary": "",
+        "index": 1,
+        "year": 2006,
+        "thumb": "/library/metadata/403790/thumb/1581395363",
+        "parentThumb": "/library/metadata/403758/thumb/1590339699",
+        "originallyAvailableAt": "2006-01-01",
+        "addedAt": 1522735819,
+        "updatedAt": 1581395363,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Dark Ambient"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403759",
+        "key": "/library/metadata/403759/children",
+        "parentRatingKey": "403758",
+        "guid": "plex://album/5d07c9e6403c640290cd0f5c",
+        "parentGuid": "plex://artist/5d07bd43403c6402905be729",
+        "studio": "Cyclic Law",
+        "type": "album",
+        "title": "Chimäre",
+        "titleSort": "Chimare",
+        "parentKey": "/library/metadata/403758",
+        "parentTitle": "Allseits",
+        "summary": "",
+        "index": 1,
+        "viewCount": 33,
+        "lastViewedAt": 1583507506,
+        "year": 2016,
+        "thumb": "/library/metadata/403759/thumb/1581395363",
+        "parentThumb": "/library/metadata/403758/thumb/1590339699",
+        "originallyAvailableAt": "2016-01-01",
+        "addedAt": 1522735818,
+        "updatedAt": 1581395363,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Dark Ambient"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403778",
+        "key": "/library/metadata/403778/children",
+        "parentRatingKey": "403758",
+        "guid": "plex://album/5d07c4a1403c640290a16c17",
+        "parentGuid": "plex://artist/5d07bd43403c6402905be729",
+        "studio": "Make Mine Music",
+        "type": "album",
+        "title": "Dedalus",
+        "parentKey": "/library/metadata/403758",
+        "parentTitle": "Allseits",
+        "summary": "",
+        "index": 1,
+        "viewCount": 2,
+        "lastViewedAt": 1530156322,
+        "year": 2007,
+        "thumb": "/library/metadata/403778/thumb/1581395364",
+        "parentThumb": "/library/metadata/403758/thumb/1590339699",
+        "originallyAvailableAt": "2007-01-01",
+        "addedAt": 1522735818,
+        "updatedAt": 1581395364,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Dark Ambient"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403773",
+        "key": "/library/metadata/403773/children",
+        "parentRatingKey": "403758",
+        "guid": "plex://album/5d07c3ff403c6402909bcd28",
+        "parentGuid": "plex://artist/5d07bd43403c6402905be729",
+        "studio": "Chat Blanc Records",
+        "type": "album",
+        "title": "Drift",
+        "parentKey": "/library/metadata/403758",
+        "parentTitle": "Allseits",
+        "summary": "",
+        "index": 1,
+        "viewCount": 4,
+        "lastViewedAt": 1530155432,
+        "year": 2007,
+        "thumb": "/library/metadata/403773/thumb/1581395369",
+        "parentThumb": "/library/metadata/403758/thumb/1590339699",
+        "originallyAvailableAt": "2007-01-01",
+        "addedAt": 1522735818,
+        "updatedAt": 1581395369,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Dark Ambient"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403766",
+        "key": "/library/metadata/403766/children",
+        "parentRatingKey": "403758",
+        "guid": "plex://album/5d07c40d403c6402909c429e",
+        "parentGuid": "plex://artist/5d07bd43403c6402905be729",
+        "studio": "Cyclic Law",
+        "type": "album",
+        "title": "Hel",
+        "parentKey": "/library/metadata/403758",
+        "parentTitle": "Allseits",
+        "summary": "",
+        "index": 1,
+        "viewCount": 6,
+        "lastViewedAt": 1487073968,
+        "year": 2009,
+        "thumb": "/library/metadata/403766/thumb/1581395375",
+        "parentThumb": "/library/metadata/403758/thumb/1590339699",
+        "originallyAvailableAt": "2009-01-01",
+        "addedAt": 1522735818,
+        "updatedAt": 1581395375,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Dark Ambient"
+          }
+        ]
+      },
+      {
+        "ratingKey": "404097",
+        "key": "/library/metadata/404097/children",
+        "parentRatingKey": "404081",
+        "guid": "plex://album/5d07c4e0403c640290a399d3",
+        "parentGuid": "plex://artist/5d07bd0a403c64029058986b",
+        "studio": "Candlelight Records",
+        "type": "album",
+        "title": "Mammal",
+        "parentKey": "/library/metadata/404081",
+        "parentTitle": "Altar of Plagues",
+        "summary": "At first glance, a black metal album of anguished contemplations about death and inevitability that opens with a nearly 19-minute song would seem impenetrable at best, but on Mammal, the second full-length offering from Irish experimenters Altar of Plagues, the whole thing somehow works. In the way that all great black metal albums are, Mammal isn't alienating so much as it is isolating, making the album not only a collection of songs, but a space in which to ruminate carefully over them. By putting the listener into the appropriate headspace, Altar of Plagues are able to exert total control over the listening experience, taking listeners on a journey that, through all of the brittle production and icy, unforgiving atmosphere, is remarkably thoughtful, introspective, and visceral. This feeling really shines through in how surprisingly dynamic the record is. The songs don't just pummel listeners into submission with their intensity, but are instead more tidal, ebbing and flowing between feverish, blastbeat-laden outbursts and quieter, more expansive passages. Combined with the spaciousness of the production, this push-and-pull approach speaks to a certain inevitability, as if to say that no matter how hard they fight, the songs always have to slow down. As an album, Mammal asks a lot of the listener. It presents an uncomfortable space in which to consider an uncomfortable subject with an austerity that will dispel any notions of black metal being only concerned with the evil or the brutal. Altar of Plagues have created something that's challenging and haunting, and those who are willing to put in the time will find an album that's not just effective, but affective. ~ Gregory Heaney",
+        "index": 1,
+        "rating": 9.0,
+        "viewCount": 4,
+        "lastViewedAt": 1567692395,
+        "year": 2011,
+        "thumb": "/library/metadata/404097/thumb/1581395387",
+        "art": "/library/metadata/404081/art/1590339690",
+        "parentThumb": "/library/metadata/404081/thumb/1590339690",
+        "originallyAvailableAt": "2011-10-09",
+        "addedAt": 1522735830,
+        "updatedAt": 1581395387,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Atmospheric Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "404087",
+        "key": "/library/metadata/404087/children",
+        "parentRatingKey": "404081",
+        "guid": "plex://album/5d07c744403c640290b70a04",
+        "parentGuid": "plex://artist/5d07bd0a403c64029058986b",
+        "studio": "Profound Lore Records",
+        "type": "album",
+        "title": "Teethed Glory and Injury",
+        "parentKey": "/library/metadata/404081",
+        "parentTitle": "Altar of Plagues",
+        "summary": "Teethed Glory and Injury is the third and final studio album by the Irish black metal band Altar of Plagues produced by Jaime Gomez Arellano who previously did work for Ghost B.C. and Ulver. It was released on April 30, 2013 through Candlelight Records and Profound Lore Records. Prior to the album's release, a music video was released for the track \"God Alone\", whence the album cover is derived All tracks written by James Kelly. Read more on Last.fm. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
+        "index": 1,
+        "lastViewedAt": 1538572348,
+        "year": 2013,
+        "thumb": "/library/metadata/404087/thumb/1581395380",
+        "art": "/library/metadata/404081/art/1590339690",
+        "parentThumb": "/library/metadata/404081/thumb/1590339690",
+        "originallyAvailableAt": "2013-01-01",
+        "addedAt": 1522735830,
+        "updatedAt": 1581395380,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "404082",
+        "key": "/library/metadata/404082/children",
+        "parentRatingKey": "404081",
+        "guid": "plex://album/5d07c395403c640290982f91",
+        "parentGuid": "plex://artist/5d07bd0a403c64029058986b",
+        "studio": "Profound Lore Records",
+        "type": "album",
+        "title": "White Tomb",
+        "parentKey": "/library/metadata/404081",
+        "parentTitle": "Altar of Plagues",
+        "summary": "",
+        "index": 1,
+        "viewCount": 17,
+        "lastViewedAt": 1567689275,
+        "year": 2009,
+        "thumb": "/library/metadata/404082/thumb/1581395384",
+        "art": "/library/metadata/404081/art/1590339690",
+        "parentThumb": "/library/metadata/404081/thumb/1590339690",
+        "originallyAvailableAt": "2009-10-09",
+        "addedAt": 1522735830,
+        "updatedAt": 1581395384,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "478762",
+        "key": "/library/metadata/478762/children",
+        "parentRatingKey": "478801",
+        "guid": "plex://album/5d07c1ec403c640290889da9",
+        "parentGuid": "plex://artist/5d07bc21403c6402904c19d1",
+        "studio": "Earache Records",
+        "type": "album",
+        "title": "The Beyond",
+        "titleSort": "Beyond",
+        "parentKey": "/library/metadata/478801",
+        "parentTitle": "Cult of Luna",
+        "summary": "Goth metal may once have been a term of opprobrium -- but then again who knows? Whatever the case, it makes perfect sense with time, even if Black Sabbath already laid down the blueprint years ago, and that's one reason why Cult of Luna's second album, The Beyond, is so astoundingly great. One of Earache's many signings from Scandinavia over the moons, the band has the primal doom-laden punch of groups like the Cure and the God Machine going into their sound, tempered with the hoarse, wide-eyed vocals of Klas Rydberg. If some of his lyrics are merely standard tropes for the field, he never lets the band down at any point, and, if anything, holds back from singing most of the time to let the music make whatever point it needs to. Meanwhile, the steady deliberation of the rhythm section does the whole death-march-trudge thing pretty darn well. The secret weapon would appear to be Magnus Lindberg -- credited with sound engineering, he's not instantly apparent anywhere, but there's a strong sense of layering and depth at many points, almost as if the band were recording in a collapsing factory. Engineer Pelle Henricsson, veteran of working with bands from Refused to Meshuggah and the Hives, brings a crisply brutal focus to the proceedings. The occasional twist on the overall sound -- the mournful steel guitar twang that helps start off \"Circle\" on a very quiet note, which then mutates into an equally sad solo cutting through the full-on band crunch, or the subtle rise-and-fall arrangement that turns \"Arrival\" into the album's surprisingly beautiful heart -- makes everything all that more noteworthy. ~ Ned Raggett",
+        "index": 1,
+        "rating": 6.0,
+        "year": 2003,
+        "thumb": "/library/metadata/478762/thumb/1581395402",
+        "art": "/library/metadata/478801/art/1590684144",
+        "parentThumb": "/library/metadata/478801/thumb/1590684144",
+        "originallyAvailableAt": "2003-01-01",
+        "addedAt": 1466582312,
+        "updatedAt": 1581395402,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Post-Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "478753",
+        "key": "/library/metadata/478753/children",
+        "parentRatingKey": "478801",
+        "guid": "plex://album/5d07c23e403c6402908b92e1",
+        "parentGuid": "plex://artist/5d07bc21403c6402904c19d1",
+        "studio": "Rage of Achilles",
+        "type": "album",
+        "title": "Cult of Luna",
+        "parentKey": "/library/metadata/478801",
+        "parentTitle": "Cult of Luna",
+        "summary": "",
+        "index": 1,
+        "viewCount": 2,
+        "lastViewedAt": 1455691988,
+        "year": 2001,
+        "thumb": "/library/metadata/478753/thumb/1581395403",
+        "art": "/library/metadata/478801/art/1590684144",
+        "parentThumb": "/library/metadata/478801/thumb/1590684144",
+        "originallyAvailableAt": "2001-01-01",
+        "addedAt": 1466582312,
+        "updatedAt": 1581395403,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Post-Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "478742",
+        "key": "/library/metadata/478742/children",
+        "parentRatingKey": "478801",
+        "guid": "plex://album/5d07c2ff403c64029092cbc1",
+        "parentGuid": "plex://artist/5d07bc21403c6402904c19d1",
+        "studio": "Earache Records",
+        "type": "album",
+        "title": "Eternal Kingdom",
+        "parentKey": "/library/metadata/478801",
+        "parentTitle": "Cult of Luna",
+        "summary": "When Sweden's Cult of Luna moved into a new rehearsal space on the site of a converted mental institution, they stumbled upon an unexpected source of inspiration for their fifth album, Eternal Kingdom. There, amongst the long-abandoned madhouse's detritus, lay a diary kept by a former inmate who had rationalized drowning his wife by concocting an entire imaginary world and cast of characters responsible for the heinous crime -- anyone but him, in other words. The title of this diary was -- you guessed it -- \"Tales of the Eternal Kingdom,\" and its contents provided the perfect jumping-off-point for Cult of Luna to wrap their always inventive post-metal songwriting around a gothic fairy tale right out of the Brothers Grimm. Although this perception is encouraged as much by the album's beautifully rendered artwork as its far from obvious lyrics, which are typically frugal in relation to the group's vast instrumental passages, and vague enough to let each listener's own imagination interpret and populate this fantastical universe as extensively as they please. On the subject of the music itself, Eternal Kingdom sees Cult of Luna generally working with the darker shades of their broad palette: combining remarkably heavy and foreboding riffs with agoraphobic expanses of near-silence on striking numbers like \"The Great Migration,\" spectacular opener \"Owlwood,\" and hypnotic colossus \"Ghost Trail,\" while abandoning all clean singing throughout in exchange for raw, tortured hardcore vocals. At the same time, the band's concerted effort to break out of their habitually epic songwriting mindset (see more conventionally sized nuggets like \"Mire Deep\" and the title track), along with the incorporation of atypical electronic sounds (\"Österbotten\") and horns (see interlude, \"The Lure,\" and album capper, \"Following Betulas\"), make a good case for this album as the band's most unique yet. This assertion is definitely debatable given Cult of Luna's consistently groundbreaking career, but what certainly isn't in question is Eternal Kingdom's tantalizing allure, as a result of its singular concept and the band's often breathtaking execution thereof. ~ Eduardo Rivadavia",
+        "index": 1,
+        "rating": 8.0,
+        "viewCount": 14,
+        "lastViewedAt": 1577511196,
+        "year": 2008,
+        "thumb": "/library/metadata/478742/thumb/1581395414",
+        "art": "/library/metadata/478801/art/1590684144",
+        "parentThumb": "/library/metadata/478801/thumb/1590684144",
+        "originallyAvailableAt": "2008-01-01",
+        "addedAt": 1466582311,
+        "updatedAt": 1581395414,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Post-Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "478802",
+        "key": "/library/metadata/478802/children",
+        "parentRatingKey": "478801",
+        "guid": "plex://album/5d07c9e2403c640290ccec14",
+        "parentGuid": "plex://artist/5d07bc21403c6402904c19d1",
+        "studio": "Indie Recordings",
+        "type": "album",
+        "title": "Mariner",
+        "parentKey": "/library/metadata/478801",
+        "parentTitle": "Cult of Luna",
+        "summary": "",
+        "index": 1,
+        "viewCount": 29,
+        "lastViewedAt": 1583509029,
+        "year": 2016,
+        "thumb": "/library/metadata/478802/thumb/1581395416",
+        "art": "/library/metadata/478801/art/1590684144",
+        "parentThumb": "/library/metadata/478801/thumb/1590684144",
+        "originallyAvailableAt": "2016-04-08",
+        "addedAt": 1466582311,
+        "updatedAt": 1581395416,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Post-Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "478773",
+        "key": "/library/metadata/478773/children",
+        "parentRatingKey": "478801",
+        "guid": "plex://album/5d07c1a1403c64029085ed07",
+        "parentGuid": "plex://artist/5d07bc21403c6402904c19d1",
+        "studio": "Earache Records",
+        "type": "album",
+        "title": "Salvation",
+        "parentKey": "/library/metadata/478801",
+        "parentTitle": "Cult of Luna",
+        "summary": "For their third album, Swedish prog metal stalwarts Cult of Luna added a seventh member, Anders Teglund, a second keyboardist who concentrates on samples and effects. Teglund largely keeps to the background for most of Salvation, however. Don't worry, they haven't turned into Skinny Puppy or anything. Indeed, Salvation is perhaps Cult of Luna's most accomplished and strongest album yet. The sense of dynamics that's been the band's strong suit all along is on full display here, with most of these eight lengthy songs (none under five minutes, and half over ten) featuring long passages of sparse, quiet music that at times are genuinely rather pretty. The near-ambient opening section of \"Echoes\" might even remind listeners of the Pink Floyd epic of the same title, and the closing track, \"Into the Beyond,\" has a fluid, bass-led section that recalls some of Can's later work. These moments of musical respite only increase the power of the full-on metal onslaughts when they come in. Where many similar albums become numbing after a while, Salvation is strong without being bludgeoning. ~ Stewart Mason",
+        "index": 1,
+        "rating": 9.0,
+        "lastViewedAt": 1483352905,
+        "year": 2004,
+        "thumb": "/library/metadata/478773/thumb/1581395415",
+        "art": "/library/metadata/478801/art/1590684144",
+        "parentThumb": "/library/metadata/478801/thumb/1590684144",
+        "originallyAvailableAt": "2004-01-01",
+        "addedAt": 1522735800,
+        "updatedAt": 1581395415,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Post-Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "478793",
+        "key": "/library/metadata/478793/children",
+        "parentRatingKey": "478801",
+        "guid": "plex://album/5d07c1fa403c64029089177b",
+        "parentGuid": "plex://artist/5d07bc21403c6402904c19d1",
+        "studio": "Earache Records",
+        "type": "album",
+        "title": "Somewhere Along the Highway",
+        "parentKey": "/library/metadata/478801",
+        "parentTitle": "Cult of Luna",
+        "summary": "If you think you know what Swedish metal is all about, Cult of Luna may make you change your mind. Yes, there's heaviosity aplenty here: these very long tracks (averaging about ten minutes each) all boast a huge and dense sound. But not all of them start out that way, and none of them ever approaches the kind of high-intensity death trip that characterizes the work of their countrymen Meshuggah or Amon Amarth. In fact, Somewhere Along the Highway actually features several moments of sheer beauty -- and the shockingly restrained \"And with Her Came the Birds\" features not only drums played with jazz brushes but also, believe it or not, a banjo. That's not to say that there isn't plenty of screaming and yelling and raw, pounding beats. It's just that on tracks like \"Finland\" and the gorgeous \"Dim,\" the screaming and yelling take clear second billing to richly melodic layers of guitar. Even on darker material, such as the arrhythmic and brooding \"Marching to the Heartbeats,\" the overriding concern seems to be more with building a carefully constructed soundscape rather than just venting spleen. And if the pattern gets a bit predictable and tiresome by the album-ending instrumental \"Dark City Dead Man,\" it's still a powerful and compelling one. Recommended. ~ Rick Anderson",
+        "index": 1,
+        "rating": 7.0,
+        "viewCount": 22,
+        "lastViewedAt": 1545286952,
+        "year": 2006,
+        "thumb": "/library/metadata/478793/thumb/1581395434",
+        "art": "/library/metadata/478801/art/1590684144",
+        "parentThumb": "/library/metadata/478801/thumb/1590684144",
+        "originallyAvailableAt": "2006-01-01",
+        "addedAt": 1522735801,
+        "updatedAt": 1581395434,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Post-Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "478782",
+        "key": "/library/metadata/478782/children",
+        "parentRatingKey": "478801",
+        "guid": "plex://album/5d07c6fe403c640290b506c4",
+        "parentGuid": "plex://artist/5d07bc21403c6402904c19d1",
+        "studio": "Indie Recordings",
+        "type": "album",
+        "title": "Vertikal",
+        "parentKey": "/library/metadata/478801",
+        "parentTitle": "Cult of Luna",
+        "summary": "On Vertikal, the sixth album from Cult of Luna, the Swedish band returns after a five-year gap with an album of rigidly structured and massively heavy post-metal. Punctuated by electronic interludes, the album shows off Cult of Luna's patience for a good, slow build as they carefully assemble layers and connect passages, stopping only when the monstrous songs they've built are fully operational and ready to rampage by way of a destructively heavy riff. Confident in their craft, the bandmembers are careful never to rush things, allowing the songs on Vertikal to play out the way they're supposed to, as is the case with the 18-and-a-half-minute epic \"Vicarious Redemption,\" which seems to grow exponentially as it slowly plods toward its conclusion. While Cult of Luna have always been an impressive band, the solid construction and merciless execution of Vertikal makes for an incredible listening experience. ~ Gregory Heaney",
+        "index": 1,
+        "rating": 9.0,
+        "viewCount": 5,
+        "lastViewedAt": 1554699533,
+        "year": 2013,
+        "thumb": "/library/metadata/478782/thumb/1581395435",
+        "art": "/library/metadata/478801/art/1590684144",
+        "parentThumb": "/library/metadata/478801/thumb/1590684144",
+        "originallyAvailableAt": "2013-01-01",
+        "addedAt": 1522735801,
+        "updatedAt": 1581395435,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Post-Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "478737",
+        "key": "/library/metadata/478737/children",
+        "parentRatingKey": "478801",
+        "guid": "plex://album/5d07c7d5403c640290baecd7",
+        "parentGuid": "plex://artist/5d07bc21403c6402904c19d1",
+        "studio": "Indie Recordings",
+        "type": "album",
+        "title": "Vertikal II",
+        "parentKey": "/library/metadata/478801",
+        "parentTitle": "Cult of Luna",
+        "summary": "Continuing the work the band started on the full-length Vertikal, Cult of Luna extend ominous moods evoked on that album with Vertikal II. With three new tracks, as well as a more condensed remix of the sprawling \"Vicarious Redemption\" by Justin Broadrick (Jesu, Godflesh), the EP feels more like an epilogue to the previous full-length than an extension. While the vibe here is a little looser (think late-model Neurosis), Cult of Luna still aren't afraid to let things play out at their own pace, so even though the songs here don't possess the rigidity of their forebears, they have the same sense of depth that made the first volume such a compelling listen. ~ Gregory Heaney",
+        "index": 1,
+        "rating": 8.0,
+        "viewCount": 10,
+        "lastViewedAt": 1580799368,
+        "year": 2013,
+        "thumb": "/library/metadata/478737/thumb/1581395433",
+        "art": "/library/metadata/478801/art/1590684144",
+        "parentThumb": "/library/metadata/478801/thumb/1590684144",
+        "originallyAvailableAt": "2013-09-17",
+        "addedAt": 1466582311,
+        "updatedAt": 1581395433,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Post-Metal"
+          },
+          {
+            "tag": "Ambient"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403815",
+        "key": "/library/metadata/403815/children",
+        "parentRatingKey": "403798",
+        "guid": "plex://album/5d07c4b4403c640290a21295",
+        "parentGuid": "plex://artist/5d07bc17403c6402904b975d",
+        "studio": "Southern Lord",
+        "type": "album",
+        "title": "Angels of Darkness, Demons of Light I",
+        "parentKey": "/library/metadata/403798",
+        "parentTitle": "Earth",
+        "summary": "",
+        "index": 1,
+        "lastViewedAt": 1548160962,
+        "year": 2011,
+        "thumb": "/library/metadata/403815/thumb/1581395487",
+        "art": "/library/metadata/403798/art/1590339777",
+        "parentThumb": "/library/metadata/403798/thumb/1590339777",
+        "originallyAvailableAt": "2011-01-01",
+        "addedAt": 1522735820,
+        "updatedAt": 1581395487,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Post-Rock"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403803",
+        "key": "/library/metadata/403803/children",
+        "parentRatingKey": "403798",
+        "guid": "plex://album/5d07c62b403c640290aebd5d",
+        "parentGuid": "plex://artist/5d07bc17403c6402904b975d",
+        "studio": "Southern Lord",
+        "type": "album",
+        "title": "Angels of Darkness, Demons of Light II",
+        "parentKey": "/library/metadata/403798",
+        "parentTitle": "Earth",
+        "summary": "",
+        "index": 1,
+        "year": 2012,
+        "thumb": "/library/metadata/403803/thumb/1581395484",
+        "art": "/library/metadata/403798/art/1590339777",
+        "parentThumb": "/library/metadata/403798/thumb/1590339777",
+        "originallyAvailableAt": "2012-01-01",
+        "addedAt": 1522735820,
+        "updatedAt": 1581395484,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Drone"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403821",
+        "key": "/library/metadata/403821/children",
+        "parentRatingKey": "403798",
+        "guid": "plex://album/5d07c2dd403c640290917bf9",
+        "parentGuid": "plex://artist/5d07bc17403c6402904b975d",
+        "studio": "Southern Lord",
+        "type": "album",
+        "title": "The Bees Made Honey in the Lion's Skull",
+        "titleSort": "Bees Made Honey in the Lion's Skull",
+        "parentKey": "/library/metadata/403798",
+        "parentTitle": "Earth",
+        "summary": "What a long strange trip it's been indeed. When Earth -- basically Dylan Carlson -- disappeared from the music scene after Pentastar: In the Style of Demons, he'd become a black sheep to virtually everyone. Lost in the swirl of drug addiction, and having bought the gun that Kurt Cobain used in his suicide, it took years for Carlson to come to grips with his own evil spirits. While interest in the band never completely waned, it took the likes of Sunn 0))) and other big feedbacking drone worshipers to bring it to fruition. In 2005, Carlson's new Earth returned with Hex: Or Printing in the Infernal Method, a record that was less deafening, but strangely and hypnotically beautiful nonetheless, taking as a primary inspiration the spaghetti Western soundtracks of Ennio Morricone as a cue to create a new minimal soundscape that was sun-bleached, bone-dry, and more mysterious than anything they'd done before. Issued by Stephen O'Malley's Southern Lord label, 2008's The Bees Made Honey in the Lion's Skull has a package that is something to behold, with a black textured slipcase, the band name and title embossed in gold, and a booklet featuring a perfect illustration of the title by Arik Roper in four-color glossy glorious art. The title of the album comes from the Old Testament of the Bible in the narrative of Samson and Delilah. Other than Carlson on guitars (and amplifiers), Earth also include drummer Adrienne Davies, Steve Moore on acoustic and Wurlitzer pianos and Hammond B-3, and bassist Don McGreevy (both electric and upright). Guitarist Bill Frisell helps out on four cuts as well, and Randall Dunn produced the set. Fans of the heavier, more ear-shattering version of the group will find themselves drawn to this more than Hex or the live Hibernaculum set; that said, The Bees Made Honey should also attract more recent listeners. Big guitars abound, but they're musical; they're as informed by a much more ringing brand of country sound that can be heard on records ranging from those of Lee Hazlewood to Thin White Rope's Tucson-drenched sonic six-string wind-downs. But in true Earth fashion, the long droning form is back, albeit tempered by minimal repetitive melodies that are simple in structure but hold great power.  The set begins with \"Omens and Portents I: The Driver.\" It's nine minutes of controlled crawl. Carlson's guitar and wah-wah pedal are colored by the high ringing tone of Frisell's trademark sound -- albeit it far less ornamental than listeners are used to hearing him. Davies' drums, so easy to overlook, are perfect in their minimal, muted tom-tom pace; they help to register the tension in this gradually unfolding melody. Reverb, controlled feedback, detuned drone, and high-pitched whine all gradually flood the foreground while the bass and drums hold the line and simultaneously make the tempo nearly unbearable. The Wurlitzer paints the ground between the front-line instruments and the rhythm section, and hints of a lyric statement emerge, fade, disappear, and mutate into others -- very, very slowly. It's dark, powerful, forbidding music. \"Rise to Glory,\" while still heavy despite the restraint in volume, is somewhat brighter. Carlson uses big chords, a slowly evolving riff, and a high-twang country ring in his attack, and the drums walk a middle ground between pulse and actual time signature. The acoustic piano that creeps and asserts itself between the guitar sounds is painterly, and feels like some kind of arrival from the wasteland. \"Miami Morning Coming Down II (Shine),\" which has almost a nursery rhyme melody, but its gradual pacing cleanses the palette of sentimentality and instead evolves into something resembling movement toward a much richer sonic landscape. With large B-sharp washes, off-rhythm single beats, and a droning bassline, this is as close to a song as Carlson has ever composed. The front-line complexity reaches its zenith in the middle of the record on \"Engine of Ruin,\" where Frisell gets to work his magic in concert with Carlson playing an octave apart. The ringing open tone of his guitar and the low-slung harshness of the latter are complex, dynamically rich, and beautifully textural. Elements of the blues, big-riffing '70s rock (albeit tempered by the wonderful separation and clarity of the sound), and rockist sway make this one of the album's highlights.  The darkness returns on the latter half of the record, more pronounced with less actual articulation on the second part of the opening theme, introduced by a rumbling acoustic piano, knotty harmonics, and a framed melodic statement that is more complex and slightly faster, but still s-l-o-o-o-o-w; think of the flow of raw honey as it emerges from the cone. The final two cuts, \"Hung from the Moon\" and the title track, are so deeply atmospheric and beautifully arrayed that they need to be heard rather than discussed -- except to say that the latter is actually Earth's attempt at a shuffle, but in a time signature and dynamic manner that is all their own. The Bees Made Honey in the Lion's Skull is more musical and adventurous than anything Earth have ever issued. It's a record that gets inside your body as well as your head and won't let go. It's rich and adventurous, and still contains the kind of restraint that allows for the spaces between sounds to accommodate their own voices. If Carlson and Earth don't get real soundtrack work for this brand of monumentally cinematic rock, there is no justice. It's odd to think that a band around this long is finally reaching its peak rather than trying to hold on to past glories. ~ Thom Jurek",
+        "index": 1,
+        "rating": 8.0,
+        "viewCount": 2,
+        "lastViewedAt": 1552626874,
+        "year": 2008,
+        "thumb": "/library/metadata/403821/thumb/1581395498",
+        "art": "/library/metadata/403798/art/1590339777",
+        "parentThumb": "/library/metadata/403798/thumb/1590339777",
+        "originallyAvailableAt": "2008-01-01",
+        "addedAt": 1522735820,
+        "updatedAt": 1581395498,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Drone"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403799",
+        "key": "/library/metadata/403799/children",
+        "parentRatingKey": "403798",
+        "guid": "plex://album/5d07c1dd403c640290880ca2",
+        "parentGuid": "plex://artist/5d07bc17403c6402904b975d",
+        "studio": "Sub Pop Records",
+        "type": "album",
+        "title": "Earth 2: Special Low Frequency Version",
+        "parentKey": "/library/metadata/403798",
+        "parentTitle": "Earth",
+        "summary": "",
+        "index": 1,
+        "year": 1993,
+        "thumb": "/library/metadata/403799/thumb/1581395502",
+        "art": "/library/metadata/403798/art/1590339777",
+        "parentThumb": "/library/metadata/403798/thumb/1590339777",
+        "originallyAvailableAt": "1993-01-01",
+        "addedAt": 1522735819,
+        "updatedAt": 1581395502,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Drone"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403862",
+        "key": "/library/metadata/403862/children",
+        "parentRatingKey": "403798",
+        "guid": "plex://album/5d07c24c403c6402908c173d",
+        "parentGuid": "plex://artist/5d07bc17403c6402904b975d",
+        "studio": "Sub Pop Records",
+        "type": "album",
+        "title": "Extra‐Capsular Extraction",
+        "parentKey": "/library/metadata/403798",
+        "parentTitle": "Earth",
+        "summary": "",
+        "index": 1,
+        "rating": 5.0,
+        "year": 1991,
+        "thumb": "/library/metadata/403862/thumb/1581395503",
+        "art": "/library/metadata/403798/art/1590339777",
+        "parentThumb": "/library/metadata/403798/thumb/1590339777",
+        "originallyAvailableAt": "1991-01-01",
+        "addedAt": 1522735822,
+        "updatedAt": 1581395503,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Drone"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403834",
+        "key": "/library/metadata/403834/children",
+        "parentRatingKey": "403798",
+        "guid": "plex://album/5d07c1ec403c640290889dad",
+        "parentGuid": "plex://artist/5d07bc17403c6402904b975d",
+        "studio": "Southern Lord",
+        "type": "album",
+        "title": "HEX; or Printing in the Infernal Method",
+        "parentKey": "/library/metadata/403798",
+        "parentTitle": "Earth",
+        "summary": "Bands like Black Sabbath and the Melvins made it OK to \"drone\" within the realm of heavy metal, but this approach wasn't fully explored until Earth hit the scene in the early '90s. Led by guitarist Dylan Carlson, what sets the band apart from the rest of the doom metal pack is that Earth almost always completely bypasses vocals -- usually focusing entirely on a few plodding notes per song -- as evidenced by their 2005 release (and first for the Southern Lord label), Hex: Or Printing in the Infernal Method. Once more (as on Earth's previous release, Living in the Gleam of an Unseathed Sword), Carlson is teamed with drummer Adrienne Davies, while several other guest instrumentalists supply bass, lap/pedal steel guitar, and even trombone and tubular bells. Imagine what a soundtrack to a film about the earth's early days would sound like, and Hex is pretty darn close, just from the song titles alone -- \"Land of Some Other Order,\" \"Left in the Desert,\" \"The Dry Lake,\" and so on. Certainly not the type of album you'd put on in your car when you want to zip along the freeway, but fans of doom metal with an interesting twist will certainly approve. ~ Greg Prato",
+        "index": 1,
+        "rating": 7.0,
+        "lastViewedAt": 1538719409,
+        "year": 2005,
+        "thumb": "/library/metadata/403834/thumb/1581395514",
+        "art": "/library/metadata/403798/art/1590339777",
+        "parentThumb": "/library/metadata/403798/thumb/1590339777",
+        "originallyAvailableAt": "2005-01-01",
+        "addedAt": 1522735821,
+        "updatedAt": 1581395514,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Post-Rock"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403829",
+        "key": "/library/metadata/403829/children",
+        "parentRatingKey": "403798",
+        "guid": "plex://album/5d07c272403c6402908d893d",
+        "parentGuid": "plex://artist/5d07bc17403c6402904b975d",
+        "studio": "Southern Lord",
+        "type": "album",
+        "title": "Hibernaculum",
+        "parentKey": "/library/metadata/403798",
+        "parentTitle": "Earth",
+        "summary": "Arriving in 2007, Hibernaculum, a beautifully packaged a double audio/video disc combination issued on Southern Lord, proves that the change in sound that Earth mastermind and guitarist Dylan Carlson and drummer Adrienne Davies created on Hex: Or Printing in the Infernal Method was no one-off. On the CD version of the set, Earth cover three tunes from their previous incarnation as pioneering heavy metal drone masters, including the cut \"A Plague of Angels,\" previously available only on a rare tour-only split 12\" (with Sunn 0)))), all done in the \"Hex\" manner. On first glance -- and perhaps even on first listen -- with only 36 minutes of music included on the audio disc, this might appear to be a stop-gap on the way to a new album; it's seemingly more in line with the demos and other oddities Carlson had issued in the group's previous incarnation before he disbanded it. Having resurrected the band in 2000, Carlson decided to follow this different tack: playing music that is heavy in a very different way. Snaky long guitar lines are played with a restrained force, little distortion or feedback, and no drones. The hypnotic effect is achieved more from the repetition of the guitar patterns themselves and the space in between them. It's usually trebly and contains single lines as well as chord changes, with slow droning riffs that rely on the microphonics of volume to achieve their effect. It's given a flourish by Davies and bassists Don McGreevy and Jonas Haskins, and some analog synth sound coloration by Sunn 0)))'s Greg Anderson on the first two cuts, \"Ouroboros Is Broken\" and \"Coda Maestoso in F (Flat) Minor.\" These two cuts, which lead into the last two, are heavy because of their intentional restraint. The music isn't pretty; it touches upon everything including Ennio Morricone's spaghetti Western film cues and even a warped form of desert country music that could have come from Tucson in the 1980s.  \"Miami Morning Coming Down\" begins with a spare piano playing the four-note theme, which is completed in sparse fashion by Carlson's guitar playing in the second half. The music doesn't so much whirl around. In fact, in many ways it feels static in its repetition, but it draws you in all the same, offering a hint that something, anything, might happen. And it does -- the numbers of notes are the same but not their sequence, not the amount of space between theme articulation and completion. It begins to hover and float as fuzz tones take over on the guitars, cymbals shimmer, and a bassline emerges. It's hypnotic and haunting. The final cut is where Carlson and friends show the true menace in their sound, opening with a drone that seems to slip in and out of a crack in the world, the break that points to the void. Over 16 minutes in length, it unfolds and disintegrates rather than really building -- its tempo remains very slow, almost still, but the dark, heavy plod becomes a thud with a ringing guitar touching on pedal steel atmospherics and the sonics themselves peeling off the layers that surround this simple melody. As good as the rest of the material here is, it's \"A Plague of Angels\" that is the payoff. It wraps everything heard so far into a messy little package that points not inwardly but out toward the night sky itself. In its purposefulness, it's not just an aesthetic, it's a poetic. The film by Seldon Hunt on the accompanying DVD offers live footage of Earth during their Hex tour in Europe, interviews with bandmembers and with Carlson and others, providing an in-your-face, intimate view of the band as it exists in the present day. Hibernaculum may or may not be a stop-gap, because what exists here is somehow enough. It's Earth as a developing entity that transcends all the different genres that wrap into their sound for the sake of creating a music that is \"heavier\" than any of their peers. ~ Thom Jurek",
+        "index": 1,
+        "rating": 7.0,
+        "lastViewedAt": 1552894044,
+        "year": 2007,
+        "thumb": "/library/metadata/403829/thumb/1581395514",
+        "art": "/library/metadata/403798/art/1590339777",
+        "parentThumb": "/library/metadata/403798/thumb/1590339777",
+        "originallyAvailableAt": "2007-01-01",
+        "addedAt": 1522735820,
+        "updatedAt": 1581395514,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Drone"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403844",
+        "key": "/library/metadata/403844/children",
+        "parentRatingKey": "403798",
+        "guid": "plex://album/5d07c1ec403c640290889daf",
+        "parentGuid": "plex://artist/5d07bc17403c6402904b975d",
+        "studio": "Sub Pop Records",
+        "type": "album",
+        "title": "Pentastar: In the Style of Demons",
+        "parentKey": "/library/metadata/403798",
+        "parentTitle": "Earth",
+        "summary": "Dylan Carlson may best be remembered as Kurt Cobain's friend, probably not the way he would like to be seen in music history. But besides having that going for him, he was also the brains behind Earth, a Seattle combo that tried to recreate Black Sabbath, but much slower. Earth's early albums showed a lot of promise, but never quite delivered the epic sound that was hinted at. On Pentastar, Carlson tries to find the middle ground between the space rock of Hawkwind and the noisy guitar work of the Melvins. Unfortunately, he forgot to write any songs, instead letting the noise speak for itself. As an ambient noise project, the album actually works. It makes great background music, but very rarely does the music stand out. Songs blur together, and only on the Jimi Hendrix cover \"Peace in Mississippi\" does Earth sound like a rock band. The Sabbath influence rears its head on the noisy \"Tallahassee,\" but it seems like too little, too late -- since the long instrumentals may keep people from actually reaching that song. If Carlson really wanted to make his mark, he should have just tried to rock instead of hinting at it. As it stands, open-minded fans of doom metal may want to check this out, but few others will be interested in what is going on here. ~ Bradley Torreano",
+        "index": 1,
+        "rating": 3.0,
+        "viewCount": 11,
+        "lastViewedAt": 1539500330,
+        "year": 1996,
+        "thumb": "/library/metadata/403844/thumb/1581395522",
+        "art": "/library/metadata/403798/art/1590339777",
+        "parentThumb": "/library/metadata/403798/thumb/1590339777",
+        "originallyAvailableAt": "1996-01-01",
+        "addedAt": 1522735821,
+        "updatedAt": 1581395522,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Stoner Rock"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403853",
+        "key": "/library/metadata/403853/children",
+        "parentRatingKey": "403798",
+        "guid": "plex://album/5d07c24c403c6402908c173b",
+        "parentGuid": "plex://artist/5d07bc17403c6402904b975d",
+        "studio": "Sub Pop Records",
+        "type": "album",
+        "title": "Phase 3: Thrones and Dominions",
+        "parentKey": "/library/metadata/403798",
+        "parentTitle": "Earth",
+        "summary": "Earth's master of paranoia and disaster, Dylan Carlson, has long seemed bent on capturing the sound of aggression, displacement, fear, and loathing through the lens of narcotic painkillers. Or so it seems. Throughout the course of Earth's output, Carlson has befuddled listeners with his down-tuned, lengthy excursions into single-note monoliths of songs, his guitar tones droning heavily, hanging menacingly for long spells of time before crashing in slow-motion toward another note or chord progression. The chief problem this time around, as with Pentastar: In the Style of Demons, is that Carlson's gift for writing riffs never fully lifts from the earth. In other words, there are plenty of excellent ideas -- stellar, half-written song structures that are never granted the proper completion or percussive accompaniment. There are very few people working like this -- save folks like Caspar Brotzmann or the Melvins -- with such command of heavy, louder-than-hell guitar playing. Earth can be frightening, saddening, alienating, peculiar, and more often than not, disappointing. One may listen and wish Carlson would hammer down on that guitar with a complete, vital rhythm section. ~ Patrick Kennedy",
+        "index": 1,
+        "rating": 4.0,
+        "year": 1995,
+        "thumb": "/library/metadata/403853/thumb/1581395528",
+        "art": "/library/metadata/403798/art/1590339777",
+        "parentThumb": "/library/metadata/403798/thumb/1590339777",
+        "originallyAvailableAt": "1995-01-01",
+        "addedAt": 1522735821,
+        "updatedAt": 1581395528,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Drone"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403809",
+        "key": "/library/metadata/403809/children",
+        "parentRatingKey": "403798",
+        "guid": "plex://album/5d07c8af403c640290c1ccb1",
+        "parentGuid": "plex://artist/5d07bc17403c6402904b975d",
+        "studio": "Southern Lord",
+        "type": "album",
+        "title": "Primitive and Deadly",
+        "parentKey": "/library/metadata/403798",
+        "parentTitle": "Earth",
+        "summary": "Since guitarist Dylan Carlson re-formed Earth in 2003, the one constant has been endless exploration. From the exploded desert-like Americana atmospheres of Hex: Or Printing the Infernal Method right through the Angels of Darkness: Demons of Light series with their string players, Carlson and his collaborators have regarded tone, texture, dynamic, and space as elastic elements rife for inquiry. Through it all, Earth have retained a signature: their sound remains instantly identifiable. Primitive and Deadly integrates many of the musical tenets that have appeared on those previous recordings and combines them into a seamless whole. Opener \"Torn by the Fox of the Crescent Moon\" is their weightiest cut since re-formation. Using a chugging, doomy, gargantuan riff, Carlson, drummer Adrienne Davies, bassist Bill Herzog, and additional guitarist Brett Nelson (Built to Spill) thunder along a tense, fuzz-blown path where guitar harmonics, distortion, and post-psych blues swell around the rhythm section's quake. Mark Lanegan's vocals on \"There Is a Serpent Coming\" add exponentially to the platform. Fat glacial riffs, feedback, processional drums, and illustrative guitar effects frame his grainy voice and its apocalyptic occult narrative inside a blown-out, bluesy, cinematic Western style. The set's centerpiece -- and longest cut -- \"From the Zodiacal Light\" weds doom metal's minimalism to a ferociously textured post-psych roar. The thudding chords and wrung-out single notes offer vocalist Rabia Shaheen Qazi (Rose Windows) a plateau on which to ascend--and she does. Her melodic elocution is as fierce as the wah-wah whammy bar and the sonic overdrive that whirl around her. The other instrumental here, \"Even Hell Has Its Heroes,\" melds Carlson's sense of slow, weighty riff exposition and love of Jimi Hendrix's unhinged blues style. The lead guitar squall explores various tonal voicings within a two-chord vamp for over ten minutes. Layered feedback covers the backdrop as his bandmates hold it down. The sounds of bells and eerie chimes introduce \"Rooks Across the Gate\" as waves of dissonant thirds throb across the front; a minimal lead guitar statement sounds almost glissando contrasted with the sheer weight of the tune's riff. Lanegan adds a Celtic melodic inference in his weathered delivery to carry the haunted narrative. Randall Dunn's Moog assists in illuminating Carlson's high-register fills to create another lyric voice, and soars above fingerpicked and strummed chords by Nelson and guest Jodie Cox (the Narrows). Davies uses the bell on her ride cymbal to underscore each repetitive passage until fadeout. Earth's massive, plodding, serpentine approach on Primitive and Deadly reflects a new focus on lyric euphony and a renewed commitment to corporeal force. The pervasive, blinding darkness that saturates this bleak, sublime music is driven by the band's collective desire to seek ecstasy in the very heart of the void. ~ Thom Jurek",
+        "index": 1,
+        "rating": 8.0,
+        "year": 2014,
+        "thumb": "/library/metadata/403809/thumb/1581395532",
+        "art": "/library/metadata/403798/art/1590339777",
+        "parentThumb": "/library/metadata/403798/thumb/1590339777",
+        "originallyAvailableAt": "2014-01-01",
+        "addedAt": 1522735820,
+        "updatedAt": 1581395532,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Drone"
+          }
+        ]
+      },
+      {
+        "ratingKey": "398021",
+        "key": "/library/metadata/398021/children",
+        "parentRatingKey": "397975",
+        "guid": "plex://album/5d07c442403c6402909e0c38",
+        "parentGuid": "plex://artist/5d07bc54403c6402904edd95",
+        "studio": "Revive Records",
+        "type": "album",
+        "title": "Age of the Fifth Sun",
+        "parentKey": "/library/metadata/397975",
+        "parentTitle": "God Is an Astronaut",
+        "summary": "Recorded March 2009 - April 2010 @ Quill Lane Studio Mixed and Produced by Torsten Kinsella, Zachary Dutton-Hanney and Pat O'Donnell Mastered by Tim Young @ Metropolis Mastering in London Read more on Last.fm. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply.",
+        "index": 1,
+        "viewCount": 4,
+        "lastViewedAt": 1545381782,
+        "year": 2010,
+        "thumb": "/library/metadata/398021/thumb/1581395452",
+        "art": "/library/metadata/397975/art/1590339767",
+        "parentThumb": "/library/metadata/397975/thumb/1590339767",
+        "originallyAvailableAt": "2010-01-01",
+        "addedAt": 1498403544,
+        "updatedAt": 1581395452,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Post-Rock"
+          }
+        ]
+      },
+      {
+        "ratingKey": "397985",
+        "key": "/library/metadata/397985/children",
+        "parentRatingKey": "397975",
+        "guid": "plex://album/5d07c266403c6402908d0e9c",
+        "parentGuid": "plex://artist/5d07bc54403c6402904edd95",
+        "studio": "Rocket Girl",
+        "type": "album",
+        "title": "All Is Violent, All Is Bright",
+        "parentKey": "/library/metadata/397975",
+        "parentTitle": "God Is an Astronaut",
+        "summary": "On their second album, All Is Violent, All Is Bright, Irish instrumental trio God Is an Astronaut continue to create anthem-like tracks suggestive of 1980s alternative rock, but without the vocals. Torsten Kinsella provides atmospheric sounds on his keyboards and keening melodic lines on his guitar, as his bassist brother Niels Kinsela and drummer Lloyd Hanney soon lock in with medium-tempo rock rhythms on tune after tune. The importance of dynamics to the music is paramount, as the tracks tend to gradually rise in intensity, a crescendo building to the midpoint, with the music then falling away and slowly building back up to the finish. Of course, anthems generally have words, but God Is an Astronaut's tunes manage to be stirring and inspiring without a voice to intone lyrics over them. Since there are no vocals, no virtuosic solos, no well-developed melodies, and no steady dance beats, the band gets its instrumental points across by mood, varying the power, volume, and pace within repetitive patterns. It will still sound to many listeners like a music-minus-one experience -- U2 without Bono, for example -- but that's the point. The God Is an Astronaut musicians are alternative rock purists intent on affecting their audience with the overall sound of their music alone. ~ William Ruhlmann",
+        "index": 1,
+        "rating": 6.0,
+        "viewCount": 18,
+        "lastViewedAt": 1582374233,
+        "year": 2005,
+        "thumb": "/library/metadata/397985/thumb/1581395451",
+        "art": "/library/metadata/397975/art/1590339767",
+        "parentThumb": "/library/metadata/397975/thumb/1590339767",
+        "originallyAvailableAt": "2005-01-01",
+        "addedAt": 1498403543,
+        "updatedAt": 1581395451,
+        "loudnessAnalysisVersion": "1",
+        "Genre": [
+          {
+            "tag": "Post-Rock"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+
+{
+  "MediaContainer": {
+    "size": 16,
+    "allowSync": false,
+    "identifier": "com.plexapp.plugins.library",
+    "mediaTagPrefix": "/system/bundle/media/flags/",
+    "mediaTagVersion": 1530105926,
+    "title1": "Plex Library",
+    "Directory": [
+      {
+        "allowSync": true,
+        "art": "/:/resources/artist-fanart.jpg",
+        "composite": "/library/sections/29/composite/1533454149",
+        "filters": true,
+        "refreshing": false,
+        "thumb": "/:/resources/artist.png",
+        "key": "29",
+        "type": "artist",
+        "title": "Music",
+        "agent": "com.plexapp.agents.lastfm",
+        "scanner": "Plex Music Scanner",
+        "language": "en",
+        "uuid": "63c7dcc8-4d41-41f1-b103-6fe124ca324c",
+        "updatedAt": 1513603096,
+        "createdAt": 1461341110,
+        "scannedAt": 1533454149,
+        "Location": [
+          {
+            "id": 49,
+            "path": "/mnt/music"
+          }
+        ]
+      }
+    ]
+  }
+}

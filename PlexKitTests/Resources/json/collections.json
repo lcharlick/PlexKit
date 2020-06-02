@@ -1,0 +1,22 @@
+{
+    "MediaContainer": {
+        "size": 1,
+        "allowSync": false,
+        "art": "/:/resources/artist-fanart.jpg",
+        "content": "secondary",
+        "identifier": "com.plexapp.plugins.library",
+        "mediaTagPrefix": "/system/bundle/media/flags/",
+        "mediaTagVersion": 1557920080,
+        "nocache": true,
+        "thumb": "/:/resources/artist.png",
+        "title1": "Audiobooks (Audible)",
+        "title2": "By Collection",
+        "viewGroup": "secondary",
+        "viewMode": 65592,
+        "Directory": [{
+            "fastKey": "/library/sections/34/all?collection=3286",
+            "key": "3286",
+            "title": "Harry Potter"
+        }]
+    }
+}

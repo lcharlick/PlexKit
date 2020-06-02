@@ -1,0 +1,281 @@
+[
+    {
+        "name": "name",
+        "product": "Plex Media Server",
+        "productVersion": "1.16.1.1291-158e5b199",
+        "platform": "Linux",
+        "platformVersion": "7 (Core)",
+        "device": "PC",
+        "clientIdentifier": "clientIdentifier",
+        "createdAt": "2019-07-11T06:45:07Z",
+        "lastSeenAt": "2020-05-29T12:01:13Z",
+        "provides": "server",
+        "ownerId": null,
+        "sourceTitle": null,
+        "publicAddress": "publicAddress",
+        "accessToken": "accessToken",
+        "owned": true,
+        "home": false,
+        "synced": false,
+        "relay": true,
+        "presence": true,
+        "httpsRequired": false,
+        "publicAddressMatches": false,
+        "dnsRebindingProtection": false,
+        "connections": [
+            {
+                "protocol": "http",
+                "address": "address",
+                "port": 32400,
+                "uri": "uri",
+                "local": false,
+                "relay": false,
+                "IPv6": false
+            }
+        ]
+    },
+    {
+        "name": "home-server",
+        "product": "Plex Media Server",
+        "productVersion": "1.19.3.2843-e3c1f7bcd",
+        "platform": "FreeBSD",
+        "platformVersion": "11.3-RELEASE-p6",
+        "device": "PC",
+        "clientIdentifier": "clientIdentifier",
+        "createdAt": "2015-12-03T07:51:43Z",
+        "lastSeenAt": "2020-05-29T03:10:57Z",
+        "provides": "server",
+        "ownerId": null,
+        "sourceTitle": null,
+        "publicAddress": "publicAddress",
+        "accessToken": "accessToken",
+        "owned": true,
+        "home": false,
+        "synced": false,
+        "relay": true,
+        "presence": true,
+        "httpsRequired": false,
+        "publicAddressMatches": true,
+        "dnsRebindingProtection": false,
+        "natLoopbackSupported": false,
+        "connections": [
+            {
+                "protocol": "http",
+                "address": "address",
+                "port": 14871,
+                "uri": "uri",
+                "local": false,
+                "relay": false,
+                "IPv6": false
+            },
+            {
+                "protocol": "http",
+                "address": "address",
+                "port": 32400,
+                "uri": "uri",
+                "local": true,
+                "relay": false,
+                "IPv6": false
+            },
+            {
+                "protocol": "http",
+                "address": "address",
+                "port": 27560,
+                "uri": "uri",
+                "local": false,
+                "relay": false,
+                "IPv6": false
+            }
+        ]
+    },
+    {
+        "name": "itunes-server",
+        "product": "Plex Media Server",
+        "productVersion": "1.10.1.4602-f54242b6b",
+        "platform": "MacOSX",
+        "platformVersion": "10.12.6",
+        "device": "Mac",
+        "clientIdentifier": "clientIdentifier",
+        "createdAt": "2016-10-03T05:55:37Z",
+        "lastSeenAt": "2018-01-17T01:42:32Z",
+        "provides": "server",
+        "ownerId": 10834098,
+        "sourceTitle": "sourceTitle",
+        "publicAddress": "publicAddress",
+        "accessToken": "accessToken",
+        "owned": false,
+        "home": true,
+        "synced": false,
+        "relay": true,
+        "presence": false,
+        "httpsRequired": false,
+        "publicAddressMatches": false,
+        "connections": [
+            {
+                "protocol": "http",
+                "address": "address",
+                "port": 32400,
+                "uri": "uri",
+                "local": true,
+                "relay": false,
+                "IPv6": false
+            },
+            {
+                "protocol": "http",
+                "address": "address",
+                "port": 32400,
+                "uri": "uri",
+                "local": true,
+                "relay": false,
+                "IPv6": false
+            },
+            {
+                "protocol": "http",
+                "address": "address",
+                "port": 26760,
+                "uri": "uri",
+                "local": false,
+                "relay": false,
+                "IPv6": false
+            }
+        ]
+    },
+    {
+        "name": "iPhone",
+        "product": "Plex for iOS",
+        "productVersion": "7.1",
+        "platform": "iOS",
+        "platformVersion": "13.5",
+        "device": "iPhone",
+        "clientIdentifier": "clientIdentifier",
+        "createdAt": "2019-11-16T10:32:43Z",
+        "lastSeenAt": "2020-05-29T12:12:44Z",
+        "provides": "client,controller,sync-target,player,pubsub-player,provider-playback",
+        "ownerId": null,
+        "sourceTitle": null,
+        "publicAddress": "publicAddress",
+        "accessToken": null,
+        "owned": true,
+        "home": false,
+        "synced": false,
+        "relay": false,
+        "presence": false,
+        "httpsRequired": false,
+        "publicAddressMatches": true,
+        "connections": [
+            {
+                "protocol": "http",
+                "address": "address",
+                "port": 32500,
+                "uri": "uri",
+                "local": true,
+                "relay": false,
+                "IPv6": false
+            }
+        ]
+    },
+    {
+        "name": "Safari",
+        "product": "Plex Web",
+        "productVersion": "4.30.2",
+        "platform": "Safari",
+        "platformVersion": "13.1",
+        "device": "OSX",
+        "clientIdentifier": "clientIdentifier",
+        "createdAt": "2019-12-16T11:36:01Z",
+        "lastSeenAt": "2020-05-28T23:28:51Z",
+        "provides": "client,player,pubsub-player",
+        "ownerId": null,
+        "sourceTitle": null,
+        "publicAddress": "publicAddress",
+        "accessToken": "accessToken",
+        "owned": true,
+        "home": false,
+        "synced": false,
+        "relay": false,
+        "presence": false,
+        "httpsRequired": false,
+        "publicAddressMatches": true,
+        "connections": [
+            {
+                "protocol": "http",
+                "address": "address",
+                "port": 14871,
+                "uri": "uri",
+                "local": false,
+                "relay": false,
+                "IPv6": false
+            },
+            {
+                "protocol": "http",
+                "address": "address",
+                "port": 32400,
+                "uri": "uri",
+                "local": true,
+                "relay": false,
+                "IPv6": false
+            },
+            {
+                "protocol": "http",
+                "address": "address",
+                "port": 27560,
+                "uri": "uri",
+                "local": false,
+                "relay": false,
+                "IPv6": false
+            }
+        ]
+    },
+    {
+        "name": "Safari",
+        "product": "Plex Web",
+        "productVersion": "4.30.2",
+        "platform": "Safari",
+        "platformVersion": "13.1",
+        "device": "OSX",
+        "clientIdentifier": "clientIdentifier",
+        "createdAt": "2020-05-26T07:10:05Z",
+        "lastSeenAt": "2020-05-29T13:09:52Z",
+        "provides": "client,player,pubsub-player",
+        "ownerId": null,
+        "sourceTitle": null,
+        "publicAddress": "publicAddress",
+        "accessToken": "accessToken",
+        "owned": true,
+        "home": false,
+        "synced": false,
+        "relay": false,
+        "presence": false,
+        "httpsRequired": false,
+        "publicAddressMatches": true,
+        "connections": [
+            {
+                "protocol": "http",
+                "address": "address",
+                "port": 14871,
+                "uri": "uri",
+                "local": false,
+                "relay": false,
+                "IPv6": false
+            },
+            {
+                "protocol": "http",
+                "address": "address",
+                "port": 32400,
+                "uri": "uri",
+                "local": true,
+                "relay": false,
+                "IPv6": false
+            },
+            {
+                "protocol": "http",
+                "address": "address",
+                "port": 27560,
+                "uri": "uri",
+                "local": false,
+                "relay": false,
+                "IPv6": false
+            }
+        ]
+    }
+]

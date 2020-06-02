@@ -1,0 +1,65 @@
+{
+    "MediaContainer": {
+        "size": 1,
+        "allowSync": true,
+        "identifier": "com.plexapp.plugins.library",
+        "librarySectionID": 30,
+        "librarySectionTitle": "Music (Demo)",
+        "librarySectionUUID": "c36e3669-ce94-4905-a7f2-622a6706a3da",
+        "Hub": [{
+            "hubKey": "/library/metadata/395618,474495",
+            "key": "/library/metadata/380361/similar",
+            "title": "Similar Artists",
+            "type": "artist",
+            "hubIdentifier": "artist.similar",
+            "context": "hub.artist.similar",
+            "size": 2,
+            "more": false,
+            "style": "shelf",
+            "Metadata": [{
+                "ratingKey": "395618",
+                "key": "/library/metadata/395618/children",
+                "guid": "plex://artist/5d07bc70403c6402905056f4",
+                "type": "artist",
+                "title": "Wolves in the Throne Room",
+                "librarySectionTitle": "Music (Demo)",
+                "librarySectionID": 30,
+                "librarySectionKey": "/library/sections/30",
+                "index": 1,
+                "viewCount": 111,
+                "lastViewedAt": 1569915565,
+                "thumb": "/library/metadata/395618/thumb/1586890756",
+                "art": "/library/metadata/395618/art/1586890756",
+                "addedAt": 1492839992,
+                "updatedAt": 1586890756,
+                "Genre": [{
+                    "tag": "Pop/Rock"
+                }],
+                "Country": [{
+                    "tag": "United States"
+                }]
+            }, {
+                "ratingKey": "474495",
+                "key": "/library/metadata/474495/children",
+                "guid": "com.plexapp.agents.lastfm://Agalloch?lang=en",
+                "type": "artist",
+                "title": "Agalloch",
+                "librarySectionTitle": "Music (Demo)",
+                "librarySectionID": 30,
+                "librarySectionKey": "/library/sections/30",
+                "index": 1,
+                "viewCount": 197,
+                "lastViewedAt": 1586424600,
+                "thumb": "/library/metadata/474495/thumb/1586890699",
+                "art": "/library/metadata/474495/art/1586890699",
+                "addedAt": 1574832895,
+                "updatedAt": 1586890699,
+                "Genre": [{
+                    "tag": "Doom metal"
+                }, {
+                    "tag": "Folk metal"
+                }]
+            }]
+        }]
+    }
+}

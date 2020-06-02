@@ -1,0 +1,110 @@
+{
+    "MediaContainer": {
+        "size": 1,
+        "totalSize": 210,
+        "allowSync": true,
+        "art": "/:/resources/movie-fanart.jpg",
+        "identifier": "com.plexapp.plugins.library",
+        "librarySectionID": 3,
+        "librarySectionTitle": "Movies",
+        "librarySectionUUID": "d6f7b252-a65f-4bcb-af57-c560335acd0d",
+        "mediaTagPrefix": "/system/bundle/media/flags/",
+        "mediaTagVersion": 1590058356,
+        "offset": 0,
+        "thumb": "/:/resources/movie.png",
+        "title1": "Movies",
+        "title2": "All Movies",
+        "viewGroup": "movie",
+        "viewMode": 65592,
+        "Metadata": [
+            {
+                "ratingKey": "246169",
+                "key": "/library/metadata/246169",
+                "guid": "com.plexapp.agents.themoviedb://348?lang=en",
+                "studio": "20th Century Fox",
+                "type": "movie",
+                "title": "Alien",
+                "contentRating": "R",
+                "summary": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
+                "rating": 8.1,
+                "year": 1979,
+                "tagline": "In space no one can hear you scream.",
+                "thumb": "/library/metadata/246169/thumb/1560012400",
+                "art": "/library/metadata/246169/art/1560012400",
+                "duration": 6997616,
+                "originallyAvailableAt": "1979-05-25",
+                "addedAt": 1449039414,
+                "updatedAt": 1560012400,
+                "chapterSource": "agent",
+                "Media": [
+                    {
+                        "id": 220442,
+                        "duration": 6997616,
+                        "bitrate": 9434,
+                        "width": 1920,
+                        "height": 816,
+                        "aspectRatio": 2.35,
+                        "audioChannels": 6,
+                        "audioCodec": "dca",
+                        "videoCodec": "h264",
+                        "videoResolution": "1080",
+                        "container": "mkv",
+                        "videoFrameRate": "24p",
+                        "audioProfile": "dts",
+                        "videoProfile": "high",
+                        "Part": [
+                            {
+                                "id": 224807,
+                                "key": "/library/parts/224807/1449039336/file.mkv",
+                                "duration": 6997616,
+                                "file": "/mnt/movies/Alien (1979)/Alien.mkv",
+                                "size": 8251845873,
+                                "audioProfile": "dts",
+                                "container": "mkv",
+                                "videoProfile": "high"
+                            }
+                        ]
+                    }
+                ],
+                "Genre": [
+                    {
+                        "tag": "Horror"
+                    },
+                    {
+                        "tag": "Science Fiction"
+                    }
+                ],
+                "Director": [
+                    {
+                        "tag": "Ridley Scott"
+                    }
+                ],
+                "Writer": [
+                    {
+                        "tag": "Dan O'Bannon"
+                    }
+                ],
+                "Country": [
+                    {
+                        "tag": "USA"
+                    },
+                    {
+                        "tag": "United Kingdom"
+                    }
+                ],
+                "Role": [
+                    {
+                        "tag": "Bolaji Badejo"
+                    },
+                    {
+                        "tag": "Eddie Powell"
+                    },
+                    {
+                        "tag": "Harry Dean Stanton"
+                    }
+                ]
+            }
+
+        ]
+    }
+}

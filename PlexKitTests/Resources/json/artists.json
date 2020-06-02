@@ -1,0 +1,747 @@
+{
+  "MediaContainer": {
+    "size": 38,
+    "totalSize": 38,
+    "allowSync": true,
+    "art": "/:/resources/artist-fanart.jpg",
+    "identifier": "com.plexapp.plugins.library",
+    "librarySectionID": 30,
+    "librarySectionTitle": "Music (Demo)",
+    "librarySectionUUID": "c36e3669-ce94-4905-a7f2-622a6706a3da",
+    "mediaTagPrefix": "/system/bundle/media/flags/",
+    "mediaTagVersion": 1530105926,
+    "nocache": true,
+    "offset": 0,
+    "thumb": "/:/resources/artist.png",
+    "title1": "Music (Demo)",
+    "title2": "All Artists",
+    "viewGroup": "artist",
+    "viewMode": 65592,
+    "Metadata": [
+      {
+        "ratingKey": "399775",
+        "key": "/library/metadata/399775/children",
+        "type": "artist",
+        "title": "Agalloch",
+        "summary": "Agalloch was an American metal band formed in Portland, Oregon, United States in 1995. On May 13th, 2016, Agalloch announced their disbandment. John Haughm released the following statement regarding the status of Agalloch:",
+        "index": 1,
+        "viewCount": 69,
+        "lastViewedAt": 1532874929,
+        "thumb": "/library/metadata/399775/thumb/1533232019",
+        "art": "/library/metadata/399775/art/1533232019",
+        "addedAt": 1508135035,
+        "updatedAt": 1533232019,
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          },
+          {
+            "tag": "Doom Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "399802",
+        "key": "/library/metadata/399802/children",
+        "type": "artist",
+        "title": "Agalloch / Nest",
+        "titleSort": "Agalloch",
+        "summary": "",
+        "index": 1,
+        "addedAt": 1508135036,
+        "updatedAt": 1533232002
+      },
+      {
+        "ratingKey": "403867",
+        "key": "/library/metadata/403867/children",
+        "type": "artist",
+        "title": "Ahab",
+        "summary": "There are at least six artists named Ahab:",
+        "index": 1,
+        "viewCount": 47,
+        "lastViewedAt": 1532878943,
+        "thumb": "/library/metadata/403867/thumb/1533232012",
+        "addedAt": 1522735822,
+        "updatedAt": 1533232012,
+        "Genre": [
+          {
+            "tag": "Post-Metal"
+          },
+          {
+            "tag": "Funeral Doom Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "380361",
+        "key": "/library/metadata/380361/children",
+        "type": "artist",
+        "title": "Alcest",
+        "summary": "Alcest is a French blackgaze band formed in Bagnols Sur C\u00e8ze, Languedoc-Roussillon in 2000 by multi-instrumentalist Neige (Amesoeurs, Mortifera, Lantl\u00f4s, Peste Noire and more).",
+        "index": 1,
+        "viewCount": 19,
+        "lastViewedAt": 1533429452,
+        "thumb": "/library/metadata/380361/thumb/1533232013",
+        "art": "/library/metadata/380361/art/1533232013",
+        "addedAt": 1455545178,
+        "updatedAt": 1533232013,
+        "Genre": [
+          {
+            "tag": "Shoegaze"
+          },
+          {
+            "tag": "France"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403898",
+        "key": "/library/metadata/403898/children",
+        "type": "artist",
+        "title": "Alda",
+        "summary": "There are multiple artists with this name:",
+        "index": 1,
+        "viewCount": 12,
+        "lastViewedAt": 1531379886,
+        "thumb": "/library/metadata/403898/thumb/1533232004",
+        "addedAt": 1522735823,
+        "updatedAt": 1533232004,
+        "Genre": [
+          {
+            "tag": "Atmospheric Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403758",
+        "key": "/library/metadata/403758/children",
+        "type": "artist",
+        "title": "Allseits",
+        "summary": "Allseits (aka All Sides) is the drone project of German musician Nina Kernicke (live member of Troum).\nSo far she released \"Irrlicht\", a collaborative album with AUN (2008, on Oral), and the solo album \"Hel\" (2009, on Cyclic Law). Read more on Last.fm. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply",
+        "index": 1,
+        "viewCount": 42,
+        "lastViewedAt": 1532954846,
+        "thumb": "/library/metadata/403758/thumb/1533232029",
+        "addedAt": 1522735818,
+        "updatedAt": 1533232029,
+        "Genre": [
+          {
+            "tag": "Dark Ambient"
+          }
+        ]
+      },
+      {
+        "ratingKey": "404081",
+        "key": "/library/metadata/404081/children",
+        "type": "artist",
+        "title": "Altar of Plagues",
+        "summary": "Altar of Plagues was an Irish post-black metal band formed in 2006 in Cork, Ireland. Terms that are most frequently used to describe their sound include black metal, ambient and progressive metal or post-metal, though it seems no one description can sum up the act's massive sound. The act themselves consider black metal to be the genre to which they are most attached, but on the contrary they have also been quoted to take influence from acts as diverse as Emperor, Bj\u00f6rk and Arvo P\u00e4rt.",
+        "index": 1,
+        "viewCount": 9,
+        "lastViewedAt": 1502332368,
+        "thumb": "/library/metadata/404081/thumb/1533232009",
+        "addedAt": 1522735830,
+        "updatedAt": 1533232009,
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          },
+          {
+            "tag": "Atmospheric Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "381105",
+        "key": "/library/metadata/381105/children",
+        "type": "artist",
+        "title": "Cult of Luna",
+        "summary": "Cult of Luna is an atmospheric sludge/progressive metal/post-hardcore/post-metal band formed in 1998 in Ume\u00e5, Sweden by guitarist/vocalist Johannes Persson and vocalist Klas Rydberg.  After some member hunting and rehearsals CoL had its first line-up consisting of: Klas Rydberg, Johannes Persson, Magnus Lindberg, Erik Olofsson and Fredrik Renstrom. After a short period of time, Fredrik had to leave due to some personal difficulties.",
+        "index": 1,
+        "viewCount": 36,
+        "lastViewedAt": 1532702987,
+        "thumb": "/library/metadata/381105/thumb/1533232023",
+        "art": "/library/metadata/381105/art/1533232023",
+        "addedAt": 1466582311,
+        "updatedAt": 1533232023,
+        "Genre": [
+          {
+            "tag": "Post-Metal"
+          },
+          {
+            "tag": "Sweden"
+          }
+        ]
+      },
+      {
+        "ratingKey": "381097",
+        "key": "/library/metadata/381097/children",
+        "type": "artist",
+        "title": "Cult of Luna & Julie Christmas",
+        "titleSort": "Cult of Luna & Christmas, Julie",
+        "summary": "Collaboration of Cult of Luna & Julie Christmas.",
+        "index": 1,
+        "viewCount": 14,
+        "lastViewedAt": 1532016567,
+        "thumb": "/library/metadata/381097/thumb/1533232000",
+        "art": "/library/metadata/381097/art/1533232000",
+        "addedAt": 1466582311,
+        "updatedAt": 1533232000,
+        "Genre": [
+          {
+            "tag": "Post-Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403798",
+        "key": "/library/metadata/403798/children",
+        "type": "artist",
+        "title": "Earth",
+        "summary": "There is more than one artist with this name:",
+        "index": 1,
+        "viewCount": 6,
+        "lastViewedAt": 1460949365,
+        "thumb": "/library/metadata/403798/thumb/1533232017",
+        "addedAt": 1522735819,
+        "updatedAt": 1533232017,
+        "Genre": [
+          {
+            "tag": "Drone"
+          },
+          {
+            "tag": "Post-Rock"
+          }
+        ]
+      },
+      {
+        "ratingKey": "397975",
+        "key": "/library/metadata/397975/children",
+        "type": "artist",
+        "title": "God Is an Astronaut",
+        "summary": "Ever since forming in 2002, Irish trio God Is An Astronaut has reigned as one of the premier instrumental groups. With their fusion of intense rock instrumentation, ethereal and emotional soundscapes and transfixing melodies, each of the band's prior releases has offered a breath taking sonic journey.",
+        "index": 1,
+        "viewCount": 21,
+        "lastViewedAt": 1533143514,
+        "thumb": "/library/metadata/397975/thumb/1533232051",
+        "addedAt": 1498403543,
+        "updatedAt": 1533232051,
+        "Genre": [
+          {
+            "tag": "Post-Rock"
+          }
+        ]
+      },
+      {
+        "ratingKey": "397587",
+        "key": "/library/metadata/397587/children",
+        "type": "artist",
+        "title": "Godspeed You! Black Emperor",
+        "summary": "Godspeed You! Black Emperor (formerly punctuated Godspeed You Black Emperor! and abbreviated to GY!BE, GYBE or Godspeed) is a Canadian band based in Montreal, Quebec.",
+        "index": 1,
+        "viewCount": 9,
+        "lastViewedAt": 1510842023,
+        "thumb": "/library/metadata/397587/thumb/1533232009",
+        "addedAt": 1498270635,
+        "updatedAt": 1533232009,
+        "Genre": [
+          {
+            "tag": "Post-Rock"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403660",
+        "key": "/library/metadata/403660/children",
+        "type": "artist",
+        "title": "Gojira",
+        "summary": "There are multiple artists called Gojira;",
+        "index": 1,
+        "viewCount": 11,
+        "lastViewedAt": 1466489198,
+        "thumb": "/library/metadata/403660/thumb/1533232028",
+        "addedAt": 1522735814,
+        "updatedAt": 1533232028,
+        "Genre": [
+          {
+            "tag": "Progressive Metal"
+          },
+          {
+            "tag": "Progressive Death Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "405476",
+        "key": "/library/metadata/405476/children",
+        "type": "artist",
+        "title": "Immortal",
+        "summary": "Immortal is a black metal band from Bergen, Norway, founded in 1991 by frontman and guitarist Abbath Doom Occulta (Olve Eikemo) and guitarist Demonaz Doom Occulta (Harald N\u00e6vdal). The pair worked with various drummers (including Grim, Armagedda and Hellhammer), and were later joined by current drummer Horgh (Reidar Horghagen) in 1996.",
+        "index": 1,
+        "viewCount": 13,
+        "lastViewedAt": 1533445379,
+        "thumb": "/library/metadata/405476/thumb/1533362832",
+        "addedAt": 1533192224,
+        "updatedAt": 1533362832,
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          },
+          {
+            "tag": "Death Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403953",
+        "key": "/library/metadata/403953/children",
+        "type": "artist",
+        "title": "Isis",
+        "summary": "There are at least eight artists that have used the name Isis:",
+        "index": 1,
+        "thumb": "/library/metadata/403953/thumb/1533232037",
+        "addedAt": 1522735825,
+        "updatedAt": 1533232037,
+        "Genre": [
+          {
+            "tag": "Post-Metal"
+          },
+          {
+            "tag": "Progressive Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403515",
+        "key": "/library/metadata/403515/children",
+        "type": "artist",
+        "title": "J\u00f3nsi",
+        "summary": "J\u00f3nsi is a pseudonym of, at least, two Icelandic artists:",
+        "index": 1,
+        "thumb": "/library/metadata/403515/thumb/1533232016",
+        "addedAt": 1522735807,
+        "updatedAt": 1533232016,
+        "Genre": [
+          {
+            "tag": "Electronic"
+          },
+          {
+            "tag": "Post-Rock"
+          }
+        ]
+      },
+      {
+        "ratingKey": "397800",
+        "key": "/library/metadata/397800/children",
+        "type": "artist",
+        "title": "Kauan",
+        "summary": "Kauan is a post-rock band from Chelyabinsk, Russia formed in 2005. The band's name stems from the Finnish language, and many of the band's lyrics are in Finnish.",
+        "index": 1,
+        "viewCount": 24,
+        "lastViewedAt": 1532873895,
+        "thumb": "/library/metadata/397800/thumb/1533317566",
+        "addedAt": 1498270642,
+        "updatedAt": 1533317566,
+        "Genre": [
+          {
+            "tag": "Post-Rock"
+          },
+          {
+            "tag": "Atmospheric Black Metal"
+          },
+          {
+            "tag": "Folk Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "397768",
+        "key": "/library/metadata/397768/children",
+        "type": "artist",
+        "title": "Lantl\u00f4s",
+        "summary": "Lantl\u00f4s was founded in 2005/2006 in Rheda, Germany by Herbst and Angrrau. Some rough demos were recorded and later released on the extremely limited \"\u00cesern Himel\" demo tape by the band itself in 2008. Because both Herbst and Angrrau were not satisfied with the sound and \"\u00cesern Himel\" was always meant to be a demo, they started to record the debut in their homestudio in September of 2007. After Albo\u00een joined as a session singer their first line-up was complete. \"Lantl\u00f4s\", released by ATMF, saw daylight in September of 2008 in combination with the perfect artwork by Fursy Teyssier. Shortly thereafter, Angrrau and Albo\u00een left Lantl\u00f4s. The debut was rereleased on LP via Deviant Records and on tape via Karge Welten in 2009.",
+        "index": 1,
+        "thumb": "/library/metadata/397768/thumb/1533317556",
+        "addedAt": 1498270641,
+        "updatedAt": 1533317556,
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          },
+          {
+            "tag": "Shoegaze"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403911",
+        "key": "/library/metadata/403911/children",
+        "type": "artist",
+        "title": "Lychgate",
+        "summary": "There are two artists called Lychgate:",
+        "index": 1,
+        "lastViewedAt": 1439289120,
+        "thumb": "/library/metadata/403911/thumb/1533232042",
+        "addedAt": 1522735824,
+        "updatedAt": 1533232042,
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "397616",
+        "key": "/library/metadata/397616/children",
+        "type": "artist",
+        "title": "Mogwai",
+        "summary": "Mogwai are a band from Glasgow formed in 1995. They compose lengthy, mostly instrumental guitar-based pieces in the style of post-rock, usually focused around the elaboration of a single theme, and are known traditionally for their quiet/loud dynamic, defined bass riffs, and an eminent ambient sound, sometimes dark and sometimes grand. Although frequently referred to as post-rock, the band have revealed in interviews that they despise this categorization, insisting that their sound bears little resemblance to pioneers of the genre, such as Tortoise.",
+        "index": 1,
+        "viewCount": 16,
+        "lastViewedAt": 1505215036,
+        "thumb": "/library/metadata/397616/thumb/1533317613",
+        "addedAt": 1498270636,
+        "updatedAt": 1533317613,
+        "Genre": [
+          {
+            "tag": "Post-Rock"
+          }
+        ]
+      },
+      {
+        "ratingKey": "397717",
+        "key": "/library/metadata/397717/children",
+        "type": "artist",
+        "title": "Vinterriket / Northaunt",
+        "titleSort": "Northaunt",
+        "summary": "",
+        "index": 1,
+        "addedAt": 1498270640,
+        "updatedAt": 1533317561,
+        "Genre": [
+          {
+            "tag": "Dark Ambient"
+          }
+        ]
+      },
+      {
+        "ratingKey": "397765",
+        "key": "/library/metadata/397765/children",
+        "type": "artist",
+        "title": "Northaunt & Svartsinn",
+        "titleSort": "Northaunt",
+        "summary": "",
+        "index": 1,
+        "addedAt": 1498270641,
+        "updatedAt": 1533317550,
+        "Genre": [
+          {
+            "tag": "Ambient"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403600",
+        "key": "/library/metadata/403600/children",
+        "type": "artist",
+        "title": ":Of the Wand & the Moon:",
+        "titleSort": "Of the Wand & the Moon",
+        "summary": "",
+        "index": 1,
+        "viewCount": 6,
+        "lastViewedAt": 1531661016,
+        "thumb": "/library/metadata/403600/thumb/1533232362",
+        "addedAt": 1522735811,
+        "updatedAt": 1533232362,
+        "Genre": [
+          {
+            "tag": "Neofolk"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403479",
+        "key": "/library/metadata/403479/children",
+        "type": "artist",
+        "title": "Oranssi Pazuzu",
+        "summary": "Oranssi Pazuzu is a Finnish psychedelic black metal band formed in 2007. The band consists of Juho \"Jun-His\" Vanhanen (vocals, guitar), Korjak (drums), Moit (guitar), Evil (keyboards, percussion) and Ontto (bass guitar). The band takes its name from \"oranssi\", the Finnish word for \"orange\" and Pazuzu, a wind demon from Babylonian mythology.",
+        "index": 1,
+        "viewCount": 29,
+        "lastViewedAt": 1485134778,
+        "thumb": "/library/metadata/403479/thumb/1533232055",
+        "addedAt": 1522735806,
+        "updatedAt": 1533232055,
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          },
+          {
+            "tag": "Space Rock"
+          }
+        ]
+      },
+      {
+        "ratingKey": "404003",
+        "key": "/library/metadata/404003/children",
+        "type": "artist",
+        "title": "Rammstein",
+        "summary": "Rammstein is a German metal band which was formed in 1994, in Berlin, and consists of Till Lindemann (lead vocals), Richard Kruspe (lead guitar and backing vocals), Paul Landers (rhythm guitar, backing vocals), Oliver Riedel (bass guitar, \"Ollie\"), Christoph Schneider (drums and Electronic percussion, \"Doom\") and Christian Lorenz (keyboards, \"Flake\"). The band is widely accepted as part of the Neue Deutsche H\u00e4rte scene, alongside bands such as Oomph!, Laibach, and Die Krupps. Their songs are performed almost exclusively in German. They have sold over 22 million records worldwide. Rammstein's entire catalogue is published by Universal Music Group. Since its formation, Rammstein has had no changes in lineup.\nAlthough the majority of their songs are written in German, Rammstein has had success across the world.",
+        "index": 1,
+        "viewCount": 147,
+        "lastViewedAt": 1532870857,
+        "thumb": "/library/metadata/404003/thumb/1533317597",
+        "addedAt": 1522735827,
+        "updatedAt": 1533317597,
+        "Genre": [
+          {
+            "tag": "Industrial Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "397853",
+        "key": "/library/metadata/397853/children",
+        "type": "artist",
+        "title": "Ulrich Schnauss",
+        "titleSort": "Schnauss, Ulrich",
+        "summary": "Ulrich Schnauss (born 1977 in Kiel) is a German electronic musician and producer based in London, England.",
+        "index": 1,
+        "viewCount": 141,
+        "lastViewedAt": 1533192244,
+        "thumb": "/library/metadata/397853/thumb/1533317581",
+        "addedAt": 1498270644,
+        "updatedAt": 1533317581,
+        "Genre": [
+          {
+            "tag": "Ambient"
+          },
+          {
+            "tag": "Downtempo"
+          },
+          {
+            "tag": "Electronic"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403518",
+        "key": "/library/metadata/403518/children",
+        "type": "artist",
+        "title": "Sigur R\u00f3s",
+        "summary": "Sigur R\u00f3s are an Icelandic post-rock band.  The name is derived from the name of lead vocalist J\u00f3nsi Birgisson's little sister, Sigurr\u00f3s. They hail from the same creative and vibrant Icelandic music scene as m\u00fam and Amiina. They released their first ever foray into film-making with their tour documentary, Heima in late 2007.",
+        "index": 1,
+        "viewCount": 195,
+        "lastViewedAt": 1533398761,
+        "thumb": "/library/metadata/403518/thumb/1533317637",
+        "art": "/library/metadata/403518/art/1533317637",
+        "addedAt": 1522735808,
+        "updatedAt": 1533317637,
+        "Genre": [
+          {
+            "tag": "Ambient"
+          },
+          {
+            "tag": "Post-Rock"
+          }
+        ]
+      },
+      {
+        "ratingKey": "381412",
+        "key": "/library/metadata/381412/children",
+        "type": "artist",
+        "title": "Sunn O)))",
+        "summary": "",
+        "index": 1,
+        "thumb": "/library/metadata/381412/thumb/1533232362",
+        "art": "/library/metadata/381412/art/1533232362",
+        "addedAt": 1466582323,
+        "updatedAt": 1533232362,
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          },
+          {
+            "tag": "Drone"
+          },
+          {
+            "tag": "Drone Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "381472",
+        "key": "/library/metadata/381472/children",
+        "type": "artist",
+        "title": "Sunn O))) / Earth",
+        "titleSort": "Sunn O)))",
+        "summary": "",
+        "index": 1,
+        "addedAt": 1466582327,
+        "updatedAt": 1533232349
+      },
+      {
+        "ratingKey": "381475",
+        "key": "/library/metadata/381475/children",
+        "type": "artist",
+        "title": "Thy Catafalque",
+        "summary": "Thy Catafalque is an avantgarde post-black metal act from Mak\u00f3, Hungary since 1998.",
+        "index": 1,
+        "viewCount": 57,
+        "lastViewedAt": 1531630121,
+        "thumb": "/library/metadata/381475/thumb/1533317574",
+        "addedAt": 1466582327,
+        "updatedAt": 1533317574,
+        "Genre": [
+          {
+            "tag": "Avant-Garde Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "382364",
+        "key": "/library/metadata/382364/children",
+        "type": "artist",
+        "title": "Tool",
+        "summary": "Formed around 1990 in Los Angeles, California, United States, by drummer Danny Carey, guitarist Adam Jones, vocalist Maynard James Keenan, and original bassist Paul D'Amour, Tool is a band that is most noted for combining alternative metal with a wide variety of progressive structures, irregular time signatures and lyrics that range from angry diatribes to meditations on philosophical and social matters.",
+        "index": 1,
+        "viewCount": 45,
+        "lastViewedAt": 1532876992,
+        "thumb": "/library/metadata/382364/thumb/1533317581",
+        "addedAt": 1466582370,
+        "updatedAt": 1533317581,
+        "Genre": [
+          {
+            "tag": "Progressive Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "397914",
+        "key": "/library/metadata/397914/children",
+        "type": "artist",
+        "title": "Tycho",
+        "summary": "Scott Hansen (born 1976/1977), professionally known as Tycho, is an American ambient music artist and producer, who is known as ISO50 for his photographic and design works. Tycho is currently signed to, and has released under, Ghostly International, but has also released music on Merck Records and Gammaphone Records. His song, Dictaphone's Lament, was used as the track on a music video entitled \"Live Life to the Fullest\", which was made by and featured on the action cartoon block Toonami. Additionally, his song Cascade (originally made for an Adult Swim/Ghostly International compilation) was played during the final moments of the original 11-year run of Toonami in 2008.",
+        "index": 1,
+        "viewCount": 177,
+        "lastViewedAt": 1533397046,
+        "thumb": "/library/metadata/397914/thumb/1533317584",
+        "addedAt": 1498270646,
+        "updatedAt": 1533317584,
+        "Genre": [
+          {
+            "tag": "Electronic"
+          }
+        ]
+      },
+      {
+        "ratingKey": "381252",
+        "key": "/library/metadata/381252/children",
+        "type": "artist",
+        "title": "Ulver",
+        "summary": "Ulver (Norwegian for \u201cwolves\u201d) is a multi-disciplinary musical group founded in Oslo, Norway and currently based in London, England. The band was formed by Kristoffer \"Garm\" Rygg in 1993, and the current line-up includes Rygg (vocal, programming), J\u00f8rn H. Sv\u00e6ren (misc.), Tore Ylwizaker (programming, piano) and Daniel O'Sullivan (guitar, piano, various). Since their first black metal releases in 1993, Ulver\u2019s style has ever been changing by combining elements of experimental, electronic and ambient music, avant-garde, rock, trip-hop, and their own innovations.",
+        "index": 1,
+        "viewCount": 77,
+        "lastViewedAt": 1532425472,
+        "thumb": "/library/metadata/381252/thumb/1533232120",
+        "addedAt": 1466582317,
+        "updatedAt": 1533232120,
+        "Genre": [
+          {
+            "tag": "Norway"
+          }
+        ]
+      },
+      {
+        "ratingKey": "403933",
+        "key": "/library/metadata/403933/children",
+        "type": "artist",
+        "title": "Klage / Vemod",
+        "titleSort": "Vemod",
+        "summary": "",
+        "index": 1,
+        "addedAt": 1522735824,
+        "updatedAt": 1533232022
+      },
+      {
+        "ratingKey": "403936",
+        "key": "/library/metadata/403936/children",
+        "type": "artist",
+        "title": "Vemod",
+        "summary": "There are several artists with the name Vemod:",
+        "index": 1,
+        "viewCount": 56,
+        "lastViewedAt": 1502427932,
+        "thumb": "/library/metadata/403936/thumb/1533232058",
+        "addedAt": 1522735824,
+        "updatedAt": 1533232058,
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "397550",
+        "key": "/library/metadata/397550/children",
+        "type": "artist",
+        "title": "Wardruna",
+        "summary": "Wardruna is a Norwegian music group founded by Einar Kvitrafn Selvik. In 2009 Wardruna enchanted their listeners with their mesmerizing debut album \u2018gap var Ginnunga\u2019, which also was the first part of a planned trilogy. In the ensuing years the group have spent a lot of time on adapting their music to a live format and establishing a live band. This resulting in a handful of very special concerts, perhaps most notably when they performed in front of the majestic 1100-year-old Gokstad ship at the Viking Ship Museum in Norway.",
+        "index": 1,
+        "viewCount": 9,
+        "lastViewedAt": 1450853032,
+        "thumb": "/library/metadata/397550/thumb/1533232028",
+        "art": "/library/metadata/397550/art/1533232028",
+        "addedAt": 1498270634,
+        "updatedAt": 1533232028,
+        "Genre": [
+          {
+            "tag": "Neofolk"
+          }
+        ]
+      },
+      {
+        "ratingKey": "395618",
+        "key": "/library/metadata/395618/children",
+        "type": "artist",
+        "title": "Wolves in the Throne Room",
+        "summary": "Wolves in the Throne Room is a black metal band which formed in Olympia, Washington, United States in 2002. The band's core lineup has primarily consisted of brothers Nathan Weaver (vocals, guitar) and Aaron Weaver (drums, other instruments), though since 2017 Kody Keyworth (guitar) is also considered a permanent member. The band has released six full-length albums to date, as well as a number of EPs. They have stated one of the founding concepts of the band to be channelling the \"energies of the Pacific Northwest's landscape\" into musical form. Read more on Last.fm. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply",
+        "index": 1,
+        "viewCount": 95,
+        "lastViewedAt": 1533287985,
+        "thumb": "/library/metadata/395618/thumb/1533232036",
+        "art": "/library/metadata/395618/art/1533232036",
+        "addedAt": 1492839992,
+        "updatedAt": 1533232036,
+        "Genre": [
+          {
+            "tag": "Ambient"
+          },
+          {
+            "tag": "Black Metal"
+          },
+          {
+            "tag": "Atmospheric Black Metal"
+          }
+        ]
+      },
+      {
+        "ratingKey": "397539",
+        "key": "/library/metadata/397539/children",
+        "type": "artist",
+        "title": "Zeal and Ardor",
+        "summary": "Incorrect tag for Zeal & Ardor Read more on Last.fm. User-contributed text is available under the Creative Commons By-SA License; additional terms may apply",
+        "index": 1,
+        "viewCount": 16,
+        "lastViewedAt": 1532359590,
+        "thumb": "/library/metadata/397539/thumb/1533232039",
+        "addedAt": 1498270634,
+        "updatedAt": 1533232039,
+        "Genre": [
+          {
+            "tag": "Black Metal"
+          }
+        ]
+      }
+    ]
+  }
+}

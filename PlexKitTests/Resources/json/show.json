@@ -1,0 +1,69 @@
+{
+  "MediaContainer": {
+    "size": 1,
+    "totalSize": 120,
+    "allowSync": true,
+    "art": "/:/resources/show-fanart.jpg",
+    "identifier": "com.plexapp.plugins.library",
+    "librarySectionID": 2,
+    "librarySectionTitle": "TV Shows",
+    "librarySectionUUID": "fe6d6cca-91b2-4881-b03c-c3541476d7d6",
+    "mediaTagPrefix": "/system/bundle/media/flags/",
+    "mediaTagVersion": 1590058356,
+    "nocache": true,
+    "offset": 0,
+    "sortAsc": true,
+    "thumb": "/:/resources/show.png",
+    "title1": "TV Shows",
+    "title2": "All Shows",
+    "viewGroup": "show",
+    "viewMode": 131122,
+    "Metadata": [
+      {
+        "ratingKey": "37250",
+        "key": "/library/metadata/37250/children",
+        "guid": "com.plexapp.agents.thetvdb://74205?lang=en",
+        "studio": "HBO",
+        "type": "show",
+        "title": "Band of Brothers",
+        "contentRating": "TV-MA",
+        "summary": "The miniseries follows Easy Company, an army unit during World War II, from their initial training at Camp Toccoa to the conclusion of the war. The series is based on the book written by the late Stephen E. Ambrose. \r\n\r\nBand of Brothers is executive produced by Steven Spielberg and Tom Hanks, the series won 6 Emmy Awards. ",
+        "index": 1,
+        "rating": 9.4,
+        "viewCount": 8,
+        "lastViewedAt": 1477036961,
+        "year": 2001,
+        "thumb": "/library/metadata/37250/thumb/1559967326",
+        "art": "/library/metadata/37250/art/1559967326",
+        "banner": "/library/metadata/37250/banner/1559967326",
+        "theme": "/library/metadata/37250/theme/1559967326",
+        "duration": 3600000,
+        "originallyAvailableAt": "2001-09-09",
+        "leafCount": 10,
+        "viewedLeafCount": 8,
+        "childCount": 1,
+        "addedAt": 1427433010,
+        "updatedAt": 1559967326,
+        "Genre": [
+          {
+            "tag": "Action"
+          },
+          {
+            "tag": "Adventure"
+          }
+        ],
+        "Role": [
+          {
+            "tag": "Andrew Scott"
+          },
+          {
+            "tag": "Ben Caplan"
+          },
+          {
+            "tag": "Craig Heaney"
+          }
+        ]
+      }
+    ]
+  }
+}

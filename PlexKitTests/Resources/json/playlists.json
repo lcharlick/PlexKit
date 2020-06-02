@@ -1,0 +1,27 @@
+{
+    "MediaContainer": {
+        "size": 1,
+        "totalSize": 1,
+        "offset": 0,
+        "Metadata": [
+            {
+                "allowSync": true,
+                "ratingKey": "404337",
+                "key": "/playlists/404337/items",
+                "guid": "com.plexapp.agents.none://3a370e2f-4c27-4677-a0de-634e5e7736d4",
+                "type": "playlist",
+                "title": "Test Playlist",
+                "summary": "",
+                "smart": false,
+                "playlistType": "audio",
+                "composite": "/playlists/404337/composite/1524830850",
+                "viewCount": 5,
+                "lastViewedAt": 1524734209,
+                "duration": 4107000,
+                "leafCount": 9,
+                "addedAt": 1523543021,
+                "updatedAt": 1524830850
+            }
+        ]
+    }
+}

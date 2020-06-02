@@ -1,0 +1,21 @@
+{
+    "id": 12345,
+    "code": "XY7Z",
+    "product": "0",
+    "trusted": false,
+    "clientIdentifier": "clientIdentifier",
+    "location": {
+        "code": "AU",
+        "country": "Australia",
+        "city": "Adelaide",
+        "time_zone": "Australia/Adelaide",
+        "postal_code": "5000",
+        "subdivisions": "South Australia",
+        "coordinates": "-00.0000, 000.0000"
+    },
+    "expiresIn": 900,
+    "createdAt": "2020-05-30T14:59:05Z",
+    "expiresAt": "2020-05-30T15:14:05Z",
+    "authToken": "authToken",
+    "newRegistration": null
+}
