@@ -32,7 +32,7 @@ public extension Plex.Request.Libraries.Response {
         public let mediaTagPrefix: String?
         public let mediaTagVersion: Int?
         public let title1: String?
-        public let Directory: [PlexLibrary]?
+        private let Directory: [PlexLibrary]?
         public var directory: [PlexLibrary] { self.Directory ?? [] }
     }
 }
