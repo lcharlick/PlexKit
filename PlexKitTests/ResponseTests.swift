@@ -55,7 +55,7 @@ extension ResponseTests {
     func testPin_noId() throws {
         let response = try loadResponse(
             "pin_no_id",
-            for: Plex.ServiceRequest.Pin.self
+            for: Plex.ServiceRequest.OAuth.self
         )
         XCTAssertEqual(response.id, 1291057671)
         XCTAssertEqual(response.code, "XY7Z")
@@ -78,7 +78,7 @@ extension ResponseTests {
     func testPin() throws {
         let response = try loadResponse(
             "pin",
-            for: Plex.ServiceRequest.Pin.self
+            for: Plex.ServiceRequest.OAuth.self
         )
         XCTAssertEqual(response.authToken, "authToken")
     }

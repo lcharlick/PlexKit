@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		480638952482954B006F7F00 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480638942482954B006F7F00 /* URLExtensions.swift */; };
 		480638992482A145006F7F00 /* RequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480638982482A145006F7F00 /* RequestTests.swift */; };
-		4806389B2482AB63006F7F00 /* Pins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4806389A2482AB63006F7F00 /* Pins.swift */; };
+		4806389B2482AB63006F7F00 /* OAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4806389A2482AB63006F7F00 /* OAuth.swift */; };
 		480638A02482B222006F7F00 /* pin.json in Resources */ = {isa = PBXBuildFile; fileRef = 4806389E2482B222006F7F00 /* pin.json */; };
 		480638A12482B222006F7F00 /* pin_no_id.json in Resources */ = {isa = PBXBuildFile; fileRef = 4806389F2482B222006F7F00 /* pin_no_id.json */; };
 		480638A32482B394006F7F00 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480638A22482B394006F7F00 /* Account.swift */; };
@@ -83,7 +83,7 @@
 /* Begin PBXFileReference section */
 		480638942482954B006F7F00 /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
 		480638982482A145006F7F00 /* RequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTests.swift; sourceTree = "<group>"; };
-		4806389A2482AB63006F7F00 /* Pins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pins.swift; sourceTree = "<group>"; };
+		4806389A2482AB63006F7F00 /* OAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth.swift; sourceTree = "<group>"; };
 		4806389E2482B222006F7F00 /* pin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pin.json; sourceTree = "<group>"; };
 		4806389F2482B222006F7F00 /* pin_no_id.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pin_no_id.json; sourceTree = "<group>"; };
 		480638A22482B394006F7F00 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 			children = (
 				480638A22482B394006F7F00 /* Account.swift */,
 				480638A62482B642006F7F00 /* HomeUsers.swift */,
-				4806389A2482AB63006F7F00 /* Pins.swift */,
+				4806389A2482AB63006F7F00 /* OAuth.swift */,
 				4854D1832481465800132EEF /* Resources.swift */,
 				4854D18A24815BA800132EEF /* SimpleAuthentication.swift */,
 				480638B02482BB95006F7F00 /* SwitchUser.swift */,
@@ -489,7 +489,7 @@
 				480638BD24835E7F006F7F00 /* MediaFile.swift in Sources */,
 				480638A32482B394006F7F00 /* Account.swift in Sources */,
 				480638BB2482C7CB006F7F00 /* TranscodeImage.swift in Sources */,
-				4806389B2482AB63006F7F00 /* Pins.swift in Sources */,
+				4806389B2482AB63006F7F00 /* OAuth.swift in Sources */,
 				4860DBCF247D6B7F00D4B7C1 /* PlexMediaType.swift in Sources */,
 				4854D18B24815BA800132EEF /* SimpleAuthentication.swift in Sources */,
 				480638952482954B006F7F00 /* URLExtensions.swift in Sources */,

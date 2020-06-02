@@ -1,5 +1,5 @@
 //
-//  Pins.swift
+//  OAuth.swift
 //  PlexKit
 //
 //  Created by Lachlan Charlick on 31/5/20.
@@ -9,7 +9,7 @@
 import Foundation
 
 public extension Plex.ServiceRequest {
-    struct Pin: PlexServiceRequest {
+    struct OAuth: PlexServiceRequest {
         public var path: String {
             let path = "api/v2/pins"
             if let id = id {

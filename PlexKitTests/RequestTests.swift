@@ -35,7 +35,7 @@ class RequestTests: XCTestCase {
 
 extension RequestTests {
     func testPin_noId() throws {
-        let request = try Plex.ServiceRequest.Pin()
+        let request = try Plex.ServiceRequest.OAuth()
             .asURLRequest(using: nil)
 
         XCTAssertEqual(request.httpMethod, "POST")
@@ -58,7 +58,7 @@ extension RequestTests {
 
     func testPin() throws {
         let id: Int64 = 1234
-        let request = try Plex.ServiceRequest.Pin(id: id)
+        let request = try Plex.ServiceRequest.OAuth(id: id)
             .asURLRequest(using: nil)
 
         XCTAssertEqual(request.httpMethod, "GET")
