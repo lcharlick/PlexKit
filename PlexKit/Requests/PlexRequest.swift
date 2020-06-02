@@ -39,14 +39,14 @@ public extension BasePlexRequest where Response: Codable {
 public protocol PlexResourceRequest: BasePlexRequest {
     func asURLRequest(
         from url: URL,
-        using token: String
+        using token: String?
     ) throws -> URLRequest
 }
 
 public extension PlexResourceRequest {
     func asURLRequest(
         from url: URL,
-        using token: String
+        using token: String?
     ) throws -> URLRequest {
         guard let url = url.appendingPathComponent(path)
             .appendingQueryItems(queryItems ?? []) else {
@@ -56,7 +56,9 @@ public extension PlexResourceRequest {
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod
         request.addValue(accept, forHTTPHeaderField: "accept")
-        request.addValue(token, forHTTPHeaderField: "X-Plex-Token")
+        if let token = token {
+            request.addValue(token, forHTTPHeaderField: "X-Plex-Token")
+        }
         return request
     }
 }

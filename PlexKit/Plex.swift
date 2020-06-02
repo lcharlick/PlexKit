@@ -65,7 +65,7 @@ public final class Plex {
 
     @discardableResult public func request<Request: PlexServiceRequest>(
         _ request: Request,
-        using token: String?,
+        token: String? = nil,
         completion: @escaping (Result<Request.Response, PlexError>) -> Void
     ) -> URLSessionTask? {
         let urlRequest: URLRequest
@@ -90,7 +90,7 @@ public final class Plex {
     @discardableResult public func request<Request: PlexResourceRequest>(
         _ request: Request,
         from url: URL,
-        using token: String,
+        token: String? = nil,
         completion: @escaping (Result<Request.Response, PlexError>) -> Void
     ) -> URLSessionTask? {
         let urlRequest: URLRequest
