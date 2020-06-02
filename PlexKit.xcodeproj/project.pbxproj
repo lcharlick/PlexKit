@@ -166,6 +166,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4830D9B42486AADE0055E7F8 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
 		4854D18224813C7200132EEF /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +201,7 @@
 			children = (
 				48552B64247D26C500CFC029 /* PlexKit */,
 				48552B6F247D26C500CFC029 /* PlexKitTests */,
+				4830D9B42486AADE0055E7F8 /* Example */,
 				48552B63247D26C500CFC029 /* Products */,
 			);
 			sourceTree = "<group>";

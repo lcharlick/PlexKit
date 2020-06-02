@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='macos'>
+    <pages>
+        <page name='1. Authentication'/>
+        <page name='2. Resources'/>
+        <page name='3. Libraries'/>
+    </pages>
+</playground>
