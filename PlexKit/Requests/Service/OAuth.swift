@@ -9,6 +9,14 @@
 import Foundation
 
 public extension Plex.ServiceRequest {
+    /// Sign in using Plex's flavour of OAuth.
+    /// Basic authentication flow:
+    ///     - Perform this request initialized with no `id` parameter.
+    ///     - Use the result of that request to initialize an authentication URL
+    ///     (see `authenticationURL`).
+    ///     - Redirect the user to the authentication URL.
+    ///     - Initialize another request with an `id` from the initial response.
+    ///     - Poll continuously until the response contains an `authToken` value.
     struct OAuth: PlexServiceRequest {
         public var path: String {
             let path = "api/v2/pins"
@@ -30,8 +38,16 @@ public extension Plex.ServiceRequest {
 
         private let id: Int64?
 
+        /// Plex *does* seem to support redirect after login, but only for whitelisted URL schemes (e.g. infuse://).
+        /// For the rest of us, we have to poll the server periodically to determine the authentication result.
+        // private let redirectUrl: URL
+
         public init(id: Int64? = nil) {
             self.id = id
+        }
+
+        public init(response: Response) {
+            self.id = response.id
         }
 
         /// Builds an authentication URL from an OAuth response.
