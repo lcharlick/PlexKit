@@ -31,10 +31,10 @@ class RequestTests: XCTestCase {
     }
 }
 
-// MARK: - Pins.
+// MARK: - OAuth.
 
 extension RequestTests {
-    func testPin_noId() throws {
+    func testOAuth_noId() throws {
         let request = try Plex.ServiceRequest.OAuth()
             .asURLRequest(using: nil)
 
@@ -56,7 +56,7 @@ extension RequestTests {
         ])
     }
 
-    func testPin() throws {
+    func testOAuth_withId() throws {
         let id: Int64 = 1234
         let request = try Plex.ServiceRequest.OAuth(id: id)
             .asURLRequest(using: nil)
@@ -75,6 +75,28 @@ extension RequestTests {
         ])
 
         XCTAssertEqual(data.queryItems, [:])
+    }
+
+    func testOAuth_authenticationURL() throws {
+        let response = Plex.ServiceRequest.OAuth.Response(
+            id: 1234,
+            clientIdentifier: "clientIdentifier",
+            code: "code",
+            product: nil,
+            trusted: nil,
+            expiresIn: nil,
+            createdAt: nil,
+            expiresAt: nil,
+            authToken: nil,
+            newRegistration: nil
+        )
+
+        let url = Plex.ServiceRequest.OAuth.authenticationURL(for: response)
+
+        XCTAssertEqual(
+            url.absoluteString,
+            "https://app.plex.tv/auth#?clientID=\(response.clientIdentifier)&code=\(response.code)"
+        )
     }
 }
 

@@ -34,6 +34,11 @@ public extension Plex.ServiceRequest {
             self.id = id
         }
 
+        /// Builds an authentication URL from an OAuth response.
+        public static func authenticationURL(for response: Response) -> URL {
+            URL(string: "https://app.plex.tv/auth#?clientID=\(response.clientIdentifier)&code=\(response.code)")!
+        }
+
         public static func response(from data: Data) throws -> Response {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
