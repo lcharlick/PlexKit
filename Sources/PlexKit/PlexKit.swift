@@ -1,5 +1,5 @@
 //
-//  Plex.swift
+//  PlexKit.swift
 //  PlexKit
 //
 //  Created by Lachlan Charlick on 26/5/20.
