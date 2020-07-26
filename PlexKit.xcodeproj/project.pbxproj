@@ -66,6 +66,7 @@
 		4860DBC4247D480400D4B7C1 /* libraries.json in Resources */ = {isa = PBXBuildFile; fileRef = 4860DBA9247D480400D4B7C1 /* libraries.json */; };
 		4860DBC5247D480400D4B7C1 /* switch_user.json in Resources */ = {isa = PBXBuildFile; fileRef = 4860DBAA247D480400D4B7C1 /* switch_user.json */; };
 		4860DBCF247D6B7F00D4B7C1 /* PlexMediaType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4860DBCE247D6B7F00D4B7C1 /* PlexMediaType.swift */; };
+		48DA53AD24CD454900A51A55 /* resources_no_connections.json in Resources */ = {isa = PBXBuildFile; fileRef = 48DA53AC24CD454900A51A55 /* resources_no_connections.json */; };
 		E27A7225F5A81497C0D148C4 /* LibraryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27A7EF1960D7BB8821A8678 /* LibraryItems.swift */; };
 		E27A7CD781A51D0D048857E7 /* Identity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27A77A83492448E53873960 /* Identity.swift */; };
 /* End PBXBuildFile section */
@@ -143,6 +144,7 @@
 		4860DBA9247D480400D4B7C1 /* libraries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = libraries.json; sourceTree = "<group>"; };
 		4860DBAA247D480400D4B7C1 /* switch_user.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = switch_user.json; sourceTree = "<group>"; };
 		4860DBCE247D6B7F00D4B7C1 /* PlexMediaType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlexMediaType.swift; sourceTree = "<group>"; };
+		48DA53AC24CD454900A51A55 /* resources_no_connections.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resources_no_connections.json; sourceTree = "<group>"; };
 		E27A77A83492448E53873960 /* Identity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identity.swift; sourceTree = "<group>"; };
 		E27A7EF1960D7BB8821A8678 /* LibraryItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -291,6 +293,7 @@
 				4860DB99247D480400D4B7C1 /* tracks.json */,
 				4854D18024813A0C00132EEF /* library.json */,
 				4854D18824814CA700132EEF /* resources.json */,
+				48DA53AC24CD454900A51A55 /* resources_no_connections.json */,
 				4806389F2482B222006F7F00 /* pin_no_id.json */,
 				4806389E2482B222006F7F00 /* pin.json */,
 				480638A82482B780006F7F00 /* home_users.json */,
@@ -439,6 +442,7 @@
 				480638A02482B222006F7F00 /* pin.json in Resources */,
 				480638C1248369FD006F7F00 /* season.json in Resources */,
 				480638B72482C3C0006F7F00 /* similar_artists.json in Resources */,
+				48DA53AD24CD454900A51A55 /* resources_no_connections.json in Resources */,
 				4860DBC1247D480400D4B7C1 /* identity.json in Resources */,
 				4854D18924814CA700132EEF /* resources.json in Resources */,
 				4860DBC4247D480400D4B7C1 /* libraries.json in Resources */,
