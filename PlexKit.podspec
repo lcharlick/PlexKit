@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "PlexKit"
-  spec.version      = "1.1.0"
+  spec.version      = "1.1.1"
   spec.summary      = "Async Plex interface in pure Swift."
   spec.homepage     = "https://github.com/lcharlick/PlexKit"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
