@@ -8,7 +8,47 @@
 
 import Foundation
 
+@dynamicMemberLookup
 public struct PlexResource: Codable {
+    private let model: PlexResourceModel
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        self.model = try container.decode(PlexResourceModel.self)
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        try container.encode(model)
+    }
+
+    public subscript<T>(dynamicMember keyPath: KeyPath<PlexResourceModel, T>) -> T {
+        get { model[keyPath: keyPath] }
+    }
+
+    public var connections: [PlexConnection] {
+        model.connections ?? []
+    }
+
+    public var capabilities: Set<Capability> {
+        guard let provides = model.provides else { return Set() }
+        return Set(provides.split(separator: ",")
+            .map(String.init)
+            .compactMap(Capability.init(rawValue:)))
+    }
+
+    public enum Capability: String {
+        case client
+        case server
+        case player
+        case controller
+        case syncTarget = "sync-target"
+        case pubSubPlayer = "pub-sub-player"
+        case providerPlayback = "provider-playback"
+    }
+}
+
+public struct PlexResourceModel: Codable {
     public let clientIdentifier: String
     public let name: String
     public let product: String?
@@ -31,25 +71,8 @@ public struct PlexResource: Codable {
     public let httpsRequired: Bool?
     public let publicAddressMatches: Bool?
     public let dnsRebindingProtection: Bool?
-    public let connections: [PlexConnection]
+    public let connections: [PlexConnection]?
     public let natLoopbackSupported: Bool?
-
-    public var capabilities: Set<Capability> {
-        guard let provides = provides else { return Set() }
-        return Set(provides.split(separator: ",")
-            .map(String.init)
-            .compactMap(Capability.init(rawValue:)))
-    }
-
-    public enum Capability: String {
-        case client
-        case server
-        case player
-        case controller
-        case syncTarget = "sync-target"
-        case pubSubPlayer = "pub-sub-player"
-        case providerPlayback = "provider-playback"
-    }
 }
 
 public struct PlexConnection: Codable {
