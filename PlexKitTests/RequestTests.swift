@@ -16,6 +16,7 @@ class RequestTests: XCTestCase {
         init(request: URLRequest) {
             let url = request.url!
             self.baseURL = url.removingQueryItems()
+            self.httpMethod = request.httpMethod
             self.headers = request.allHTTPHeaderFields
 
             let items = url.queryItems?.map {
@@ -26,6 +27,7 @@ class RequestTests: XCTestCase {
         }
 
         let baseURL: URL
+        let httpMethod: String?
         let queryItems: [String: String?]
         let headers: [String: String]?
     }
@@ -556,6 +558,67 @@ extension RequestTests {
             "rating": "10", // Clamp to 0...10
             "identifier": "com.plexapp.plugins.library"
         ])
+    }
+}
+
+// MARK: - Playlist Items.
+
+extension RequestTests {
+    func testGetPlaylistItems() throws {
+        let request = try Plex.Request.PlaylistItems(
+            ratingKey: "woof",
+            action: .get
+        ).asURLRequest(from: testURL, using: nil)
+
+        let data = RequestData(request: request)
+        XCTAssertEqual(data.queryItems, [:])
+        XCTAssertEqual(data.httpMethod, "GET")
+    }
+
+    func testRemovePlaylistItem() throws {
+        let request = try Plex.Request.PlaylistItems(
+            ratingKey: "woof",
+            action: .remove(
+                ratingKey: "1"
+            )
+        ).asURLRequest(from: testURL, using: nil)
+
+        let data = RequestData(request: request)
+        XCTAssertEqual(request.url?.path, "/playlists/woof/items/1")
+        XCTAssertEqual(data.queryItems, [:])
+        XCTAssertEqual(data.httpMethod, "DELETE")
+    }
+
+    func testMovePlaylistItem() throws {
+        let request = try Plex.Request.PlaylistItems(
+            ratingKey: "woof",
+            action: .move(
+                ratingKey: "2",
+                after: "1"
+            )
+        ).asURLRequest(from: testURL, using: nil)
+
+        let data = RequestData(request: request)
+        XCTAssertEqual(request.url?.path, "/playlists/woof/items/2/move")
+        XCTAssertEqual(data.queryItems, [
+            "after": "1"
+        ])
+        XCTAssertEqual(data.httpMethod, "PUT")
+    }
+
+    func testMovePlaylistItemToBeginning() throws {
+        let request = try Plex.Request.PlaylistItems(
+            ratingKey: "woof",
+            action: .move(
+                ratingKey: "2",
+                after: nil
+            )
+        ).asURLRequest(from: testURL, using: nil)
+
+        let data = RequestData(request: request)
+        XCTAssertEqual(request.url?.path, "/playlists/woof/items/2/move")
+        XCTAssertEqual(data.queryItems, [:])
+        XCTAssertEqual(data.httpMethod, "PUT")
     }
 }
 
