@@ -16,7 +16,7 @@ public extension Plex.Request {
 
         public var queryItems: [URLQueryItem]? {
             var items: [URLQueryItem] = [
-                .init(name: path, value: "/library/metadata/\(ratingKey)"),
+                .init(name: "path", value: "/library/metadata/\(ratingKey)"),
                 .init(name: "mediaIndex", value: 0),
                 .init(name: "partIndex", value: 0),
                 .init(name: "maxAudioBitrate", value: preferredBitrate), // I don't think this has any effect.
@@ -31,7 +31,7 @@ public extension Plex.Request {
             items.append(
                 // swiftlint:disable line_length
                 .init(name: "X-Plex-Client-Profile-Extra", value: """
-                add-transcode-target(type=musicProfile&context=streaming&protocol=\(`protocol`)&container=mpegts&audioCodec=\(audioCodec)
+                add-transcode-target(type=musicProfile&context=streaming&protocol=\(`protocol`)&container=mpegts&audioCodec=\(audioCodec))
                 +add-limitation(scope=musicCodec&scopeName=\(audioCodec)&type=upperBound&name=audio.bitrate&value=\(preferredBitrate)&replace=true)
                 """)
                 // swiftlint:enable line_length
