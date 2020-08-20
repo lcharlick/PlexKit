@@ -53,7 +53,7 @@ public extension Plex.Request {
             guard let token = token else {
                 throw PlexError.notAuthenticated
             }
-            return try self.asURLRequest(from: url, using: token)
+            return try _asURLRequest(from: url, using: token)
         }
 
         public static func response(from data: Data) throws -> Data {

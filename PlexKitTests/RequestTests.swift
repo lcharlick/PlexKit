@@ -310,6 +310,7 @@ extension RequestTests {
 
         let data = RequestData(request: request)
         XCTAssertEqual(data.queryItems["sectionID"], String(libraryKey))
+        XCTAssertEqual(data.httpMethod, "GET")
     }
 
     func testPlaylists_excludeSmart() throws {
@@ -317,12 +318,13 @@ extension RequestTests {
         let playlistType = PlexPlaylistType.video
         let request = try Plex.Request.Playlists(
             type: playlistType,
-            filter: .regular
+            smart: false
         )
             .asURLRequest(from: testURL, using: token)
 
         let data = RequestData(request: request)
         XCTAssertEqual(data.queryItems["smart"], "0")
+        XCTAssertEqual(data.httpMethod, "GET")
     }
 
     func testPlaylists_onlySmart() throws {
@@ -330,12 +332,64 @@ extension RequestTests {
         let playlistType = PlexPlaylistType.video
         let request = try Plex.Request.Playlists(
             type: playlistType,
-            filter: .smart
+            smart: true
         )
             .asURLRequest(from: testURL, using: token)
 
         let data = RequestData(request: request)
         XCTAssertEqual(data.queryItems["smart"], "1")
+        XCTAssertEqual(data.httpMethod, "GET")
+    }
+
+    func testPlaylists_create() throws {
+        let token = "token"
+        let title = "hello"
+        let library = "1234"
+        let items = Set(["1", "2"])
+        let playlistType = PlexPlaylistType.video
+        let request = try Plex.Request.Playlists(
+            action: .create(
+                title: title,
+                libraryUUID: library,
+                ratingKeys: items
+            ),
+            type: playlistType
+        )
+            .asURLRequest(from: testURL, using: token)
+
+        let data = RequestData(request: request)
+        XCTAssertEqual(data.queryItems, [
+            "title": title,
+            "playlistType": playlistType.rawValue,
+            "uri": "library://\(library)/directory//library/metadata/\(items.joined(separator: ","))"
+        ])
+        XCTAssertEqual(data.httpMethod, "POST")
+    }
+
+    func testPlaylists_createWithNoItemsThrowsError() {
+        XCTAssertThrowsError(try Plex.Request.Playlists(
+            action: .create(
+                title: "test",
+                libraryUUID: "test",
+                ratingKeys: Set([])
+            ),
+            type: .video
+        ))
+    }
+
+    func testPlaylists_delete() throws {
+        let playlistType = PlexPlaylistType.video
+        let request = try Plex.Request.Playlists(
+            action: .delete(
+                ratingKey: "key"
+            ),
+            type: playlistType
+        )
+            .asURLRequest(from: testURL, using: "")
+
+        let data = RequestData(request: request)
+        XCTAssertEqual(request.url?.path, "/playlists/key")
+        XCTAssertEqual(data.httpMethod, "DELETE")
     }
 }
 

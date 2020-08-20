@@ -10,12 +10,37 @@ import Foundation
 
 public extension Plex.Request {
     struct Playlists: PlexResourceRequest {
-        public var path: String { "playlists" }
+        public var path: String {
+            switch action {
+            case .delete(let ratingKey):
+                return "playlists/\(ratingKey)"
+            default:
+                return "playlists"
+            }
+        }
 
+        public var httpMethod: String {
+            switch action {
+            case .get:
+                return "GET"
+            case .create:
+                return "POST"
+            case .delete:
+                return "DELETE"
+            }
+        }
+
+        /// The media type of the contained items.
         private let type: PlexPlaylistType
+
         /// - SeeAlso: `key` property of `PlexLibrary`.
         private let libraryKey: Int?
-        private let filter: Filter?
+
+        /// The action to perform against the playlist.
+        private let action: Action
+
+        /// Whether the playlist is a smart (rule-based) playlist.
+        private let smart: Bool?
 
         public var queryItems: [URLQueryItem]? {
             var items: [URLQueryItem] = [
@@ -28,29 +53,42 @@ public extension Plex.Request {
                 )
             }
 
-            if let filter = filter {
+            if let smart = smart {
                 items.append(
-                    .init(name: "smart", value: filter == .smart))
+                    .init(name: "smart", value: smart))
+            }
+
+            switch action {
+            case .create(let title, let libraryUUID, let ratingKeys):
+                let keys = ratingKeys.joined(separator: ",")
+                items.append(contentsOf: [
+                    .init(name: "title", value: title),
+                    .init(name: "uri", value: "library://\(libraryUUID)/directory//library/metadata/\(keys)")
+                ])
+            default:
+                break
             }
 
             return items
         }
 
         public init(
+            action: Action = .get,
             type: PlexPlaylistType,
             libraryKey: Int? = nil,
-            filter: Filter? = nil
-        ) {
+            smart: Bool? = nil
+        ) throws {
+            self.action = action
             self.type = type
             self.libraryKey = libraryKey
-            self.filter = filter
-        }
+            self.smart = smart
 
-        public enum Filter: Equatable {
-            /// Fetch only regular (i.e. non-smart) playlists.
-            case regular
-            /// Fetch only smart playlists.
-            case smart
+            switch action {
+            case .create(_, _, let ratingKeys) where ratingKeys.isEmpty:
+                throw InvalidRequest.noItems
+            default:
+                break
+            }
         }
 
         public struct Response: Codable {
@@ -74,5 +112,20 @@ public extension Plex.Request.Playlists {
         public var metadata: [PlexMediaItem] {
             self.Metadata ?? []
         }
+    }
+
+    enum Action {
+        case get
+        case create(
+            title: String,
+            libraryUUID: String,
+            ratingKeys: Set<String>
+         )
+        case delete(ratingKey: String)
+    }
+
+    enum InvalidRequest: Error {
+        /// Item list is empty.
+        case noItems
     }
 }

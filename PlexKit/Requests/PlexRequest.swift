@@ -36,15 +36,17 @@ public extension BasePlexRequest where Response: Codable {
 }
 
 /// Describes a request to a plex resource (e.g. server).
-public protocol PlexResourceRequest: BasePlexRequest {
+public protocol PlexResourceRequest: BasePlexRequest {}
+
+extension PlexResourceRequest {
     func asURLRequest(
         from url: URL,
         using token: String?
-    ) throws -> URLRequest
-}
+    ) throws -> URLRequest {
+        try _asURLRequest(from: url, using: token)
+    }
 
-public extension PlexResourceRequest {
-    func asURLRequest(
+    func _asURLRequest(
         from url: URL,
         using token: String?
     ) throws -> URLRequest {
