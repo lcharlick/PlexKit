@@ -1,0 +1,26 @@
+[
+    {
+        "name": "name",
+        "product": "Plex Media Server",
+        "productVersion": "1.16.1.1291-158e5b199",
+        "platform": "Linux",
+        "platformVersion": "7 (Core)",
+        "device": "PC",
+        "clientIdentifier": "clientIdentifier",
+        "createdAt": "2019-07-11T06:45:07Z",
+        "lastSeenAt": "2020-05-29T12:01:13Z",
+        "provides": "server",
+        "ownerId": null,
+        "sourceTitle": null,
+        "publicAddress": "publicAddress",
+        "accessToken": "accessToken",
+        "owned": true,
+        "home": false,
+        "synced": false,
+        "relay": true,
+        "presence": true,
+        "httpsRequired": false,
+        "publicAddressMatches": false,
+        "dnsRebindingProtection": false
+    }
+]

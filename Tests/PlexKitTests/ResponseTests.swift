@@ -208,6 +208,16 @@ extension ResponseTests {
         XCTAssertEqual(connection.relay, false)
         XCTAssertEqual(connection.IPv6, false)
     }
+
+    func testResources_noConnections() throws {
+        // Resources may not contain a `connections` property under some circumstances.
+        let response = try loadResponse(
+            "resources_no_connections",
+            for: Plex.ServiceRequest.Resources.self
+        )
+
+        XCTAssertGreaterThan(response.count, 0)
+    }
 }
 
 // MARK: - Libraries.
