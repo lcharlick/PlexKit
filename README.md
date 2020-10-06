@@ -5,15 +5,26 @@ PlexKit provides asynchronous, type-safe access to a small portion of the Plex A
 
 ## Installation
 
-### [CocoaPods](https://cocoapods.org/)
-````ruby
-pod 'PlexKit'
-````
+### Swift Package Manager
+
+Create a `Package.swift` file.
+
+```swift
+import PackageDescription
+
+let package = Package(
+    name: "SampleProject",
+    dependencies: [
+        .Package(url: "https://github.com/lcharlick/PlexKit.git" from: "1.0.0")
+    ]
+)
+```
 
 ## Requirements
 
-- iOS 10+
+- iOS 10.0+
 - macOS 10.12+
+- tvOS 10.0+
 
 ## Getting Started
 
