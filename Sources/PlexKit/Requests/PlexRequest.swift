@@ -39,7 +39,7 @@ public extension BasePlexRequest where Response: Codable {
 public protocol PlexResourceRequest: BasePlexRequest {}
 
 extension PlexResourceRequest {
-    func asURLRequest(
+    public func asURLRequest(
         from url: URL,
         using token: String?
     ) throws -> URLRequest {
