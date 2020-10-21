@@ -34,7 +34,7 @@ public extension Plex.Request {
         private let type: PlexPlaylistType
 
         /// - SeeAlso: `key` property of `PlexLibrary`.
-        private let libraryKey: Int?
+        private let libraryKey: String?
 
         /// The action to perform against the playlist.
         private let action: Action
@@ -75,7 +75,7 @@ public extension Plex.Request {
         public init(
             action: Action = .get,
             type: PlexPlaylistType,
-            libraryKey: Int? = nil,
+            libraryKey: String? = nil,
             smart: Bool? = nil
         ) throws {
             self.action = action
@@ -89,6 +89,20 @@ public extension Plex.Request {
             default:
                 break
             }
+        }
+
+        public init(
+            type: PlexPlaylistType,
+            libraryKey: String? = nil,
+            smart: Bool? = nil
+        ) {
+            // `get` action cannot throw.
+            try! self.init(
+                action: .get,
+                type: type,
+                libraryKey: libraryKey,
+                smart: smart
+            )
         }
 
         public struct Response: Codable {
@@ -119,7 +133,7 @@ public extension Plex.Request.Playlists {
         case create(
             title: String,
             libraryUUID: String,
-            ratingKeys: Set<String>
+            ratingKeys: [String]
          )
         case delete(ratingKey: String)
     }
