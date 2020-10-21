@@ -11,8 +11,7 @@ import Foundation
 class BundleLocator {}
 
 func loadResource(_ name: String, ext: String) throws -> Data {
-    let bundle = Bundle(for: BundleLocator.self)
-    guard let path = bundle.path(forResource: name, ofType: ext) else {
+    guard let path = Bundle.module.path(forResource: name, ofType: ext) else {
         throw ResourceNotFoundError(name: name, ext: ext)
     }
     return try Data(contentsOf: URL(fileURLWithPath: path))

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 public extension Plex.Request {
     struct TranscodeImage: PlexResourceRequest {
