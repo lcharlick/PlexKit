@@ -13,7 +13,6 @@ Pod::Spec.new do |spec|
     # spec.tvos.deployment_target = "9.0"
     spec.swift_versions = "5.2"
   
-    # spec.source       = { :git => "https://github.com/lcharlick/PlexKit.git", :tag => "#{spec.version}" }
-    spec.source       = { :git => "https://github.com/lcharlick/PlexKit.git", :branch => "swift-package-manager" }
+    spec.source        = { :git => "https://github.com/lcharlick/PlexKit.git", :tag => "#{spec.version}" }
     spec.source_files  = "Sources/PlexKit/**/*.swift"
   end
