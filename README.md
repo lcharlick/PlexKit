@@ -20,6 +20,11 @@ let package = Package(
 )
 ```
 
+### [CocoaPods](https://cocoapods.org/)
+````ruby
+pod 'PlexKit'
+````
+
 ## Requirements
 
 - iOS 10.0+
