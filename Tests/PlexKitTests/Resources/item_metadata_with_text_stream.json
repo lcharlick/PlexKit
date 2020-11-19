@@ -1,0 +1,105 @@
+{
+    "MediaContainer": {
+        "size": 1,
+        "allowSync": true,
+        "identifier": "com.plexapp.plugins.library",
+        "librarySectionID": 29,
+        "librarySectionTitle": "Music",
+        "librarySectionUUID": "librarySectionUUID",
+        "mediaTagPrefix": "/system/bundle/media/flags/",
+        "mediaTagVersion": 1598519402,
+        "Metadata": [
+            {
+                "ratingKey": "524167",
+                "key": "/library/metadata/524167",
+                "parentRatingKey": "524166",
+                "grandparentRatingKey": "346408",
+                "guid": "plex://track/5d07d2e4403c6402906535c2",
+                "parentGuid": "plex://album/5d07c232403c6402908b2586",
+                "grandparentGuid": "plex://artist/5d07bc35403c6402904d32d4",
+                "type": "track",
+                "title": "The Pacific",
+                "titleSort": "Pacific",
+                "grandparentKey": "/library/metadata/346408",
+                "parentKey": "/library/metadata/524166",
+                "librarySectionTitle": "Music",
+                "librarySectionID": 29,
+                "librarySectionKey": "/library/sections/29",
+                "grandparentTitle": "Ahab",
+                "parentTitle": "The Call of the Wretched Sea",
+                "originalTitle": "Ahab",
+                "summary": "",
+                "index": 2,
+                "parentIndex": 1,
+                "ratingCount": 23786,
+                "viewCount": 3,
+                "lastViewedAt": 1599724325,
+                "thumb": "/library/metadata/524166/thumb/1602841435",
+                "art": "/library/metadata/346408/art/1602841195",
+                "parentThumb": "/library/metadata/524166/thumb/1602841435",
+                "grandparentThumb": "/library/metadata/346408/thumb/1602841195",
+                "grandparentArt": "/library/metadata/346408/art/1602841195",
+                "duration": 607364,
+                "addedAt": 1601386607,
+                "updatedAt": 1602841435,
+                "Media": [
+                    {
+                        "id": 522904,
+                        "duration": 607364,
+                        "bitrate": 262,
+                        "audioChannels": 2,
+                        "audioCodec": "aac",
+                        "container": "mp4",
+                        "optimizedForStreaming": 1,
+                        "audioProfile": "lc",
+                        "has64bitOffsets": false,
+                        "Part": [
+                            {
+                                "accessible": true,
+                                "exists": true,
+                                "id": 872459,
+                                "key": "/library/parts/872459/1493105229/file.m4a",
+                                "duration": 607364,
+                                "file": "/media/music/Ahab/2006 - The Call of the Wretched Sea/02 - The Pacific.m4a",
+                                "size": 19859290,
+                                "audioProfile": "lc",
+                                "container": "mp4",
+                                "has64bitOffsets": false,
+                                "hasThumbnail": "1",
+                                "optimizedForStreaming": true,
+                                "Stream": [
+                                    {
+                                        "id": 852699,
+                                        "streamType": 2,
+                                        "selected": true,
+                                        "default": true,
+                                        "codec": "aac",
+                                        "index": 0,
+                                        "channels": 2,
+                                        "bitrate": 262,
+                                        "audioChannelLayout": "stereo",
+                                        "profile": "lc",
+                                        "samplingRate": 44100,
+                                        "streamIdentifier": "1",
+                                        "displayTitle": "Unknown (AAC Stereo)",
+                                        "extendedDisplayTitle": "Unknown (AAC Stereo)"
+                                    },
+                                    {
+                                        "id": 876306,
+                                        "key": "/library/streams/876306",
+                                        "streamType": 4,
+                                        "codec": "txt",
+                                        "format": "txt",
+                                        "provider": "com.plexapp.agents.lyricfind",
+                                        "displayTitle": "Unknown (TXT External)",
+                                        "extendedDisplayTitle": "Unknown (TXT External)"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

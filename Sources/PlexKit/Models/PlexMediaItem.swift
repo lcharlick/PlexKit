@@ -108,6 +108,7 @@ public struct PlexMediaItem: Codable, Hashable {
         }
     }
 
+    /// A single media part, generally representing a single file.
     public struct Part: Codable, Hashable {
         public let id: Int
         public let key: String
@@ -120,6 +121,82 @@ public struct PlexMediaItem: Codable, Hashable {
         public let videoProfile: String?
         public let has64BitOffsets: Bool?
         public let optimizedForStreaming: Bool?
+
+        private let Stream: [Stream]?
+
+        /// Zero or more media streams belonging to the media file.
+        ///
+        /// When a media file contains only a single stream, `streams` will be empty. In this case,
+        /// stream data can be read directly from the `Media` or `Part`.
+        public var streams: [Stream] {
+            self.Stream ?? []
+        }
+    }
+
+    /// Represents a video, audio, subtitle or lyric stream.
+    public struct Stream: Codable, Hashable {
+        public let id: Int
+        private let streamType: Int
+        public let streamDefault: Bool?
+        public let codec: String
+        public let index: Int?
+        public let bitrate: Int?
+        public let bitDepth: Int?
+        public let chromaLocation: String?
+        public let chromaSubsampling: String?
+        public let codedHeight: Int?
+        public let codedWidth: Int?
+        public let frameRate: Double?
+        public let hasScalingMatrix: Bool?
+        public let height: Int?
+        public let level: Int?
+        public let profile: String?
+        public let refFrames: Int?
+        public let requiredBandwidths: String?
+        public let scanType: String?
+        public let width: Int?
+        public let displayTitle: String?
+        public let extendedDisplayTitle: String?
+        public let channels: Int?
+        public let language: String?
+        public let languageCode: String?
+        public let audioChannelLayout: String?
+        public let samplingRate: Int?
+        public let selected: Bool?
+        public let title: String?
+        public let headerCompression: Bool?
+
+        public var type: StreamType {
+            .init(rawValue: streamType)
+        }
+
+        public enum StreamType: Hashable {
+            /// A video stream.
+            case video
+            /// An audio stream.
+            case audio
+            /// A subtitle stream.
+            case subtitle
+            /// A lyric stream.
+            case lyrics
+            /// An unknown stream type.
+            case unknown(Int)
+
+            init(rawValue: Int) {
+                switch rawValue {
+                case 1:
+                    self = .video
+                case 2:
+                    self = .audio
+                case 3:
+                    self = .subtitle
+                case 4:
+                    self = .lyrics
+                default:
+                    self = .unknown(rawValue)
+                }
+            }
+        }
     }
 }
 
