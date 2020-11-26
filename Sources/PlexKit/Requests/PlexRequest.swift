@@ -28,10 +28,14 @@ public extension BasePlexRequest {
 }
 
 public extension BasePlexRequest where Response: Codable {
-    static func response(from data: Data) throws -> Response {
+    static func _response(from data: Data) throws -> Response {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         return try decoder.decode(Response.self, from: data)
+    }
+
+    static func response(from data: Data) throws -> Response {
+        try _response(from: data)
     }
 }
 
