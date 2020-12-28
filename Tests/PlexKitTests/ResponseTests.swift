@@ -665,6 +665,29 @@ extension ResponseTests {
             response.mediaContainer.metadata.count
         )
     }
+
+    func testItemMetadataWithMultipleStreams() throws {
+        let response = try loadResponse(
+            "item_metadata_with_text_stream",
+            for: Plex.Request.ItemMetadata.self
+        )
+        XCTAssertEqual(
+            response.mediaContainer.size,
+            response.mediaContainer.metadata.count
+        )
+
+        let item = response.mediaContainer.metadata[0]
+        XCTAssertEqual(item.media.count, 1)
+
+        guard let streams = item.media.first?.parts.first?.streams else {
+            XCTFail("No streams found!")
+            return
+        }
+
+        XCTAssertEqual(streams.count, 2)
+        XCTAssertEqual(streams.filter { $0.type == .audio }.count, 1)
+        XCTAssertEqual(streams.filter { $0.type == .lyrics }.count, 1)
+    }
 }
 
 // MARK: - Playlists.
