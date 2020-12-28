@@ -28,23 +28,29 @@ public extension BasePlexRequest {
 }
 
 public extension BasePlexRequest where Response: Codable {
-    static func response(from data: Data) throws -> Response {
+    static func _response(from data: Data) throws -> Response {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         return try decoder.decode(Response.self, from: data)
     }
+
+    static func response(from data: Data) throws -> Response {
+        try _response(from: data)
+    }
 }
 
 /// Describes a request to a plex resource (e.g. server).
-public protocol PlexResourceRequest: BasePlexRequest {
-    func asURLRequest(
+public protocol PlexResourceRequest: BasePlexRequest {}
+
+extension PlexResourceRequest {
+    public func asURLRequest(
         from url: URL,
         using token: String?
-    ) throws -> URLRequest
-}
+    ) throws -> URLRequest {
+        try _asURLRequest(from: url, using: token)
+    }
 
-public extension PlexResourceRequest {
-    func asURLRequest(
+    func _asURLRequest(
         from url: URL,
         using token: String?
     ) throws -> URLRequest {

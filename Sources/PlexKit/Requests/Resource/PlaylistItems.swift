@@ -9,17 +9,60 @@
 import Foundation
 
 public extension Plex.Request {
-    /// Request all items in a playlist.
+    /// Perform an action on a playlist's contents.
     struct PlaylistItems: PlexResourceRequest {
-        public var path: String { "playlists/\(ratingKey)/items" }
+        public var path: String {
+            let path = "playlists/\(ratingKey)/items"
+            switch action {
+            case .remove(let ratingKey):
+                return "\(path)/\(ratingKey)"
+            case .move(let ratingKey, _):
+                return "\(path)/\(ratingKey)/move"
+            default:
+                return path
+            }
+        }
+
+        public var queryItems: [URLQueryItem]? {
+            switch action {
+            case .add(let resource, let ratingKeys):
+                return [
+                    uriForResource(resource, itemRatingKeys: ratingKeys)
+                ]
+            case .move(_, let afterRatingKey) where afterRatingKey != nil:
+                return [
+                    .init(
+                        name: "after",
+                        value: afterRatingKey
+                    )
+                ]
+            default:
+                return nil
+            }
+        }
+
+        public var httpMethod: String {
+            switch action {
+            case .get:
+                return "GET"
+            case .add, .move:
+                return "PUT"
+            case .remove:
+                return "DELETE"
+            }
+        }
+
+        private let action: Action
 
         /// - SeeAlso: `ratingKey` property of `MediaItem`.
         private let ratingKey: String
 
         public init(
-            ratingKey: String
+            ratingKey: String,
+            action: Action = .get
         ) {
             self.ratingKey = ratingKey
+            self.action = action
         }
 
         public struct Response: Codable {
@@ -28,6 +71,18 @@ public extension Plex.Request {
             enum CodingKeys: String, CodingKey {
                 case mediaContainer = "MediaContainer"
             }
+        }
+
+        public enum Action {
+            /// Get the items in the playlist.
+            case get
+            /// Add one or more items to the playlist.
+            case add(resource: String, ratingKeys: [String])
+            /// Remove an item from the playlist.
+            case remove(ratingKey: String)
+            /// Move the position of an item in the playlist.
+            /// Use `nil` as `after` value to move the item to the beginning of the playlist.
+            case move(ratingKey: String, after: String?)
         }
     }
 }
