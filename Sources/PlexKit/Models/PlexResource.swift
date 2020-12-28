@@ -23,7 +23,7 @@ public struct PlexResource: Codable {
     }
 
     public subscript<T>(dynamicMember keyPath: KeyPath<PlexResourceModel, T>) -> T {
-        get { model[keyPath: keyPath] }
+        model[keyPath: keyPath]
     }
 
     public var connections: [PlexConnection] {
