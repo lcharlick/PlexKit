@@ -15,7 +15,7 @@ let package = Package(
     products: [
         .library(
             name: "PlexKit",
-            targets: ["PlexKit"]),
+            targets: ["PlexKit"])
     ],
     dependencies: [
     ],
@@ -27,6 +27,6 @@ let package = Package(
             name: "PlexKitTests",
             dependencies: ["PlexKit"],
             resources: [.process("Resources")]
-        ),
+        )
     ]
 )
