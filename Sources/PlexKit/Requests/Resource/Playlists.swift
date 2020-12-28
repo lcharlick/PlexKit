@@ -14,10 +14,6 @@ public extension Plex.Request {
             switch action {
             case .delete(let ratingKey):
                 return "playlists/\(ratingKey)"
-            case .addItems(let ratingKey, _, _):
-                return "playlists/\(ratingKey)/items"
-            case .removeItem(ratingKey: let ratingKey, itemRatingKey: let itemRatingKey):
-                return "playlists/\(ratingKey)/items/\(itemRatingKey)"
             default:
                 return "playlists"
             }
@@ -29,23 +25,13 @@ public extension Plex.Request {
                 return "GET"
             case .create:
                 return "POST"
-            case .delete, .removeItem:
+            case .delete:
                 return "DELETE"
-            case .addItems:
-                return "PUT"
             }
         }
 
         /// The action to perform against the playlist.
         private let action: Action
-
-        private func queryItemForItemRatingKeys(_ ratingKeys: [String], resource: String) -> URLQueryItem {
-            let keys = ratingKeys.joined(separator: ",")
-            return URLQueryItem(
-                name: "uri",
-                value: "server://\(resource)/com.plexapp.plugins.library/library/metadata/\(keys)"
-            )
-        }
 
         public var queryItems: [URLQueryItem]? {
             var items: [URLQueryItem] = []
@@ -73,11 +59,9 @@ public extension Plex.Request {
                 items.append(contentsOf: [
                     .init(name: "type", value: type.rawValue),
                     .init(name: "title", value: title),
-                    queryItemForItemRatingKeys(itemRatingKeys, resource: resource)
+                    uriForResource(resource, itemRatingKeys: itemRatingKeys)
                 ])
-            case .addItems(_, let resource, let itemRatingKeys):
-                items.append(queryItemForItemRatingKeys(itemRatingKeys, resource: resource))
-            case .delete, .removeItem:
+            case .delete:
                 break
             }
 
@@ -123,6 +107,14 @@ public extension Plex.Request {
             }
         }
     }
+}
+
+func uriForResource(_ resource: String, itemRatingKeys: [String]) -> URLQueryItem {
+    let keys = itemRatingKeys.joined(separator: ",")
+    return URLQueryItem(
+        name: "uri",
+        value: "server://\(resource)/com.plexapp.plugins.library/library/metadata/\(keys)"
+    )
 }
 
 public extension Plex.Request.Playlists {
@@ -173,19 +165,6 @@ public extension Plex.Request.Playlists {
 
         /// Delete a playlist.
         case delete(ratingKey: String)
-
-        /// Add items to a playlist.
-        case addItems(
-            ratingKey: String,
-            resource: String,
-            itemRatingKeys: [String]
-         )
-
-        /// Remove an item from a playlist.
-        case removeItem(
-            ratingKey: String,
-            itemRatingKey: String
-         )
     }
 
     enum InvalidRequest: Error {

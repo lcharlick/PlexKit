@@ -389,46 +389,6 @@ extension RequestTests {
         XCTAssertEqual(request.url?.path, "/playlists/key")
         XCTAssertEqual(data.httpMethod, "DELETE")
     }
-
-    func testPlaylists_addItems() throws {
-        let ratingKey = "test"
-        let itemRatingKeys = ["3", "1", "2"]
-        let resource = "1234"
-
-        let request = try Plex.Request.Playlists(
-            action: .addItems(
-                ratingKey: ratingKey,
-                resource: resource,
-                itemRatingKeys: itemRatingKeys
-            )
-        )
-            .asURLRequest(from: testURL, using: "")
-
-        let data = RequestData(request: request)
-        XCTAssertEqual(request.url?.path, "/playlists/\(ratingKey)/items")
-        XCTAssertEqual(data.queryItems, [
-            "uri": "server://\(resource)/com.plexapp.plugins.library/library/metadata/\(itemRatingKeys.joined(separator: ","))"
-        ])
-        XCTAssertEqual(data.httpMethod, "PUT")
-    }
-
-    func testPlaylists_removeItem() throws {
-        let ratingKey = "test"
-        let itemRatingKey = "1234"
-
-        let request = try Plex.Request.Playlists(
-            action: .removeItem(
-                ratingKey: ratingKey,
-                itemRatingKey: itemRatingKey
-            )
-        )
-            .asURLRequest(from: testURL, using: "")
-
-        let data = RequestData(request: request)
-        XCTAssertEqual(request.url?.path, "/playlists/\(ratingKey)/items/\(itemRatingKey)")
-        XCTAssertEqual(data.queryItems, [:])
-        XCTAssertEqual(data.httpMethod, "DELETE")
-    }
 }
 
 // MARK: - Related Media.
@@ -711,6 +671,46 @@ extension RequestTests {
         XCTAssertEqual(request.url?.path, "/playlists/woof/items/2/move")
         XCTAssertEqual(data.queryItems, [:])
         XCTAssertEqual(data.httpMethod, "PUT")
+    }
+
+    func testAddItemToPlaylist() throws {
+        let ratingKey = "test"
+        let itemRatingKeys = ["3", "1", "2"]
+        let resource = "1234"
+
+        let request = try Plex.Request.PlaylistItems(
+            ratingKey: ratingKey,
+            action: .add(
+                resource: resource,
+                ratingKeys: itemRatingKeys
+            )
+        )
+            .asURLRequest(from: testURL, using: "")
+
+        let data = RequestData(request: request)
+        XCTAssertEqual(request.url?.path, "/playlists/\(ratingKey)/items")
+        XCTAssertEqual(data.queryItems, [
+            "uri": "server://\(resource)/com.plexapp.plugins.library/library/metadata/\(itemRatingKeys.joined(separator: ","))"
+        ])
+        XCTAssertEqual(data.httpMethod, "PUT")
+    }
+
+    func testRemoveItemFromPlaylist() throws {
+        let ratingKey = "test"
+        let itemRatingKey = "1234"
+
+        let request = try Plex.Request.PlaylistItems(
+            ratingKey: ratingKey,
+            action: .remove(
+                ratingKey: itemRatingKey
+            )
+        )
+            .asURLRequest(from: testURL, using: "")
+
+        let data = RequestData(request: request)
+        XCTAssertEqual(request.url?.path, "/playlists/\(ratingKey)/items/\(itemRatingKey)")
+        XCTAssertEqual(data.queryItems, [:])
+        XCTAssertEqual(data.httpMethod, "DELETE")
     }
 }
 

@@ -25,13 +25,9 @@ public extension Plex.Request {
 
         public var queryItems: [URLQueryItem]? {
             switch action {
-            case .add(let library, let ratingKeys):
-                let keys = ratingKeys.joined(separator: ",")
+            case .add(let resource, let ratingKeys):
                 return [
-                    .init(
-                        name: "uri",
-                        value: "library://\(library)/directory//library/metadata/\(keys)"
-                    )
+                    uriForResource(resource, itemRatingKeys: ratingKeys)
                 ]
             case .move(_, let afterRatingKey) where afterRatingKey != nil:
                 return [
@@ -81,7 +77,7 @@ public extension Plex.Request {
             /// Get the items in the playlist.
             case get
             /// Add one or more items to the playlist.
-            case add(library: String, ratingKeys: Set<String>)
+            case add(resource: String, ratingKeys: [String])
             /// Remove an item from the playlist.
             case remove(ratingKey: String)
             /// Move the position of an item in the playlist.
