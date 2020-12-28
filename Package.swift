@@ -26,9 +26,7 @@ let package = Package(
         .testTarget(
             name: "PlexKitTests",
             dependencies: ["PlexKit"],
-            resources: [
-                .process("Resources")
-            ]
+            resources: [.process("Resources")]
         ),
     ]
 )
