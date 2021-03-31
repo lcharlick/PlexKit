@@ -39,7 +39,7 @@ public extension Plex.Request {
         private let includeStations: Bool
         private let includeExternalMedia: Bool
 
-        internal init(
+        public init(
             ratingKey: String,
             includeConcerts: Bool = false,
             includeExtras: Bool = false,
