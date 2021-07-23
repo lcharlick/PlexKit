@@ -36,7 +36,7 @@ extension ServiceTests {
         XCTAssertEqual(headers["X-Plex-Platform-Version"], info.platformVersion)
         XCTAssertEqual(headers["X-Plex-Device"], info.device)
         XCTAssertEqual(headers["X-Plex-Device-Name"], info.deviceName)
-        XCTAssertEqual(headers["X-Plex-Token"], info.token)
+        XCTAssertEqual(headers["X-Plex-Token"], info.token?.rawValue)
         XCTAssertEqual(headers["X-Plex-Session-Identifier"], info.sessionIdentifier)
     }
 }

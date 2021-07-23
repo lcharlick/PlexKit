@@ -22,12 +22,11 @@ public extension Plex.ServiceRequest {
 
         public let httpMethod = "POST"
 
-        /// - SeeAlso: The `uuid` property of `HomeUser`.
-        private let uuid: String
+        private let uuid: PlexUser.UUID
         private let passCode: String?
 
         public init(
-            uuid: String,
+            uuid: PlexUser.UUID,
             passCode: String? = nil
         ) {
             self.uuid = uuid

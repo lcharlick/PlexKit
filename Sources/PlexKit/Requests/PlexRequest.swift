@@ -45,14 +45,14 @@ public protocol PlexResourceRequest: BasePlexRequest {}
 extension PlexResourceRequest {
     public func asURLRequest(
         from url: URL,
-        using token: String?
+        using token: Plex.Token?
     ) throws -> URLRequest {
         try _asURLRequest(from: url, using: token)
     }
 
     func _asURLRequest(
         from url: URL,
-        using token: String?
+        using token: Plex.Token?
     ) throws -> URLRequest {
         guard let url = url.appendingPathComponent(path)
             .appendingQueryItems(queryItems ?? []) else {
@@ -63,7 +63,7 @@ extension PlexResourceRequest {
         request.httpMethod = httpMethod
         request.addValue(accept, forHTTPHeaderField: "accept")
         if let token = token {
-            request.addValue(token, forHTTPHeaderField: "X-Plex-Token")
+            request.addValue(token.rawValue, forHTTPHeaderField: "X-Plex-Token")
         }
         return request
     }
@@ -71,11 +71,11 @@ extension PlexResourceRequest {
 
 /// Describes a request to the plex.tv service.
 public protocol PlexServiceRequest: BasePlexRequest {
-    func asURLRequest(using token: String?) throws -> URLRequest
+    func asURLRequest(using token: Plex.Token?) throws -> URLRequest
 }
 
 public extension PlexServiceRequest {
-    func asURLRequest(using token: String?) throws -> URLRequest {
+    func asURLRequest(using token: Plex.Token?) throws -> URLRequest {
         let path = "https://plex.tv/\(self.path)"
         guard let url = URL(string: path)?.appendingQueryItems(queryItems ?? []) else {
             throw PlexError.invalidRequest(.invalidURL(path))
@@ -86,7 +86,7 @@ public extension PlexServiceRequest {
         request.addValue(accept, forHTTPHeaderField: "accept")
 
         if let token = token {
-            request.addValue(token, forHTTPHeaderField: "X-Plex-Token")
+            request.addValue(token.rawValue, forHTTPHeaderField: "X-Plex-Token")
         }
 
         return request

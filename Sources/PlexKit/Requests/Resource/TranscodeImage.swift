@@ -16,7 +16,7 @@ public extension Plex.Request {
 
         public var queryItems: [URLQueryItem]? {
             var items: [URLQueryItem] = [
-                .init(name: "url", value: key),
+                .init(name: "url", value: key.rawValue),
                 .init(name: "minSize", value: minSize)
             ]
 
@@ -49,8 +49,7 @@ public extension Plex.Request {
         }
 
         /// The path to the image.
-        /// - SeeAlso: `thumb` property of `MediaItem`.
-        private let key: String
+        private let key: Plex.ImagePath
 
         /// The dimensions of the result image.
         private let size: CGSize?
@@ -69,7 +68,7 @@ public extension Plex.Request {
         private let opacity: Int?
 
         public init(
-            key: String,
+            key: Plex.ImagePath,
             size: CGSize? = nil,
             minSize: Bool = true,
             blur: Int? = nil,

@@ -7,17 +7,26 @@
 //
 
 import Foundation
+import Tagged
 
 public struct PlexLibrary: Codable {
-    public let key: String
-    public let uuid: String
+    public typealias Id = Tagged<PlexLibrary, Int>
+    public typealias Key = Tagged<(PlexLibrary, key: ()), String>
+    public typealias UUID = Tagged<(PlexLibrary, uuid: ()), String>
+
+    public let key: Key
+    public var id: Id? {
+        Int(key.rawValue).map(Id.init(rawValue:))
+    }
+
+    public let uuid: UUID
     public let type: PlexMediaType
     public let allowSync: Bool?
-    public let art: String?
-    public let composite: String?
+    public let art: Plex.ImagePath?
+    public let composite: Plex.ImagePath?
     public let filters: Bool?
     public let refreshing: Bool?
-    public let thumb: String?
+    public let thumb: Plex.ImagePath?
     public let title: String?
     public let agent: String?
     public let scanner: String?

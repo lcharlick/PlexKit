@@ -59,8 +59,7 @@ extension RequestTests {
     }
 
     func testOAuth_withId() throws {
-        let id: Int64 = 1234
-        let request = try Plex.ServiceRequest.OAuth(id: id)
+        let request = try Plex.ServiceRequest.OAuth(id: 1234)
             .asURLRequest(using: nil)
 
         XCTAssertEqual(request.httpMethod, "GET")
@@ -69,7 +68,7 @@ extension RequestTests {
 
         XCTAssertEqual(
             data.baseURL,
-            URL(string: "https://plex.tv/api/v2/pins/\(id)")
+            URL(string: "https://plex.tv/api/v2/pins/1234")
         )
 
         XCTAssertEqual(data.headers, [
@@ -106,7 +105,7 @@ extension RequestTests {
 
 extension RequestTests {
     func testAccount() throws {
-        let token = "token"
+        let token: Plex.Token = "token"
         let request = try Plex.ServiceRequest.Account()
             .asURLRequest(using: token)
 
@@ -119,7 +118,7 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "application/json",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token.rawValue
         ])
 
         XCTAssertEqual(data.queryItems, [:])
@@ -130,7 +129,7 @@ extension RequestTests {
 
 extension RequestTests {
     func testHomeUsers() throws {
-        let token = "token"
+        let token: Plex.Token = "token"
         let request = try Plex.ServiceRequest.HomeUsers()
             .asURLRequest(using: token)
 
@@ -143,7 +142,7 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "application/json",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token.rawValue
         ])
 
         XCTAssertEqual(data.queryItems, [:])
@@ -154,7 +153,7 @@ extension RequestTests {
 
 extension RequestTests {
     func testSwitchUser_noPassCode() throws {
-        let uuid = "woof"
+        let uuid: PlexUser.UUID = "woof"
         let request = try Plex.ServiceRequest.SwitchUser(uuid: uuid)
             .asURLRequest(using: nil)
 
@@ -175,7 +174,7 @@ extension RequestTests {
     }
 
     func testSwitchUser_withPassCode() throws {
-        let uuid = "woof"
+        let uuid: PlexUser.UUID = "woof"
         let passCode = "1234"
         let request = try Plex.ServiceRequest.SwitchUser(uuid: uuid, passCode: passCode)
             .asURLRequest(using: nil)
@@ -192,7 +191,7 @@ extension RequestTests {
 
 extension RequestTests {
     func testResources() throws {
-        let token = "token"
+        let token: Plex.Token = "token"
         let request = try Plex.ServiceRequest.Resources()
             .asURLRequest(using: token)
 
@@ -205,7 +204,7 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "application/json",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token.rawValue
         ])
 
         XCTAssertEqual(data.queryItems, [
@@ -219,9 +218,9 @@ extension RequestTests {
 
 extension RequestTests {
     func testLibraryContents() throws {
-        let key = "key"
+        let key: PlexLibrary.Key = "key"
         let mediaType = PlexMediaType.album
-        let token = "token"
+        let token: Plex.Token = "token"
         let url = URL(string: "http://192.168.0.100:32400")!
 
         let request = try Plex.Request.LibraryItems(
@@ -238,7 +237,7 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "application/json",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token.rawValue
         ])
 
         XCTAssertEqual(data.queryItems, [
@@ -276,7 +275,7 @@ extension RequestTests {
 
 extension RequestTests {
     func testPlaylists() throws {
-        let token = "token"
+        let token: Plex.Token = "token"
         let playlistType = PlexPlaylistType.audio
         let request = try Plex.Request.Playlists(type: playlistType)
             .asURLRequest(from: testURL, using: token)
@@ -290,7 +289,7 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "application/json",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token.rawValue
         ])
 
         XCTAssertEqual(data.queryItems, [
@@ -299,8 +298,8 @@ extension RequestTests {
     }
 
     func testPlaylists_library() throws {
-        let token = "token"
-        let libraryKey = 10
+        let token: Plex.Token = "token"
+        let libraryKey: PlexLibrary.Key = "10"
         let playlistType = PlexPlaylistType.video
         let request = try Plex.Request.Playlists(
             type: playlistType,
@@ -314,7 +313,7 @@ extension RequestTests {
     }
 
     func testPlaylists_excludeSmart() throws {
-        let token = "token"
+        let token: Plex.Token = "token"
         let playlistType = PlexPlaylistType.video
         let request = try Plex.Request.Playlists(
             type: playlistType,
@@ -328,7 +327,7 @@ extension RequestTests {
     }
 
     func testPlaylists_onlySmart() throws {
-        let token = "token"
+        let token: Plex.Token = "token"
         let playlistType = PlexPlaylistType.video
         let request = try Plex.Request.Playlists(
             type: playlistType,
@@ -342,10 +341,10 @@ extension RequestTests {
     }
 
     func testPlaylists_create() throws {
-        let token = "token"
+        let token: Plex.Token = "token"
         let title = "hello"
         let resource = "1234"
-        let items = ["1", "2"]
+        let items: [PlexMediaItem.RatingKey] = ["1", "2"]
         let playlistType = PlexPlaylistType.video
         let request = try Plex.Request.Playlists(
             action: .create(
@@ -361,7 +360,7 @@ extension RequestTests {
         XCTAssertEqual(data.queryItems, [
             "title": title,
             "type": playlistType.rawValue,
-            "uri": "server://\(resource)/com.plexapp.plugins.library/library/metadata/\(items.joined(separator: ","))"
+            "uri": "server://\(resource)/com.plexapp.plugins.library/library/metadata/\(items.map(\.rawValue).joined(separator: ","))"
         ])
         XCTAssertEqual(data.httpMethod, "POST")
     }
@@ -395,8 +394,8 @@ extension RequestTests {
 
 extension RequestTests {
     func testSimilarArtists() throws {
-        let ratingKey = "key"
-        let token = "token"
+        let ratingKey: PlexMediaItem.RatingKey = "key"
+        let token: Plex.Token = "token"
 
         let request = try Plex.Request.RelatedMedia(
             ratingKey: ratingKey
@@ -411,7 +410,7 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "application/json",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token.rawValue
         ])
 
         XCTAssertEqual(data.queryItems, [:])
@@ -422,8 +421,8 @@ extension RequestTests {
 
 extension RequestTests {
     func testImage() throws {
-        let path = "woof"
-        let token = "token"
+        let path: Plex.ImagePath = "woof"
+        let token: Plex.Token = "token"
 
         let request = try Plex.Request.Image(
             path: path
@@ -433,12 +432,12 @@ extension RequestTests {
 
         XCTAssertEqual(
             data.baseURL,
-            testURL.appendingPathComponent(path)
+            testURL.appendingPathComponent(path.rawValue)
         )
 
         XCTAssertEqual(data.headers, [
             "Accept": "image/*",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token.rawValue
         ])
 
         XCTAssertEqual(data.queryItems, [:])
@@ -449,8 +448,8 @@ extension RequestTests {
 
 extension RequestTests {
     func testTranscodeImage() throws {
-        let path = "woof"
-        let token = "token"
+        let path: Plex.ImagePath = "woof"
+        let token: Plex.Token = "token"
 
         let request = try Plex.Request.TranscodeImage(
             key: path
@@ -465,18 +464,18 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "image/*",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token.rawValue
         ])
 
         XCTAssertEqual(data.queryItems, [
-            "url": path,
+            "url": path.rawValue,
             "minSize": "1"
         ])
     }
 
     func testTranscodeImage_withEffects() throws {
-        let path = "woof"
-        let token = "token"
+        let path: Plex.ImagePath = "woof"
+        let token: Plex.Token = "token"
         let size = CGSize(width: 100, height: 100)
         let blur = 100
         let saturation = 70
@@ -500,11 +499,11 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "image/*",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token.rawValue
         ])
 
         XCTAssertEqual(data.queryItems, [
-            "url": path,
+            "url": path.rawValue,
             "minSize": "0",
             "width": "\(Int(size.width))",
             "height": "\(Int(size.height))",
@@ -519,12 +518,12 @@ extension RequestTests {
 
 extension RequestTests {
     func testTimeline() throws {
-        let session = UUID()
-        let key = "woof"
+        let session = Plex.Session(rawValue: UUID())
+        let key: PlexMediaItem.RatingKey = "woof"
         let state = Plex.Request.Timeline.State.playing
         let currentTime = 60
         let duration = 100
-        let token = "token"
+        let token: Plex.Token = "token"
 
         let request = try Plex.Request.Timeline(
             session: session,
@@ -545,12 +544,12 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "application/xml",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token.rawValue
         ])
 
         XCTAssertEqual(data.queryItems, [
             Plex.Header.sessionIdentifier.rawValue: session.uuidString,
-            "ratingKey": key,
+            "ratingKey": key.rawValue,
             "key": "/library/metadata/\(key)",
             "state": state.rawValue,
             "time": String(currentTime),
@@ -565,8 +564,8 @@ extension RequestTests {
 
 extension RequestTests {
     func testEditRating() throws {
-        let key = "woof"
-        let token = "token"
+        let key: PlexMediaItem.RatingKey = "woof"
+        let token: Plex.Token = "token"
         let rating = 6
 
         let request = try Plex.Request.EditRating(
@@ -583,19 +582,19 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "*/*",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token.rawValue
         ])
 
         XCTAssertEqual(data.queryItems, [
-            "key": key,
+            "key": key.rawValue,
             "rating": String(rating),
             "identifier": "com.plexapp.plugins.library"
         ])
     }
 
     func testEditRating_clamping() throws {
-        let key = "woof"
-        let token = "token"
+        let key: PlexMediaItem.RatingKey = "woof"
+        let token: Plex.Token = "token"
         let rating = 12
 
         let request = try Plex.Request.EditRating(
@@ -606,7 +605,7 @@ extension RequestTests {
         let data = RequestData(request: request)
 
         XCTAssertEqual(data.queryItems, [
-            "key": key,
+            "key": key.rawValue,
             "rating": "10", // Clamp to 0...10
             "identifier": "com.plexapp.plugins.library"
         ])
@@ -674,8 +673,8 @@ extension RequestTests {
     }
 
     func testAddItemToPlaylist() throws {
-        let ratingKey = "test"
-        let itemRatingKeys = ["3", "1", "2"]
+        let ratingKey: PlexMediaItem.RatingKey = "test"
+        let itemRatingKeys: [PlexMediaItem.RatingKey] = ["3", "1", "2"]
         let resource = "1234"
 
         let request = try Plex.Request.PlaylistItems(
@@ -690,14 +689,14 @@ extension RequestTests {
         let data = RequestData(request: request)
         XCTAssertEqual(request.url?.path, "/playlists/\(ratingKey)/items")
         XCTAssertEqual(data.queryItems, [
-            "uri": "server://\(resource)/com.plexapp.plugins.library/library/metadata/\(itemRatingKeys.joined(separator: ","))"
+            "uri": "server://\(resource)/com.plexapp.plugins.library/library/metadata/\(itemRatingKeys.map(\.rawValue).joined(separator: ","))"
         ])
         XCTAssertEqual(data.httpMethod, "PUT")
     }
 
     func testRemoveItemFromPlaylist() throws {
-        let ratingKey = "test"
-        let itemRatingKey = "1234"
+        let ratingKey: PlexMediaItem.RatingKey = "test"
+        let itemRatingKey: PlexMediaItem.RatingKey = "1234"
 
         let request = try Plex.Request.PlaylistItems(
             ratingKey: ratingKey,

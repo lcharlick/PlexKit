@@ -46,14 +46,14 @@ public extension Plex.Request {
             return items
         }
 
-        var key: String
+        var key: PlexLibrary.Key
         var mediaType: PlexMediaType
         var range: CountableClosedRange<Int>?
         var excludeFields: [String] = []
         var filters: [Filter] = []
 
         public init(
-            key: String,
+            key: PlexLibrary.Key,
             mediaType: PlexMediaType,
             range: CountableClosedRange<Int>? = nil,
             excludeFields: [String] = [],
@@ -120,9 +120,9 @@ public extension Plex.Request.LibraryItems.Response {
         public let allowSync: Bool?
         public let art: String?
         public let identifier: String?
-        public let librarySectionID: Int?
+        public let librarySectionID: PlexLibrary.Id?
         public let librarySectionTitle: String?
-        public let librarySectionUUID: String?
+        public let librarySectionUUID: PlexLibrary.UUID?
         public let mediaTagPrefix: String?
         public let mediaTagVersion: Int?
         public let nocache: Bool?

@@ -11,12 +11,11 @@ import Foundation
 public extension Plex.Request {
     struct Image: PlexResourceRequest {
         /// The path to the image.
-        /// - SeeAlso: `thumb` property of `MediaItem`.
         public var path: String
         public let accept = "image/*"
 
-        public init(path: String) {
-            self.path = path
+        public init(path: Plex.ImagePath) {
+            self.path = path.rawValue
         }
 
         public static func response(from data: Data) throws -> Data {
