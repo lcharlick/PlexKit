@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import Tagged
 
 @dynamicMemberLookup
 public struct PlexResource: Codable {
+    public typealias Id = Tagged<PlexResource, String>
     private let model: PlexResourceModel
 
     public init(from decoder: Decoder) throws {
@@ -49,7 +51,7 @@ public struct PlexResource: Codable {
 }
 
 public struct PlexResourceModel: Codable {
-    public let clientIdentifier: String
+    public let clientIdentifier: PlexResource.Id
     public let name: String
     public let product: String?
     public let productVersion: String?
@@ -62,7 +64,7 @@ public struct PlexResourceModel: Codable {
     public let ownerId: Int?
     public let sourceTitle: String?
     public let publicAddress: String?
-    public let accessToken: String?
+    public let accessToken: Plex.Token?
     public let owned: Bool?
     public let home: Bool?
     public let synced: Bool?

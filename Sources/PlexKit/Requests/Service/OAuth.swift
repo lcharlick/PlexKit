@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Tagged
 
 public extension Plex.ServiceRequest {
     /// Sign in using Plex's flavour of OAuth.
@@ -36,13 +37,13 @@ public extension Plex.ServiceRequest {
             return [URLQueryItem(name: "strong", value: true)]
         }
 
-        private let id: Int64?
+        private let id: Response.Id?
 
         /// Plex *does* seem to support redirect after login, but only for whitelisted URL schemes (e.g. infuse://).
         /// For the rest of us, we have to poll the server periodically to determine the authentication result.
         // private let redirectUrl: URL
 
-        public init(id: Int64? = nil) {
+        public init(id: Response.Id? = nil) {
             self.id = id
         }
 
@@ -62,7 +63,9 @@ public extension Plex.ServiceRequest {
         }
 
         public struct Response: Codable {
-            public let id: Int64
+            public typealias Id = Tagged<Response, Int64>
+
+            public let id: Id
             public let clientIdentifier: String
             public let code: String
             public let product: String?
@@ -70,7 +73,7 @@ public extension Plex.ServiceRequest {
             public let expiresIn: Int?
             public let createdAt: Date?
             public let expiresAt: Date?
-            public let authToken: String?
+            public let authToken: Plex.Token?
             public let newRegistration: Bool?
         }
     }

@@ -27,8 +27,7 @@ public extension Plex.Request {
             ]
         }
 
-        /// - SeeAlso: `ratingKey` property of `MediaItem`.
-        private let ratingKey: String
+        private let ratingKey: PlexMediaItem.RatingKey
 
         private let includeConcerts: Bool
         private let includeExtras: Bool
@@ -40,7 +39,7 @@ public extension Plex.Request {
         private let includeExternalMedia: Bool
 
         public init(
-            ratingKey: String,
+            ratingKey: PlexMediaItem.RatingKey,
             includeConcerts: Bool = false,
             includeExtras: Bool = false,
             includeOnDeck: Bool = false,
@@ -77,9 +76,9 @@ public extension Plex.Request.ItemMetadata.Response {
         public let allowSync: Bool?
         public let augmentationKey: String?
         public let identifier: String?
-        public let librarySectionID: Int?
+        public let librarySectionID: PlexLibrary.Id?
         public let librarySectionTitle: String?
-        public let librarySectionUUID: String?
+        public let librarySectionUUID: PlexLibrary.UUID?
         public let mediaTagPrefix: String?
         public let mediaTagVersion: Int?
 

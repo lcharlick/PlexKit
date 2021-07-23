@@ -28,7 +28,7 @@ public extension Plex.Request.Identity.Response {
 
     struct MediaContainer: Codable {
         public let size: Int
-        public let machineIdentifier: String
+        public let machineIdentifier: PlexResource.Id
         public let version: String
     }
 }

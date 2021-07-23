@@ -7,16 +7,19 @@
 //
 
 import Foundation
+import Tagged
 
 public struct PlexMediaItem: Codable, Hashable {
-    public let ratingKey: String
-    public let key: String
-    public let parentRatingKey: String?
-    public let grandparentRatingKey: String?
+    public typealias RatingKey = Tagged<PlexMediaItem, String>
+
+    public let ratingKey: RatingKey
+    public let key: Plex.Path
+    public let parentRatingKey: RatingKey?
+    public let grandparentRatingKey: RatingKey?
     public let guid: String?
     public let parentGuid: String?
     public let grandparentGuid: String?
-    public let librarySectionID: Int?
+    public let librarySectionID: PlexLibrary.Id?
     public let type: PlexMediaType
     public let title: String?
     public let titleSort: String?
@@ -31,12 +34,12 @@ public struct PlexMediaItem: Codable, Hashable {
     public let viewCount: Int?
     public let viewOffset: Int?
     public let lastViewedAt: Date?
-    public let thumb: String?
-    public let art: String?
-    public let banner: String?
-    public let parentThumb: String?
-    public let grandparentThumb: String?
-    public let grandparentArt: String?
+    public let thumb: Plex.ImagePath?
+    public let art: Plex.ImagePath?
+    public let banner: Plex.ImagePath?
+    public let parentThumb: Plex.ImagePath?
+    public let grandparentThumb: Plex.ImagePath?
+    public let grandparentArt: Plex.ImagePath?
     public let duration: Int?
     public let addedAt: Date?
     public let updatedAt: Date?
@@ -75,12 +78,16 @@ public struct PlexMediaItem: Codable, Hashable {
     public let composite: String?
 
     public struct Tag: Codable, Hashable {
-        public let id: Int?
+        public typealias Id = Tagged<Tag, Int>
+
+        public let id: Id?
         public let tag: String
     }
 
     public struct Media: Codable, Hashable {
-        public let id: Int
+        public typealias Id = Tagged<Media, Int>
+
+        public let id: Id
         public let duration: Int?
         public let bitrate: Int?
         public let container: String?
@@ -110,8 +117,11 @@ public struct PlexMediaItem: Codable, Hashable {
 
     /// A single media part, generally representing a single file.
     public struct Part: Codable, Hashable {
-        public let id: Int
-        public let key: String
+        public typealias Id = Tagged<Part, Int>
+        public typealias Path = Tagged<Part, String>
+
+        public let id: Id
+        public let key: Path
         public let duration: Int?
         public let file: String?
         public let size: Int?
@@ -135,6 +145,8 @@ public struct PlexMediaItem: Codable, Hashable {
 
     /// Represents a video, audio, subtitle or lyric stream.
     public struct Stream: Codable, Hashable {
+        public typealias Id = Tagged<Stream, Int>
+
         public let id: Int
         private let streamType: Int
         public let streamDefault: Bool?

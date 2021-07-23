@@ -16,17 +16,16 @@ public extension Plex.Request {
 
         public var queryItems: [URLQueryItem]? {
             [
-                .init(name: "key", value: ratingKey),
+                .init(name: "key", value: ratingKey.rawValue),
                 .init(name: "rating", value: rating),
                 .init(name: "identifier", value: "com.plexapp.plugins.library")
             ]
         }
 
-        /// - SeeAlso: `ratingKey` property of `MediaItem`.
-        private let ratingKey: String
+        private let ratingKey: PlexMediaItem.RatingKey
         private let rating: Int
 
-        public init(ratingKey: String, rating: Int) {
+        public init(ratingKey: PlexMediaItem.RatingKey, rating: Int) {
             self.ratingKey = ratingKey
             self.rating = rating.clamped(to: 0...10)
         }

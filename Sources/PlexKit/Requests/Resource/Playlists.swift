@@ -42,7 +42,7 @@ public extension Plex.Request {
 
                 if let libraryKey = libraryKey {
                     items.append(
-                        .init(name: "sectionID", value: libraryKey)
+                        .init(name: "sectionID", value: libraryKey.rawValue)
                     )
                 }
 
@@ -68,9 +68,7 @@ public extension Plex.Request {
             return items
         }
 
-        public init(
-            action: Action
-        ) throws {
+        public init(action: Action) throws {
             self.action = action
             switch action {
             case .create(_, _, _, let ratingKeys) where ratingKeys.isEmpty:
@@ -83,7 +81,7 @@ public extension Plex.Request {
         public init(
             type: PlexPlaylistType,
             smart: Bool? = nil,
-            libraryKey: Int? = nil
+            libraryKey: PlexLibrary.Key? = nil
         ) {
             // `get` action cannot throw.
             try! self.init(
@@ -109,8 +107,8 @@ public extension Plex.Request {
     }
 }
 
-func uriForResource(_ resource: String, itemRatingKeys: [String]) -> URLQueryItem {
-    let keys = itemRatingKeys.joined(separator: ",")
+func uriForResource(_ resource: PlexResource.Id, itemRatingKeys: [PlexMediaItem.RatingKey]) -> URLQueryItem {
+    let keys = itemRatingKeys.map(\.rawValue).joined(separator: ",")
     return URLQueryItem(
         name: "uri",
         value: "server://\(resource)/com.plexapp.plugins.library/library/metadata/\(keys)"
@@ -151,7 +149,7 @@ public extension Plex.Request.Playlists {
         /// Fetch playlists.
         case get(
             type: PlexPlaylistType,
-            libraryKey: Int?,
+            libraryKey: PlexLibrary.Key?,
             smart: Bool?
          )
 
@@ -159,12 +157,12 @@ public extension Plex.Request.Playlists {
         case create(
             title: String,
             type: PlexPlaylistType,
-            resource: String,
-            itemRatingKeys: [String]
+            resource: PlexResource.Id,
+            itemRatingKeys: [PlexMediaItem.RatingKey]
          )
 
         /// Delete a playlist.
-        case delete(ratingKey: String)
+        case delete(ratingKey: PlexMediaItem.RatingKey)
     }
 
     enum InvalidRequest: Error {

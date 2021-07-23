@@ -46,13 +46,12 @@ public extension Plex.Request {
         }
 
         /// The id of the track.
-        /// - SeeAlso: `ratingKey` property of `MediaItem.Part`.
-        private let ratingKey: String
+        private let ratingKey: PlexMediaItem.RatingKey
 
         /// The playback session ID.
         /// This is used by the server to relate a transcode session to the timeline item.
         /// - SeeAlso: `session` property of `Timeline` request.
-        private let session: UUID
+        private let session: Plex.Session
 
         /// - Warning: This value is not always respected by the server.
         private let preferredBitrate: Int
@@ -71,8 +70,8 @@ public extension Plex.Request {
         private let clientInfo: Plex.ClientInfo
 
         public init(
-            ratingKey: String,
-            session: UUID,
+            ratingKey: PlexMediaItem.RatingKey,
+            session: Plex.Session,
             preferredBitrate: Int,
             audioCodec: String = "mp3",
             mediaBufferSize: Int = 12288,

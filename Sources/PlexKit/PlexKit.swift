@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Tagged
 
 // MARK: - Client.
 
@@ -65,7 +66,7 @@ public final class Plex {
 
     @discardableResult public func request<Request: PlexServiceRequest>(
         _ request: Request,
-        token: String? = nil,
+        token: Token? = nil,
         completion: @escaping (Result<Request.Response, PlexError>) -> Void
     ) -> URLSessionTask? {
         let urlRequest: URLRequest
@@ -90,7 +91,7 @@ public final class Plex {
     @discardableResult public func request<Request: PlexResourceRequest>(
         _ request: Request,
         from url: URL,
-        token: String? = nil,
+        token: Plex.Token? = nil,
         completion: @escaping (Result<Request.Response, PlexError>) -> Void
     ) -> URLSessionTask? {
         let urlRequest: URLRequest
@@ -114,6 +115,18 @@ public final class Plex {
             completion: completion
         )
     }
+
+    ///
+    public typealias Token = Tagged<(Plex, token: ()), String>
+
+    ///
+    public typealias Path = Tagged<(Plex, path: ()), String>
+
+    ///
+    public typealias ImagePath = Tagged<(Plex, image: ()), String>
+
+    ///
+    public typealias Session = Tagged<(Plex, session: ()), UUID>
 }
 
 // MARK: - Client Info.
@@ -128,7 +141,7 @@ public extension Plex {
             platformVersion: String? = nil,
             device: String? = nil,
             deviceName: String? = nil,
-            token: String? = nil,
+            token: Plex.Token? = nil,
             sessionIdentifier: String? = nil
         ) {
             self.clientIdentifier = clientIdentifier
@@ -150,7 +163,7 @@ public extension Plex {
         public var platformVersion: String?
         public var device: String?
         public var deviceName: String?
-        public var token: String?
+        public var token: Plex.Token?
         public var sessionIdentifier: String?
 
         public enum CodingKeys: String, CodingKey, CaseIterable {
@@ -174,7 +187,7 @@ public extension Plex {
                 .platformVersion: platformVersion,
                 .device: device,
                 .deviceName: deviceName,
-                .token: token,
+                .token: token?.rawValue,
                 .sessionIdentifier: sessionIdentifier
             ]
             return map.compactMapValues { $0 }

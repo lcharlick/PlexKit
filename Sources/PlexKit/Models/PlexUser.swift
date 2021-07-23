@@ -7,18 +7,22 @@
 //
 
 import Foundation
+import Tagged
 
 public struct PlexUser: Codable {
-    public let id: Int
-    public let uuid: String
+    public typealias Id = Tagged<PlexUser, Int>
+    public typealias UUID = Tagged<PlexUser, String>
+
+    public let id: Id
+    public let uuid: UUID
     public let email: String?
     public let joinedAt: Date?
     public let username: String?
     public let title: String
     public let thumb: String?
     public let hasPassword: Bool
-    public let authToken: String?
-    public let authenticationToken: String?
+    public let authToken: Plex.Token?
+    public let authenticationToken: Plex.Token?
     public let subscription: Subscription?
     public let entitlements: [String]?
     public let confirmedAt: Date?

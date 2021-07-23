@@ -33,7 +33,7 @@ public extension Plex.Request {
                 return [
                     .init(
                         name: "after",
-                        value: afterRatingKey
+                        value: afterRatingKey!.rawValue
                     )
                 ]
             default:
@@ -53,12 +53,10 @@ public extension Plex.Request {
         }
 
         private let action: Action
-
-        /// - SeeAlso: `ratingKey` property of `MediaItem`.
-        private let ratingKey: String
+        private let ratingKey: PlexMediaItem.RatingKey
 
         public init(
-            ratingKey: String,
+            ratingKey: PlexMediaItem.RatingKey,
             action: Action = .get
         ) {
             self.ratingKey = ratingKey
@@ -77,12 +75,12 @@ public extension Plex.Request {
             /// Get the items in the playlist.
             case get
             /// Add one or more items to the playlist.
-            case add(resource: String, ratingKeys: [String])
+            case add(resource: PlexResource.Id, ratingKeys: [PlexMediaItem.RatingKey])
             /// Remove an item from the playlist.
-            case remove(ratingKey: String)
+            case remove(ratingKey: PlexMediaItem.RatingKey)
             /// Move the position of an item in the playlist.
             /// Use `nil` as `after` value to move the item to the beginning of the playlist.
-            case move(ratingKey: String, after: String?)
+            case move(ratingKey: PlexMediaItem.RatingKey, after: PlexMediaItem.RatingKey?)
         }
     }
 }

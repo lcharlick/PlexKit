@@ -12,12 +12,11 @@ public extension Plex.Request {
     struct RelatedMedia: PlexResourceRequest {
         public var path: String { "/hubs/metadata/\(ratingKey)/related" }
 
-        /// - SeeAlso: `ratingKey` property of `MediaItem`.
-        private let ratingKey: String
+        private let ratingKey: PlexMediaItem.RatingKey
         private let excludeFields: [String]
 
         public init(
-            ratingKey: String,
+            ratingKey: PlexMediaItem.RatingKey,
             excludeFields: [String] = []
         ) {
             self.ratingKey = ratingKey
@@ -40,9 +39,9 @@ public extension Plex.Request.RelatedMedia.Response {
         public let totalSize: Int?
         public let allowSync: Bool?
         public let identifier: String?
-        public let librarySectionID: Int?
+        public let librarySectionID: PlexLibrary.Id?
         public let librarySectionTitle: String?
-        public let librarySectionUUID: String?
+        public let librarySectionUUID: PlexLibrary.UUID?
         private let Hub: [Hub]?
         public var hubs: [Hub] {
             self.Hub ?? []

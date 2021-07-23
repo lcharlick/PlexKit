@@ -18,11 +18,14 @@ let package = Package(
             targets: ["PlexKit"])
     ],
     dependencies: [
+        .package(url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.6.0"),
     ],
     targets: [
         .target(
             name: "PlexKit",
-            dependencies: []),
+            dependencies: [
+                .product(name: "Tagged", package: "swift-tagged")
+            ]),
         .testTarget(
             name: "PlexKitTests",
             dependencies: ["PlexKit"],

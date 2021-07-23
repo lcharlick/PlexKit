@@ -17,7 +17,7 @@ public extension Plex.Request {
         public var queryItems: [URLQueryItem]? {
             [
                 .init(name: Plex.Header.sessionIdentifier.rawValue, value: session.uuidString),
-                .init(name: "ratingKey", value: ratingKey),
+                .init(name: "ratingKey", value: ratingKey.rawValue),
                 .init(name: "key", value: "/library/metadata/\(ratingKey)"),
                 .init(name: "state", value: state.rawValue),
                 .init(name: "time", value: currentTime),
@@ -29,11 +29,10 @@ public extension Plex.Request {
 
         /// The playback session ID.
         /// This seems to be used by the server to relate a transcode session to the timeline item.
-        private let session: UUID
+        private let session: Plex.Session
 
-        /// - SeeAlso: `ratingKey` property of `MediaItem`.
         /// - Warning: the `MediaItem` type must be playable.
-        private let ratingKey: String
+        private let ratingKey: PlexMediaItem.RatingKey
 
         /// The current playback state.
         private let state: State
@@ -48,8 +47,8 @@ public extension Plex.Request {
         private let isContinuing: Bool
 
         public init(
-            session: UUID,
-            ratingKey: String,
+            session: Plex.Session,
+            ratingKey: PlexMediaItem.RatingKey,
             state: State,
             currentTime: Int,
             duration: Int,
