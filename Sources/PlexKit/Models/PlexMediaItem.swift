@@ -42,7 +42,7 @@ public struct PlexMediaItem: Codable, Hashable {
     public let updatedAt: Date?
     public let originalTitle: String?
     public let rating: Double?
-    public let userRating: Int?
+    public let userRating: Double?
     public let lastRatedAt: Date?
     public let year: Int?
     public let originallyAvailableAt: String?
