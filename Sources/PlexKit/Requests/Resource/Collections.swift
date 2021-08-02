@@ -41,13 +41,13 @@ public extension Plex.Request.Collections {
     struct MediaContainer: Codable {
         public let size: Int
         public let allowSync: Bool?
-        public let art: String?
+        public let art: Plex.ImagePath?
         public let content: String?
         public let identifier: String?
         public let mediaTagPrefix: String?
         public let mediaTagVersion: Int?
         public let nocache: Bool?
-        public let thumb: String?
+        public let thumb: Plex.ImagePath?
         public let title1: String?
         public let title2: String?
         public let viewGroup: String?
