@@ -51,7 +51,7 @@ public extension Plex.Request.RelatedMedia.Response {
 
     struct Hub: Codable {
         public let size: Int
-        public let hubKey: String
+        public let hubKey: String?
         public let key: String
         public let title: String?
         public let type: PlexMediaType?
