@@ -1,0 +1,538 @@
+{
+  "MediaContainer": {
+    "size": 15,
+    "totalSize": 15,
+    "offset": 0,
+    "Metadata": [
+      {
+        "ratingKey": "475004",
+        "key": "/library/metadata/475004/children",
+        "parentRatingKey": "417674",
+        "guid": "com.plexapp.agents.audiobooks://1549119788?lang=en",
+        "parentGuid": "local://417674",
+        "studio": "Hachette Audio",
+        "type": "album",
+        "title": "Children of Ruin",
+        "parentKey": "/library/metadata/417674",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "Adrian Tchaikovsky",
+        "summary": "The astonishing sequel to Children of Time, the award-winning novel of humanity's battle for survival on a terraformed planet.\n Thousands of years ago, Earth's terraforming program took to the stars. On the world they called Nod, scientists discovered alien life - but it was their mission to overwrite it with the memory of Earth. Then humanity's great empire fell, and the program's decisions were lost to time.\n Aeons later, humanity and its new spider allies detected fragmentary radio signals between the stars. They dispatched an exploration vessel, hoping to find cousins from old Earth.\n But those ancient terraformers woke something on Nod better left undisturbed.\n And it's been waiting for them.\n For more from Adrian Tchaikovsky, check out: Children of Time\n",
+        "index": 1,
+        "rating": 9.0,
+        "viewCount": 1,
+        "lastViewedAt": 1603297263,
+        "year": 2019,
+        "thumb": "/library/metadata/475004/thumb/1634496894",
+        "parentThumb": "/library/metadata/417674/thumb/1633861027",
+        "originallyAvailableAt": "2019-05-14",
+        "addedAt": 1575550966,
+        "updatedAt": 1634496894,
+        "Genre": [
+          {
+            "tag": "Science Fiction"
+          }
+        ]
+      },
+      {
+        "ratingKey": "476230",
+        "key": "/library/metadata/476230/children",
+        "parentRatingKey": "411008",
+        "guid": "com.plexapp.agents.audiobooks://B07VYMVXK6?lang=en",
+        "parentGuid": "local://411008",
+        "studio": "Audible Studios",
+        "type": "album",
+        "title": "Starsight",
+        "parentKey": "/library/metadata/411008",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "Brandon Sanderson",
+        "summary": "The sequel to the New York Times best seller Skyward! \n From the number-one New York Times best-selling author of the Reckoners series, Words of Radiance, the Mistborn trilogy, and the Stormlight Archive comes the second book in an epic series about a girl with a secret in a dangerous world at war for humanity's future. \n All her life, Spensa has dreamed of becoming a pilot. Of proving she's a hero like her father. She made it to the sky, but the truths she learned about her father were crushing. The rumors of his cowardice are true - he deserted his flight during battle against the Krell. Worse, though, he turned against his team and attacked them. \n Spensa is sure there's more to the story. And she's sure that whatever happened to her father in his starship could happen to her. When she made it outside the protective shell of her planet, she heard the stars - and it was terrifying. Everything Spensa has been taught about her world is a lie. \n But Spensa also discovered a few other things about herself - and she'll travel to the end of the galaxy to save humankind if she needs to. \n \"[A] nonstop, highflying opener.\" (Kirkus Reviews, starred review) \n \"With this action-packed trilogy opener, Sanderson offers up a resourceful, fearless heroine and a memorable cast.\" (Publishers Weekly) \n \"Sanderson delivers a cinematic adventure that explores the defining aspects of the individual versus the society.... Fans of Sanderson will not be disappointed.\" (SLJ)\n",
+        "index": 1,
+        "rating": 9.6,
+        "viewCount": 1,
+        "skipCount": 1,
+        "lastViewedAt": 1593277107,
+        "year": 2019,
+        "thumb": "/library/metadata/476230/thumb/1633972120",
+        "parentThumb": "/library/metadata/411008/thumb/1605670354",
+        "originallyAvailableAt": "2019-11-26",
+        "addedAt": 1579696823,
+        "updatedAt": 1633972120,
+        "Genre": [
+          {
+            "tag": "Suzy Jackson"
+          },
+          {
+            "tag": "Science Fiction & Fantasy"
+          }
+        ]
+      },
+      {
+        "ratingKey": "410750",
+        "key": "/library/metadata/410750/children",
+        "parentRatingKey": "410749",
+        "guid": "com.plexapp.agents.audiobooks://B01N17THEO?lang=en",
+        "parentGuid": "local://410749",
+        "studio": "Audible Originals",
+        "type": "album",
+        "title": "For We Are Many",
+        "parentKey": "/library/metadata/410749",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "Dennis E. Taylor",
+        "summary": "The highly anticipated sequel to Audible's Best of 2016 - Science Fiction winner, We Are Legion (We Are Bob); a book listeners are calling \"so much fun\", \"what science fiction was meant to be\", and what would happen if \"Andy Weir and Ernest Cline had a lovechild\". \n Bob Johansson didn't believe in an afterlife, so waking up after being killed in a car accident was a shock. To add to the surprise, he is now a sentient computer and the controlling intelligence for a Von Neumann probe. \n Bob and his copies have been spreading out from Earth for 40 years now, looking for habitable planets. But that's the only part of the plan that's still in one piece. A system-wide war has killed off 99.9 percent of the human race; nuclear winter is slowly making the Earth uninhabitable; a radical group wants to finish the job on the remnants of humanity; the Brazilian space probes are still out there, still trying to blow up the competition; and the Bobs have discovered a spacefaring species that sees all other life as food. \n Bob left Earth anticipating a life of exploration and blissful solitude. Instead he's become a sky god to a primitive native species, the only hope for getting humanity to a new home, and possibly the only thing that can prevent every living thing in the local sphere from ending up as dinner. \n Listener favorite Ray Porter returns to narrate Bob - and his many incarnations - in all of their geeky glory. \n For We Are Many is the second installment in the blockbuster Audible Original Bobiverse series - which has sold more than one million copies.\n",
+        "index": 1,
+        "rating": 9.5,
+        "lastViewedAt": 1603726411,
+        "year": 2017,
+        "thumb": "/library/metadata/410750/thumb/1633971187",
+        "originallyAvailableAt": "2017-04-18",
+        "addedAt": 1492501723,
+        "updatedAt": 1633971187,
+        "Genre": [
+          {
+            "tag": "Science Fiction"
+          }
+        ]
+      },
+      {
+        "ratingKey": "477298",
+        "key": "/library/metadata/477298/children",
+        "parentRatingKey": "477297",
+        "guid": "com.plexapp.agents.audiobooks://B00J27VX9Y?lang=en",
+        "parentGuid": "local://477297",
+        "studio": "Hachette Audio",
+        "type": "album",
+        "title": "The First Fifteen Lives of Harry August",
+        "titleSort": "First Fifteen Lives of Harry August",
+        "parentKey": "/library/metadata/477297",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "Claire North",
+        "summary": "Wildly original, funny, and moving, The First Fifteen Lives of Harry August is an extraordinary story of a life lived again and again from World Fantasy Award-winning author Claire North.\n Harry August is on his deathbed. Again.\n No matter what he does or the decisions he makes, when death comes, Harry always returns to where he began, a child with all the knowledge of a life he has already lived a dozen times before. Nothing ever changes. Until now. As Harry nears the end of his 11th life, a little girl appears at his bedside. \"I nearly missed you, Doctor August\", she says. \"I need to send a message\".\n This is the story of what Harry does next, and what he did before, and how he tries to save a past he cannot change and a future he cannot allow.\n",
+        "index": 1,
+        "rating": 8.8,
+        "lastViewedAt": 1585044085,
+        "year": 2014,
+        "thumb": "/library/metadata/477298/thumb/1633971261",
+        "originallyAvailableAt": "2014-04-08",
+        "addedAt": 1582030388,
+        "updatedAt": 1633971261,
+        "Genre": [
+          {
+            "tag": "Science Fiction"
+          },
+          {
+            "tag": "Time Travel"
+          }
+        ]
+      },
+      {
+        "ratingKey": "412162",
+        "key": "/library/metadata/412162/children",
+        "parentRatingKey": "411545",
+        "guid": "com.plexapp.agents.audiobooks://1549142194?lang=en",
+        "parentGuid": "local://411545",
+        "studio": "Orbit",
+        "type": "album",
+        "title": "Abaddon's Gate",
+        "parentKey": "/library/metadata/411545",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "James S. A. Corey",
+        "summary": "The explosive third novel in James S.A. Corey's New York Times best-selling Expanse series. Now a major television series.\n Hugo Award Winner for Best Series\n For generations, the solar system - Mars, the Moon, the Asteroid Belt - was humanity's great frontier. Until now. The alien artifact working through its program under the clouds of Venus has appeared in Uranus's orbit, where it has built a massive gate that leads to a starless dark.\n Jim Holden and the crew of the Rocinante are part of a vast flotilla of scientific and military ships going out to examine the artifact. But behind the scenes, a complex plot is unfolding, with the destruction of Holden at its core. As the emissaries of the human race try to find whether the gate is an opportunity or a threat, the greatest danger is the one they brought with them. \n Abaddon's Gate is a breakneck science-fiction adventure following the critically acclaimed Caliban's War.\n The Expanse: Leviathan Wakes, Caliban's War, Abaddon's Gate, Cibola Burn, Nemesis Games, Babylon's Ashes, Persepolis Rising\n The Expanse Short Fiction: The Butcher of Anderson, Station, Gods of Risk, The Churn, The Vital, Abyss, Strange Dogs\n",
+        "index": 1,
+        "rating": 9.6,
+        "lastViewedAt": 1562333628,
+        "year": 2013,
+        "thumb": "/library/metadata/412162/thumb/1633971385",
+        "originallyAvailableAt": "2013-01-01",
+        "addedAt": 1558191988,
+        "updatedAt": 1633971385,
+        "Genre": [
+          {
+            "tag": "Jefferson Mays"
+          },
+          {
+            "tag": "Science Fiction & Fantasy"
+          }
+        ],
+        "Collection": [
+          {
+            "tag": "The Expanse"
+          }
+        ]
+      },
+      {
+        "ratingKey": "412158",
+        "key": "/library/metadata/412158/children",
+        "parentRatingKey": "411545",
+        "guid": "com.plexapp.agents.audiobooks://B075DK95GS?lang=en",
+        "parentGuid": "local://411545",
+        "studio": "Hachette Audio",
+        "type": "album",
+        "title": "Caliban's War",
+        "parentKey": "/library/metadata/411545",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "James S. A. Corey",
+        "summary": "Hugo Award Winner for Best Series\n The second book in the NYT best-selling Expanse series, Caliban's War shows a solar system on the brink of war, and the only hope of peace rests on James Holden and the crew of the Rocinante's shoulders. Now a Prime Original series.\n We are not alone.\n On Ganymede, breadbasket of the outer planets, a Martian marine watches as her platoon is slaughtered by a monstrous supersoldier. On Earth, a high-level politician struggles to prevent interplanetary war from reigniting. And on Venus, an alien protomolecule has overrun the planet, wreaking massive, mysterious changes, and threatening to spread out into the solar system.\n In the vast wilderness of space, James Holden and the crew of the Rocinante have been keeping the peace for the Outer Planets Alliance. When they agree to help a scientist search war-torn Ganymede for a missing child, the future of humanity rests on whether a single ship can prevent an alien invasion that may have already begun...\n The Expanse\n \n   • Leviathan Wakes\n  • Caliban's War\n  • Abaddon's Gate\n  • Cibola Burn\n  • Nemesis Games\n  • Babylon's Ashes\n  • Persepolis Rising\n  • Tiamat's Wrath\n  • Leviathan Falls\n  • Memory's Legion \n \n The Expanse Short Fiction\n \n   • Drive\n  • The Butcher of Anderson Station\n  • Gods of Risk\n  • The Churn\n  • The Vital Abyss\n  • Strange Dogs\n  • Auberon\n  • Memory's Legion\n \n",
+        "index": 1,
+        "rating": 9.7,
+        "viewCount": 11,
+        "lastViewedAt": 1560443074,
+        "year": 2012,
+        "thumb": "/library/metadata/412158/thumb/1633971396",
+        "originallyAvailableAt": "2012-01-01",
+        "addedAt": 1558191988,
+        "updatedAt": 1633971396,
+        "Genre": [
+          {
+            "tag": "Jefferson Mays"
+          },
+          {
+            "tag": "Science Fiction & Fantasy"
+          }
+        ],
+        "Collection": [
+          {
+            "tag": "The Expanse"
+          }
+        ]
+      },
+      {
+        "ratingKey": "411546",
+        "key": "/library/metadata/411546/children",
+        "parentRatingKey": "411545",
+        "guid": "com.plexapp.agents.audiobooks://B073H9PF2D?lang=en",
+        "parentGuid": "local://411545",
+        "studio": "Hachette Audio",
+        "type": "album",
+        "title": "Leviathan Wakes",
+        "parentKey": "/library/metadata/411545",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "James S. A. Corey",
+        "summary": "From a New York Times best-selling and Hugo award-winning author comes a modern masterwork of science fiction, introducing a captain, his crew, and a detective as they unravel a horrifying solar system wide conspiracy that begins with a single missing girl.\n Humanity has colonized the solar system - Mars, the Moon, the Asteroid Belt, and beyond - but the stars are still out of our reach.\n Jim Holden is XO of an ice miner making runs from the rings of Saturn to the mining stations of the Belt. When he and his crew stumble upon a derelict ship, the Scopuli, they find themselves in possession of a secret they never wanted. A secret that someone is willing to kill for - and kill on a scale unfathomable to Jim and his crew. War is brewing in the system unless he can find out who left the ship and why.\n Detective Miller is looking for a girl. One girl in a system of billions, but her parents have money and money talks. When the trail leads him to the Scopuli and rebel sympathizer Holden, he realizes that this girl may be the key to everything.\n Holden and Miller must thread the needle between the Earth government, the Outer Planet revolutionaries, and secretive corporations - and the odds are against them. But out in the Belt, the rules are different, and one small ship can change the fate of the universe.\n The Expanse\n \n   • Leviathan Wakes\n  • Caliban's War\n  • Abaddon's Gate\n  • Cibola Burn\n  • Nemesis Games\n  • Babylon's Ashes\n  • Persepolis Rising\n  • Tiamat's Wrath\n  • Leviathan Falls\n  • Memory's Legion \n \n The Expanse Short Fiction\n \n   • Drive\n  • The Butcher of Anderson Station\n  • Gods of Risk\n  • The Churn\n  • The Vital Abyss\n  • Strange Dogs\n  • Auberon\n  • Memory's Legion\n \n",
+        "index": 1,
+        "rating": 9.5,
+        "viewCount": 3,
+        "lastViewedAt": 1558109498,
+        "year": 2011,
+        "thumb": "/library/metadata/411546/thumb/1633971409",
+        "originallyAvailableAt": "2011-01-01",
+        "addedAt": 1556125590,
+        "updatedAt": 1633971409,
+        "Genre": [
+          {
+            "tag": "Jefferson Mays"
+          },
+          {
+            "tag": "Science Fiction & Fantasy"
+          }
+        ],
+        "Collection": [
+          {
+            "tag": "The Expanse"
+          }
+        ]
+      },
+      {
+        "ratingKey": "410609",
+        "key": "/library/metadata/410609/children",
+        "parentRatingKey": "410460",
+        "guid": "com.plexapp.agents.audiobooks://B002V0TILE?lang=en",
+        "parentGuid": "local://410460",
+        "studio": "Macmillan Audio",
+        "type": "album",
+        "title": "Children of the Mind",
+        "parentKey": "/library/metadata/410460",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "Orson Scott Card",
+        "summary": "The planet Lusitania is home to three sentient species: a large colony of humans; the Pequeninos; and the Hive Queen, who was brought there by Ender Wiggin. Once again, the enemy (the Starways Congress) has gathered a fleet and is threatening to destroy Lusitania. Ender's oldest friend, Jane, an evolved computer intelligence, is trying to save the three sentient species of Lusitania, but the Starways Congress is destroying the computer world she lives in. Children of the Mind is the fourth and final volume in the original Ender Saga by Orson Scott Card, winner of the Hugo and Nebula award.\n",
+        "index": 1,
+        "rating": 8.8,
+        "year": 2004,
+        "thumb": "/library/metadata/410609/thumb/1633971371",
+        "parentThumb": "/library/metadata/410460/thumb/1605545918",
+        "originallyAvailableAt": "2004-08-04",
+        "addedAt": 1453727057,
+        "updatedAt": 1633971371,
+        "Genre": [
+          {
+            "tag": "Science Fiction"
+          }
+        ],
+        "Collection": [
+          {
+            "tag": "Enderverse"
+          }
+        ]
+      },
+      {
+        "ratingKey": "475002",
+        "key": "/library/metadata/475002/children",
+        "parentRatingKey": "410460",
+        "guid": "com.plexapp.agents.audiobooks://B002V1OPY8?lang=en",
+        "parentGuid": "local://410460",
+        "studio": "Macmillan Audio",
+        "type": "album",
+        "title": "Xenocide",
+        "parentKey": "/library/metadata/410460",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "Orson Scott Card",
+        "summary": "Xenocide is the third installment of the Ender series. On Lusitania, Ender found a world where humans and pequeninos and the Hive Queen could all live together; where three very different intelligent species could find common ground at last. Or so he thought. But Lusitania also harbors the descolada, a virus which kills all humans it infects, but which the pequeninos require in order to transform into adults. The Starways Congress so fears the effect of the descolada, should it escape from Lusitania, that they have ordered the destruction of the entire planet and all who live there. The Fleet is on its way and a second Xenocide seems inevitable, until the Fleet vanishes.",
+        "index": 1,
+        "rating": 8.8,
+        "skipCount": 1,
+        "year": 2003,
+        "thumb": "/library/metadata/475002/thumb/1633971395",
+        "parentThumb": "/library/metadata/410460/thumb/1605545918",
+        "originallyAvailableAt": "2003-12-28",
+        "addedAt": 1575550965,
+        "updatedAt": 1633971395,
+        "Genre": [
+          {
+            "tag": "Science Fiction"
+          }
+        ],
+        "Collection": [
+          {
+            "tag": "Enderverse"
+          }
+        ]
+      },
+      {
+        "ratingKey": "410622",
+        "key": "/library/metadata/410622/children",
+        "parentRatingKey": "410460",
+        "guid": "com.plexapp.agents.audiobooks://B002V5A12Y?lang=en",
+        "parentGuid": "local://410460",
+        "studio": "Macmillan Audio",
+        "type": "album",
+        "title": "Ender's Game",
+        "parentKey": "/library/metadata/410460",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "Orson Scott Card",
+        "summary": "Winner of the Hugo and Nebula Awards \n In order to develop a secure defense against a hostile alien race's next attack, government agencies breed child geniuses and train them as soldiers. A brilliant young boy, Andrew \"Ender\" Wiggin lives with his kind but distant parents, his sadistic brother Peter, and the person he loves more than anyone else, his sister Valentine. Peter and Valentine were candidates for the soldier-training program but didn't make the cut - young Ender is the Wiggin drafted to the orbiting Battle School for rigorous military training. \n Ender's skills make him a leader in school and respected in the Battle Room, where children play at mock battles in zero gravity. Yet growing up in an artificial community of young soldiers Ender suffers greatly from isolation, rivalry from his peers, pressure from the adult teachers, and an unsettling fear of the alien invaders. His psychological battles include loneliness, fear that he is becoming like the cruel brother he remembers, and fanning the flames of devotion to his beloved sister. Is Ender the general Earth needs? \n But Ender is not the only result of the genetic experiments. The war with the Buggers has been raging for a hundred years, and the quest for the perfect general has been underway for almost as long. Ender's two older siblings are every bit as unusual as he is, but in very different ways. Between the three of them lie the abilities to remake a world. If, that is, the world survives. \n Orson Scott Card's Ender's Game is the winner of the 1985 Nebula Award for Best Novel and the 1986 Hugo Award for Best Novel. \n",
+        "index": 1,
+        "rating": 9.2,
+        "skipCount": 1,
+        "lastViewedAt": 1554999503,
+        "year": 2001,
+        "thumb": "/library/metadata/410622/thumb/1633971373",
+        "parentThumb": "/library/metadata/410460/thumb/1605545918",
+        "originallyAvailableAt": "2001-12-30",
+        "addedAt": 1554965274,
+        "updatedAt": 1633971373,
+        "Genre": [
+          {
+            "tag": "Science Fiction"
+          }
+        ],
+        "Collection": [
+          {
+            "tag": "Enderverse"
+          }
+        ]
+      },
+      {
+        "ratingKey": "410461",
+        "key": "/library/metadata/410461/children",
+        "parentRatingKey": "410460",
+        "guid": "com.plexapp.agents.audiobooks://B002V8N9VG?lang=en",
+        "parentGuid": "local://410460",
+        "studio": "Macmillan Audio",
+        "type": "album",
+        "title": "Speaker for the Dead",
+        "parentKey": "/library/metadata/410460",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "Orson Scott Card",
+        "summary": "In the aftermath of his terrible war, Ender Wiggin disappeared, and a powerful voice arose: the Speaker for the Dead, who told the true story of the Bugger War. Now, long years later, a second alien race has been discovered by Portuguese colonists on the planet Lusitania. But again the aliens' ways are strange and frightening...again, humans die. And it is only the Speaker for the Dead, who is also Ender Wiggin the Xenocide, who has the courage to confront the mystery...and the truth. Orson Scott Card infuses this tale with intellect by casting his characters in social, religious, and cultural contexts. This, the author's definitive edition of the sequel to Ender's Game, also includes an original postscript written and recorded by the author himself, Orson Scott Card!.\n",
+        "index": 1,
+        "rating": 9.1,
+        "viewCount": 2,
+        "skipCount": 1,
+        "lastViewedAt": 1582042197,
+        "year": 2001,
+        "thumb": "/library/metadata/410461/thumb/1633971382",
+        "parentThumb": "/library/metadata/410460/thumb/1605545918",
+        "originallyAvailableAt": "2001-12-30",
+        "addedAt": 1455623871,
+        "updatedAt": 1633971382,
+        "Genre": [
+          {
+            "tag": "Science Fiction"
+          }
+        ],
+        "Collection": [
+          {
+            "tag": "Enderverse"
+          }
+        ]
+      },
+      {
+        "ratingKey": "473929",
+        "key": "/library/metadata/473929/children",
+        "parentRatingKey": "410632",
+        "guid": "com.plexapp.agents.audiobooks://B002V5H3AW?lang=en",
+        "parentGuid": "local://410632",
+        "studio": "Random House Audio",
+        "type": "album",
+        "title": "Mostly Harmless",
+        "parentKey": "/library/metadata/410632",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "Douglas Adams",
+        "summary": "It's not just a trilogy any more. In the fifth book of this popular series, Arthur Dent makes the terrible mistake of starting to enjoy life, and immediately all hell breaks loose. In short, it's up to him to save the world from total multi-dimensional obliteration, the Guide from a hostile alien takeover, and the daughter he never knew he had from herself. A tall order, to say the least. And one he's really not up to, thank you very much.",
+        "index": 1,
+        "rating": 9.2,
+        "year": 1992,
+        "thumb": "/library/metadata/473929/thumb/1633971205",
+        "parentThumb": "/library/metadata/410632/thumb/1605457273",
+        "originallyAvailableAt": "1992-01-01",
+        "addedAt": 1572526989,
+        "updatedAt": 1633971205,
+        "Genre": [
+          {
+            "tag": "Martin Freeman"
+          },
+          {
+            "tag": "Science Fiction & Fantasy"
+          }
+        ],
+        "Collection": [
+          {
+            "tag": "Hitchhiker's Guide to the Galaxy"
+          }
+        ]
+      },
+      {
+        "ratingKey": "590819",
+        "key": "/library/metadata/590819/children",
+        "parentRatingKey": "590818",
+        "guid": "com.plexapp.agents.audiobooks://B004ASGI7C?lang=en",
+        "parentGuid": "local://590818",
+        "studio": "Hachette Audio UK",
+        "type": "album",
+        "title": "Consider Phlebas",
+        "parentKey": "/library/metadata/590818",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "Iain M. Banks",
+        "summary": "The first Culture novel, now available as an unabridged audio download. \n The war raged across the galaxy. Billions had died, billions more were doomed. Moons, planets, the very stars themselves, faced destruction - cold-blooded, brutal, and worse, random. The Idirans fought for their Faith; the Culture for its moral right to exist. Principles were at stake. There could be no surrender. \n Within the cosmic conflict, an individual crusade. Deep within a fabled labyrinth on a barren world, a Planet of the Dead proscribed to mortals, lay a fugitive Mind. Both the Culture and the Idirans sought it. It was the fate of Horza, the Changer, and his motley crew of unpredictable mercenaries, human and machine, actually to find it, and with it their own destruction. \n Consider Phlebas is a space opera of stunning power and awesome imagination.\n",
+        "index": 1,
+        "rating": 8.1,
+        "lastViewedAt": 1630556238,
+        "year": 1987,
+        "thumb": "/library/metadata/590819/thumb/1633971370",
+        "originallyAvailableAt": "1987-01-01",
+        "addedAt": 1617534407,
+        "updatedAt": 1633971370,
+        "Genre": [
+          {
+            "tag": "Science Fiction"
+          }
+        ]
+      },
+      {
+        "ratingKey": "473925",
+        "key": "/library/metadata/473925/children",
+        "parentRatingKey": "410632",
+        "guid": "com.plexapp.agents.audiobooks://B002V5D5ZE?lang=en",
+        "parentGuid": "local://410632",
+        "studio": "Random House Audio",
+        "type": "album",
+        "title": "The Restaurant at the End of the Universe",
+        "titleSort": "Restaurant at the End of the Universe",
+        "parentKey": "/library/metadata/410632",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "Douglas Adams",
+        "summary": "“Douglas Adams is a terrific satirist.” (The Washington Post Book World)\n Facing annihilation at the hands of the warlike Vogons? Time for a cup of tea! Join the cosmically displaced Arthur Dent and his uncommon comrades in arms in their desperate search for a place to eat as they hurtle across space powered by pure improbability.   \n Among Arthur's motley shipmates are Ford Prefect, a longtime friend and expert contributor to the Hitchhiker's Guide to the Galaxy; Zaphod Beeblebrox, the three-armed, two-headed ex-president of the galaxy; Tricia McMillan, a fellow Earth refugee who's gone native (her name is Trillian now); and Marvin, the moody android. Their destination? The ultimate hot spot for an evening of apocalyptic entertainment and fine dining, where the food speaks for itself (literally).\n “What’s such fun is how amusing the galaxy looks through Adams’s sardonically silly eyes.” (Detroit Free Press)\n",
+        "index": 1,
+        "rating": 9.2,
+        "viewCount": 2,
+        "lastViewedAt": 1578585981,
+        "year": 1980,
+        "thumb": "/library/metadata/473925/thumb/1633971213",
+        "parentThumb": "/library/metadata/410632/thumb/1605457273",
+        "originallyAvailableAt": "1980-01-01",
+        "addedAt": 1572526989,
+        "updatedAt": 1633971213,
+        "Genre": [
+          {
+            "tag": "Martin Freeman"
+          },
+          {
+            "tag": "Science Fiction & Fantasy"
+          }
+        ],
+        "Collection": [
+          {
+            "tag": "Hitchhiker's Guide to the Galaxy"
+          }
+        ]
+      },
+      {
+        "ratingKey": "473923",
+        "key": "/library/metadata/473923/children",
+        "parentRatingKey": "410632",
+        "guid": "com.plexapp.agents.audiobooks://B002VA9SWS?lang=en",
+        "parentGuid": "local://410632",
+        "studio": "Random House Audio",
+        "type": "album",
+        "title": "The Hitchhiker's Guide to the Galaxy",
+        "titleSort": "Hitchhiker's Guide to the Galaxy",
+        "parentKey": "/library/metadata/410632",
+        "librarySectionTitle": "Audiobooks",
+        "librarySectionID": 34,
+        "librarySectionKey": "/library/sections/34",
+        "parentTitle": "Douglas Adams",
+        "summary": "Seconds before the Earth is demolished to make way for a galactic freeway, Arthur Dent is plucked off the planet by his friend Ford Prefect, a researcher for the revised edition of The Hitchhiker's Guide to the Galaxy who, for the last 15 years, has been posing as an out-of-work actor. Together this dynamic pair begin a journey through space aided by quotes from The Hitchhiker's Guide (\"A towel is about the most massively useful thing an interstellar hitchhiker can have.\") and a galaxy full of fellow travelers: Zaphod Beeblebrox, the two-headed, three-armed ex-hippie and totally out-to-lunch president of the galaxy; Trillian, Zaphod's girlfriend (formally Tricia McMillan), whom Arthur tried to pick up at a cocktail party once upon a time zone; Marvin, a paranoid, brilliant, and chronically depressed robot; and Veet Voojagig, a former graduate student who is obsessed with the disappearance of all the ballpoint pens he bought over the years.\n Where are these pens? Why are we born? Why do we die? Why do we spend so much time in between wearing digital watches? For all the answers stick your thumb to the stars. And don't forget to bring a towel!\n",
+        "index": 1,
+        "rating": 9.2,
+        "viewCount": 2,
+        "lastViewedAt": 1573568026,
+        "year": 1979,
+        "thumb": "/library/metadata/473923/thumb/1633971191",
+        "parentThumb": "/library/metadata/410632/thumb/1605457273",
+        "originallyAvailableAt": "1979-01-01",
+        "addedAt": 1572526989,
+        "updatedAt": 1633971191,
+        "Genre": [
+          {
+            "tag": "Stephen Fry"
+          },
+          {
+            "tag": "Science Fiction & Fantasy"
+          }
+        ],
+        "Collection": [
+          {
+            "tag": "Hitchhiker's Guide to the Galaxy"
+          }
+        ]
+      }
+    ]
+  }
+}

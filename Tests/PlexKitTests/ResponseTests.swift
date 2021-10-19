@@ -768,6 +768,45 @@ extension ResponseTests {
         XCTAssertEqual(item?.key, "3286")
         XCTAssertEqual(item?.title, "Harry Potter")
     }
+
+    func testCollections2() throws {
+        let response = try loadResponse(
+            "collections2",
+            for: Plex.Request.Collections2.self
+        )
+
+        XCTAssertEqual(
+            response.mediaContainer.size,
+            response.mediaContainer.metadata.count
+        )
+
+        let collection = response.mediaContainer.metadata.first { $0.isSmart }
+        XCTAssertEqual(collection?.ratingKey, "594667")
+        XCTAssertEqual(collection?.key, "/library/collections/594667/children")
+        XCTAssertEqual(collection?.guid, "collection://f969f524-3acb-4b59-b194-2bd356f03e6a")
+        XCTAssertEqual(collection?.type, "collection")
+        XCTAssertEqual(collection?.title, "Science Fiction")
+        XCTAssertEqual(collection?.subtype, .album)
+        XCTAssertEqual(collection?.summary, "")
+        XCTAssertEqual(collection?.index, 197069)
+        XCTAssertEqual(collection?.ratingCount, 109)
+        XCTAssertEqual(collection?.thumb, "/library/collections/594667/composite/1634550705?width=400&height=600")
+        XCTAssertEqual(collection?.addedAt?.timeIntervalSince1970, 1634550705)
+        XCTAssertEqual(collection?.updatedAt?.timeIntervalSince1970, 1634550705)
+        XCTAssertEqual(collection?.childCount, "15")
+    }
+
+    func testCollectionItems() throws {
+        let response = try loadResponse(
+            "collection_items",
+            for: Plex.Request.CollectionItems.self
+        )
+
+        XCTAssertEqual(
+            response.mediaContainer.size,
+            response.mediaContainer.metadata.count
+        )
+    }
 }
 
 // MARK: - Related Media.
