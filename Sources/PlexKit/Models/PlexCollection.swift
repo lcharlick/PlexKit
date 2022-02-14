@@ -12,7 +12,7 @@ public struct PlexCollection: Codable, Hashable {
     public let key: String
     public let title: String
 
-    public let sortTitle: String?
+    public let titleSort: String?
     public let ratingKey: String?
     public let guid: String?
     public let type: String?
