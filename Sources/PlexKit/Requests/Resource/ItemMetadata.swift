@@ -11,7 +11,9 @@ import Foundation
 public extension Plex.Request {
     /// Fetch metadata for a `PlexMediaItem`.
     /// - Warning: not tested.
-    struct ItemMetadata: PlexResourceRequest {
+    typealias ItemMetadata = _ItemMetadata<PlexMediaItem>
+
+    struct _ItemMetadata<MediaItem: PlexMediaItemType>: PlexResourceRequest {
         public var path: String { "library/metadata/\(ratingKey)" }
 
         public var queryItems: [URLQueryItem]? {
@@ -67,7 +69,7 @@ public extension Plex.Request {
     }
 }
 
-public extension Plex.Request.ItemMetadata.Response {
+public extension Plex.Request._ItemMetadata.Response {
     enum CodingKeys: String, CodingKey {
         case mediaContainer = "MediaContainer"
     }
@@ -83,9 +85,9 @@ public extension Plex.Request.ItemMetadata.Response {
         public let mediaTagPrefix: String?
         public let mediaTagVersion: Int?
 
-        private let Metadata: [PlexMediaItem]?
+        private let Metadata: [MediaItem]?
 
-        public var metadata: [PlexMediaItem] {
+        public var metadata: [MediaItem] {
             self.Metadata ?? []
         }
     }

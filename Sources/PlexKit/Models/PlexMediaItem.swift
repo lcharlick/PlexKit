@@ -8,7 +8,19 @@
 
 import Foundation
 
-public struct PlexMediaItem: Codable, Hashable {
+public protocol PlexMediaItemType: Codable, Hashable {
+    var ratingKey: String { get }
+    var key: String { get }
+}
+
+/// The most basic media item type.
+/// Handy for performance-critical requests.
+public struct BasicPlexMediaItem: PlexMediaItemType {
+    public let ratingKey: String
+    public let key: String
+}
+
+public struct PlexMediaItem: PlexMediaItemType {
     public let ratingKey: String
     public let key: String
     public let parentRatingKey: String?

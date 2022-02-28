@@ -9,7 +9,9 @@
 import Foundation
 
 public extension Plex.Request {
-    struct RelatedMedia: PlexResourceRequest {
+    typealias RelatedMedia = _RelatedMedia<PlexMediaItem>
+
+    struct _RelatedMedia<MediaItem: PlexMediaItemType>: PlexResourceRequest {
         public var path: String { "/hubs/metadata/\(ratingKey)/related" }
 
         /// - SeeAlso: `ratingKey` property of `MediaItem`.
@@ -30,7 +32,7 @@ public extension Plex.Request {
     }
 }
 
-public extension Plex.Request.RelatedMedia.Response {
+public extension Plex.Request._RelatedMedia.Response {
     enum CodingKeys: String, CodingKey {
         case mediaContainer = "MediaContainer"
     }
@@ -59,8 +61,8 @@ public extension Plex.Request.RelatedMedia.Response {
         public let context: String?
         public let more: Bool?
         public let style: String?
-        private let Metadata: [PlexMediaItem]?
-        public var metadata: [PlexMediaItem] {
+        private let Metadata: [MediaItem]?
+        public var metadata: [MediaItem] {
             self.Metadata ?? []
         }
     }
