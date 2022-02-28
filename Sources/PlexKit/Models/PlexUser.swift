@@ -32,12 +32,12 @@ public struct PlexUser: Codable {
     public let protected: Bool?
 
     /* `Roles` data is different depending on the route used,
-     * so I've removed it for now.
-    public let roles: Roles?
-    public struct Roles: Codable {
-        public let roles: [String]
-    }
-    */
+      * so I've removed it for now.
+     public let roles: Roles?
+     public struct Roles: Codable {
+         public let roles: [String]
+     }
+     */
 
     public struct Subscription: Codable {
         public let active: Bool

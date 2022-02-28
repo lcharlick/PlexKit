@@ -12,7 +12,7 @@ public extension Plex.Request {
     struct Playlists: PlexResourceRequest {
         public var path: String {
             switch action {
-            case .delete(let ratingKey):
+            case let .delete(ratingKey):
                 return "playlists/\(ratingKey)"
             default:
                 return "playlists"
@@ -37,7 +37,7 @@ public extension Plex.Request {
             var items: [URLQueryItem] = []
 
             switch action {
-            case .get(type: let type, libraryKey: let libraryKey, smart: let smart):
+            case let .get(type: type, libraryKey: libraryKey, smart: smart):
                 items.append(.init(name: "playlistType", value: type.rawValue))
 
                 if let libraryKey = libraryKey {
@@ -50,16 +50,16 @@ public extension Plex.Request {
                     items.append(
                         .init(name: "smart", value: smart))
                 }
-            case .create(
-                    title: let title,
-                    type: let type,
-                    resource: let resource,
-                    itemRatingKeys: let itemRatingKeys
+            case let .create(
+                title: title,
+                type: type,
+                resource: resource,
+                itemRatingKeys: itemRatingKeys
             ):
                 items.append(contentsOf: [
                     .init(name: "type", value: type.rawValue),
                     .init(name: "title", value: title),
-                    uriForResource(resource, itemRatingKeys: itemRatingKeys)
+                    uriForResource(resource, itemRatingKeys: itemRatingKeys),
                 ])
             case .delete:
                 break
@@ -73,7 +73,7 @@ public extension Plex.Request {
         ) throws {
             self.action = action
             switch action {
-            case .create(_, _, _, let ratingKeys) where ratingKeys.isEmpty:
+            case let .create(_, _, _, ratingKeys) where ratingKeys.isEmpty:
                 throw InvalidRequest.noItems
             default:
                 break
@@ -143,7 +143,7 @@ public extension Plex.Request.Playlists {
         let Metadata: [PlexMediaItem]?
 
         public var metadata: [PlexMediaItem] {
-            self.Metadata ?? []
+            Metadata ?? []
         }
     }
 
@@ -153,7 +153,7 @@ public extension Plex.Request.Playlists {
             type: PlexPlaylistType,
             libraryKey: Int?,
             smart: Bool?
-         )
+        )
 
         /// Create a new playlist.
         case create(
@@ -161,7 +161,7 @@ public extension Plex.Request.Playlists {
             type: PlexPlaylistType,
             resource: String,
             itemRatingKeys: [String]
-         )
+        )
 
         /// Delete a playlist.
         case delete(ratingKey: String)

@@ -23,7 +23,7 @@ public extension Plex.Request {
                 .init(name: "time", value: currentTime),
                 .init(name: "duration", value: duration),
                 .init(name: "continuing", value: isContinuing),
-                .init(name: "hasMDE", value: true)
+                .init(name: "hasMDE", value: true),
             ]
         }
 
@@ -58,7 +58,7 @@ public extension Plex.Request {
             self.session = session
             self.ratingKey = ratingKey
             self.state = state
-            self.currentTime = currentTime.clamped(to: 0...duration)
+            self.currentTime = currentTime.clamped(to: 0 ... duration)
             self.duration = duration
             self.isContinuing = isContinuing
         }

@@ -16,7 +16,7 @@ public extension Plex.Request {
         public var path: String { "library/sections/\(key)/all" }
         public var queryItems: [URLQueryItem]? {
             var items: [URLQueryItem] = [
-                URLQueryItem(name: "type", value: mediaType.key)
+                URLQueryItem(name: "type", value: mediaType.key),
             ]
 
             if let range = range {
@@ -32,7 +32,7 @@ public extension Plex.Request {
                 // This field can contain invalid unicode characters, causing
                 // JSON decode errors. We don't use the field currently, so it can
                 // be explicitly excluded here.
-                "file"
+                "file",
             ] + self.excludeFields
 
             items.append(
@@ -88,14 +88,14 @@ public extension Plex.Request._LibraryItems {
 
         fileprivate var queryItem: URLQueryItem? {
             switch self {
-            case .keys(let keys):
+            case let .keys(keys):
                 guard !keys.isEmpty else { return nil }
                 return .init(name: "id", value: keys.joined(separator: ","))
-            case .property(let name, let comparison, let value):
-                return .init(name: name+comparison.rawValue, value: value)
-            case .dateProperty(let name, let comparison, let value):
-                return .init(name: name+comparison.rawValue, value: String(Int(value.timeIntervalSince1970)))
-            case .collection(let id):
+            case let .property(name, comparison, value):
+                return .init(name: name + comparison.rawValue, value: value)
+            case let .dateProperty(name, comparison, value):
+                return .init(name: name + comparison.rawValue, value: String(Int(value.timeIntervalSince1970)))
+            case let .collection(id):
                 return .init(name: "collection", value: id)
             }
         }
@@ -135,7 +135,7 @@ public extension Plex.Request._LibraryItems.Response {
         private let Metadata: [MediaItem]?
 
         public var metadata: [MediaItem] {
-            self.Metadata ?? []
+            Metadata ?? []
         }
     }
 }

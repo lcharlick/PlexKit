@@ -12,6 +12,6 @@ func pageQueryItems(for range: CountableClosedRange<Int>) -> [URLQueryItem] {
     guard let start = range.first, let end = range.last else { return [] }
     return [
         URLQueryItem(name: "X-Plex-Container-Start", value: start),
-        URLQueryItem(name: "X-Plex-Container-Size", value: end - start)
+        URLQueryItem(name: "X-Plex-Container-Size", value: end - start),
     ]
 }

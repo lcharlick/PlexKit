@@ -15,7 +15,7 @@ public extension Plex.ServiceRequest {
         public var queryItems: [URLQueryItem]? {
             [
                 URLQueryItem(name: "includeHttps", value: preferSecureConnections),
-                URLQueryItem(name: "includeRelay", value: includeRelayConnections)
+                URLQueryItem(name: "includeRelay", value: includeRelayConnections),
             ]
         }
 

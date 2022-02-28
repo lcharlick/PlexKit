@@ -6,8 +6,8 @@
 //  Copyright © 2021 Lachlan Charlick. All rights reserved.
 //
 
-import XCTest
 @testable import PlexKit
+import XCTest
 
 class PlexMediaTypeTests: XCTestCase {
     func testInitFromRawValue() {
@@ -43,7 +43,6 @@ class PlexMediaTypeTests: XCTestCase {
             """.data(using: .utf8)!).mediaType,
             .unknown("hello")
         )
-
     }
 }
 

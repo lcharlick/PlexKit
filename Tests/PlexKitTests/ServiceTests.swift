@@ -6,11 +6,10 @@
 //  Copyright © 2020 Lachlan Charlick. All rights reserved.
 //
 
-import XCTest
 @testable import PlexKit
+import XCTest
 
-final class ServiceTests: XCTestCase {
-}
+final class ServiceTests: XCTestCase {}
 
 extension ServiceTests {
     func testSessionHeaders() throws {

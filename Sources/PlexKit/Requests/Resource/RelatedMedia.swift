@@ -47,7 +47,7 @@ public extension Plex.Request._RelatedMedia.Response {
         public let librarySectionUUID: String?
         private let Hub: [Hub]?
         public var hubs: [Hub] {
-            self.Hub ?? []
+            Hub ?? []
         }
     }
 
@@ -63,7 +63,7 @@ public extension Plex.Request._RelatedMedia.Response {
         public let style: String?
         private let Metadata: [MediaItem]?
         public var metadata: [MediaItem] {
-            self.Metadata ?? []
+            Metadata ?? []
         }
     }
 }

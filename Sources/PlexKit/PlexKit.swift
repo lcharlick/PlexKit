@@ -18,7 +18,7 @@ public final class Plex {
 
     enum Constants {
         // Taken from Alamofire.
-        static let acceptableStatusCodes = Array(200..<300)
+        static let acceptableStatusCodes = 200 ..< 300
     }
 
     public init(sessionConfiguration: URLSessionConfiguration, clientInfo: ClientInfo) {
@@ -175,7 +175,7 @@ public extension Plex {
                 .device: device,
                 .deviceName: deviceName,
                 .token: token,
-                .sessionIdentifier: sessionIdentifier
+                .sessionIdentifier: sessionIdentifier,
             ]
             return map.compactMapValues { $0 }
         }

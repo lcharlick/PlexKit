@@ -16,9 +16,9 @@ public extension Plex.Request {
         public var path: String {
             let path = "playlists/\(ratingKey)/items"
             switch action {
-            case .remove(let ratingKey):
+            case let .remove(ratingKey):
                 return "\(path)/\(ratingKey)"
-            case .move(let ratingKey, _):
+            case let .move(ratingKey, _):
                 return "\(path)/\(ratingKey)/move"
             default:
                 return path
@@ -27,18 +27,18 @@ public extension Plex.Request {
 
         public var queryItems: [URLQueryItem]? {
             switch action {
-            case .add(let resource, let ratingKeys):
+            case let .add(resource, ratingKeys):
                 return [
-                    uriForResource(resource, itemRatingKeys: ratingKeys)
+                    uriForResource(resource, itemRatingKeys: ratingKeys),
                 ]
-            case .move(_, let afterRatingKey) where afterRatingKey != nil:
+            case let .move(_, afterRatingKey) where afterRatingKey != nil:
                 return [
                     .init(
                         name: "after",
                         value: afterRatingKey
-                    )
+                    ),
                 ]
-            case .getRange(let range):
+            case let .getRange(range):
                 return pageQueryItems(for: range)
             default:
                 return nil
@@ -93,7 +93,7 @@ public extension Plex.Request {
             private let Metadata: [MediaItem]?
 
             public var metadata: [MediaItem] {
-                self.Metadata ?? []
+                Metadata ?? []
             }
         }
 
@@ -112,4 +112,3 @@ public extension Plex.Request {
         }
     }
 }
-

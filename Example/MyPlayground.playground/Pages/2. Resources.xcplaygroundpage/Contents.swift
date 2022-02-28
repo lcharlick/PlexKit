@@ -18,11 +18,11 @@ client.request(
     token: token
 ) { result in
     switch result {
-    case .success(let response):
+    case let .success(response):
         print("Found \(response.count) resources")
-        let servers = response.filter { $0.capabilities.contains(.server)}
+        let servers = response.filter { $0.capabilities.contains(.server) }
         print("\(servers.count) of which are servers.")
-    case .failure(let error):
+    case let .failure(error):
         print("An error occurred: \(error)")
     }
 }

@@ -10,23 +10,25 @@ let package = Package(
         .macOS(.v10_12),
         .iOS(.v10),
         .watchOS(.v5),
-        .tvOS(.v10)
+        .tvOS(.v10),
     ],
     products: [
         .library(
             name: "PlexKit",
-            targets: ["PlexKit"])
+            targets: ["PlexKit"]
+        ),
     ],
     dependencies: [
     ],
     targets: [
         .target(
             name: "PlexKit",
-            dependencies: []),
+            dependencies: []
+        ),
         .testTarget(
             name: "PlexKitTests",
             dependencies: ["PlexKit"],
             resources: [.process("Resources")]
-        )
+        ),
     ]
 )

@@ -6,13 +6,13 @@
 //  Copyright © 2020 Lachlan Charlick. All rights reserved.
 //
 
-import XCTest
 @testable import PlexKit
+import XCTest
 
 class ResponseTests: XCTestCase {
     func loadResponse<R: BasePlexRequest>(
         _ name: String,
-        for requestType: R.Type
+        for _: R.Type
     ) throws -> R.Response {
         let data = try loadResource(name, ext: "json")
         return try R.response(from: data)
@@ -29,7 +29,7 @@ extension ResponseTests {
         )
 
         let user = response.user
-        XCTAssertEqual(user.id, 123456)
+        XCTAssertEqual(user.id, 123_456)
         XCTAssertEqual(user.uuid, "uuid")
         XCTAssertEqual(user.email, "email")
         XCTAssertEqual(
@@ -42,7 +42,7 @@ extension ResponseTests {
         XCTAssertTrue(user.hasPassword)
         XCTAssertEqual(user.authToken, "authToken")
         XCTAssertEqual(user.authenticationToken, "authentication_token")
-                XCTAssertEqual(
+        XCTAssertEqual(
             ISO8601DateFormatter().string(from: user.confirmedAt ?? Date()),
             "2012-08-09T09:37:16Z"
         )
@@ -57,7 +57,7 @@ extension ResponseTests {
             "pin_no_id",
             for: Plex.ServiceRequest.OAuth.self
         )
-        XCTAssertEqual(response.id, 1291057671)
+        XCTAssertEqual(response.id, 1_291_057_671)
         XCTAssertEqual(response.code, "XY7Z")
         XCTAssertEqual(response.product, "0")
         XCTAssertEqual(response.trusted, false)
@@ -115,6 +115,7 @@ extension ResponseTests {
         XCTAssertEqual(user?.protected, true)
     }
 }
+
 // MARK: - Switch User.
 
 extension ResponseTests {
@@ -256,9 +257,9 @@ extension ResponseTests {
         XCTAssertEqual(library.scanner, "Plex Music Scanner")
         XCTAssertEqual(library.language, "en")
         XCTAssertEqual(library.uuid, "63c7dcc8-4d41-41f1-b103-6fe124ca324c")
-        XCTAssertEqual(library.createdAt?.timeIntervalSince1970, 1461341110)
-        XCTAssertEqual(library.updatedAt?.timeIntervalSince1970, 1513603096)
-        XCTAssertEqual(library.scannedAt?.timeIntervalSince1970, 1533454149)
+        XCTAssertEqual(library.createdAt?.timeIntervalSince1970, 1_461_341_110)
+        XCTAssertEqual(library.updatedAt?.timeIntervalSince1970, 1_513_603_096)
+        XCTAssertEqual(library.scannedAt?.timeIntervalSince1970, 1_533_454_149)
     }
 }
 
@@ -296,22 +297,22 @@ extension ResponseTests {
         XCTAssertEqual(item.parentIndex, 1)
         XCTAssertEqual(item.ratingCount, 7382)
         XCTAssertEqual(item.viewCount, 2)
-        XCTAssertEqual(item.lastViewedAt?.timeIntervalSince1970, 1561214605)
+        XCTAssertEqual(item.lastViewedAt?.timeIntervalSince1970, 1_561_214_605)
         XCTAssertEqual(item.thumb, "/library/metadata/403868/thumb/1581395296")
         XCTAssertEqual(item.art, "/library/metadata/403867/art/1590339692")
         XCTAssertEqual(item.parentThumb, "/library/metadata/403868/thumb/1581395296")
         XCTAssertEqual(item.grandparentThumb, "/library/metadata/403867/thumb/1590339692")
         XCTAssertEqual(item.grandparentArt, "/library/metadata/403867/art/1590339692")
-        XCTAssertEqual(item.duration, 666697)
-        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1522735822)
-        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1581395296)
+        XCTAssertEqual(item.duration, 666_697)
+        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1_522_735_822)
+        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1_581_395_296)
         XCTAssertNotNil(item.media)
         XCTAssertEqual(item.media.count, 1)
 
         let media = item.media.first
 
-        XCTAssertEqual(media?.id, 397724)
-        XCTAssertEqual(media?.duration, 666697)
+        XCTAssertEqual(media?.id, 397_724)
+        XCTAssertEqual(media?.duration, 666_697)
         XCTAssertEqual(media?.bitrate, 192)
         XCTAssertEqual(media?.audioChannels, 2)
         XCTAssertEqual(media?.audioCodec, "mp3")
@@ -321,14 +322,14 @@ extension ResponseTests {
 
         let part = media?.parts.first
 
-        XCTAssertEqual(part?.id, 403991)
+        XCTAssertEqual(part?.id, 403_991)
         XCTAssertEqual(part?.key, "/library/parts/403991/1474300012/file.mp3")
-        XCTAssertEqual(part?.duration, 666697)
+        XCTAssertEqual(part?.duration, 666_697)
         XCTAssertEqual(
             part?.file,
             "/mnt/music_demo/Ahab/2015 - The Boats of the Glen Carrig/02 - The Thing That Made Search.mp3"
         )
-        XCTAssertEqual(part?.size, 16448855)
+        XCTAssertEqual(part?.size, 16_448_855)
         XCTAssertEqual(part?.container, "mp3")
         XCTAssertEqual(part?.hasThumbnail, "1")
     }
@@ -341,7 +342,7 @@ extension ResponseTests {
 
         XCTAssertEqual(
             response.mediaContainer.metadata.first?.viewOffset,
-            3282433
+            3_282_433
         )
     }
 
@@ -370,14 +371,14 @@ extension ResponseTests {
         XCTAssertEqual(item.summary, "")
         XCTAssertEqual(item.index, 1)
         XCTAssertEqual(item.viewCount, 24)
-        XCTAssertEqual(item.lastViewedAt?.timeIntervalSince1970, 1558532350)
+        XCTAssertEqual(item.lastViewedAt?.timeIntervalSince1970, 1_558_532_350)
         XCTAssertEqual(item.year, 2004)
         XCTAssertEqual(item.thumb, "/library/metadata/474523/thumb/1581395273")
         XCTAssertEqual(item.art, "/library/metadata/474522/art/1590339695")
         XCTAssertEqual(item.parentThumb, "/library/metadata/474522/thumb/1590339695")
         XCTAssertEqual(item.originallyAvailableAt, "2004-01-01")
-        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1574832896)
-        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1581395273)
+        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1_574_832_896)
+        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1_581_395_273)
     }
 
     func testLibraryContents_artists() throws {
@@ -403,17 +404,17 @@ extension ResponseTests {
         )
         XCTAssertEqual(item.index, 1)
         XCTAssertEqual(item.viewCount, 69)
-        XCTAssertEqual(item.lastViewedAt?.timeIntervalSince1970, 1532874929)
+        XCTAssertEqual(item.lastViewedAt?.timeIntervalSince1970, 1_532_874_929)
         XCTAssertEqual(item.thumb, "/library/metadata/399775/thumb/1533232019")
         XCTAssertEqual(item.art, "/library/metadata/399775/art/1533232019")
-        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1508135035)
-        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1533232019)
+        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1_508_135_035)
+        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1_533_232_019)
         XCTAssertNotNil(item.genres)
         XCTAssertEqual(item.genres.count, 2)
 
         XCTAssertEqual(item.genres, [
             .init(tag: "Black Metal"),
-            .init(tag: "Doom Metal")
+            .init(tag: "Doom Metal"),
         ])
     }
 
@@ -446,34 +447,34 @@ extension ResponseTests {
         XCTAssertEqual(item.tagline, "In space no one can hear you scream.")
         XCTAssertEqual(item.thumb, "/library/metadata/246169/thumb/1560012400")
         XCTAssertEqual(item.art, "/library/metadata/246169/art/1560012400")
-        XCTAssertEqual(item.duration, 6997616)
+        XCTAssertEqual(item.duration, 6_997_616)
         XCTAssertEqual(item.originallyAvailableAt, "1979-05-25")
-        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1449039414)
-        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1560012400)
+        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1_449_039_414)
+        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1_560_012_400)
         XCTAssertEqual(item.chapterSource, "agent")
 
         XCTAssertEqual(item.genres, [
             .init(tag: "Horror"),
-            .init(tag: "Science Fiction")
+            .init(tag: "Science Fiction"),
         ])
 
         XCTAssertEqual(item.countries, [
             .init(tag: "USA"),
-            .init(tag: "United Kingdom")
+            .init(tag: "United Kingdom"),
         ])
 
         XCTAssertEqual(item.directors, [
-            .init(tag: "Ridley Scott")
+            .init(tag: "Ridley Scott"),
         ])
 
         XCTAssertEqual(item.writers, [
-            .init(tag: "Dan O'Bannon")
+            .init(tag: "Dan O'Bannon"),
         ])
 
         let media = item.media.first
 
-        XCTAssertEqual(media?.id, 220442)
-        XCTAssertEqual(media?.duration, 6997616)
+        XCTAssertEqual(media?.id, 220_442)
+        XCTAssertEqual(media?.duration, 6_997_616)
         XCTAssertEqual(media?.bitrate, 9434)
         XCTAssertEqual(media?.width, 1920)
         XCTAssertEqual(media?.height, 816)
@@ -489,11 +490,11 @@ extension ResponseTests {
 
         let part = media?.parts.first
 
-        XCTAssertEqual(part?.id, 224807)
+        XCTAssertEqual(part?.id, 224_807)
         XCTAssertEqual(part?.key, "/library/parts/224807/1449039336/file.mkv")
-        XCTAssertEqual(part?.duration, 6997616)
+        XCTAssertEqual(part?.duration, 6_997_616)
         XCTAssertEqual(part?.file, "/mnt/movies/Alien (1979)/Alien.mkv")
-        XCTAssertEqual(part?.size, 8251845873)
+        XCTAssertEqual(part?.size, 8_251_845_873)
         XCTAssertEqual(part?.audioProfile, "dts")
         XCTAssertEqual(part?.container, "mkv")
         XCTAssertEqual(part?.videoProfile, "high")
@@ -526,19 +527,19 @@ extension ResponseTests {
         XCTAssertEqual(item.index, 1)
         XCTAssertEqual(item.rating, 9.4)
         XCTAssertEqual(item.viewCount, 8)
-        XCTAssertEqual(item.lastViewedAt?.timeIntervalSince1970, 1477036961)
+        XCTAssertEqual(item.lastViewedAt?.timeIntervalSince1970, 1_477_036_961)
         XCTAssertEqual(item.year, 2001)
         XCTAssertEqual(item.thumb, "/library/metadata/37250/thumb/1559967326")
         XCTAssertEqual(item.art, "/library/metadata/37250/art/1559967326")
         XCTAssertEqual(item.banner, "/library/metadata/37250/banner/1559967326")
         XCTAssertEqual(item.theme, "/library/metadata/37250/theme/1559967326")
-        XCTAssertEqual(item.duration, 3600000)
+        XCTAssertEqual(item.duration, 3_600_000)
         XCTAssertEqual(item.originallyAvailableAt, "2001-09-09")
         XCTAssertEqual(item.leafCount, 10)
         XCTAssertEqual(item.viewedLeafCount, 8)
         XCTAssertEqual(item.childCount, 1)
-        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1427433010)
-        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1559967326)
+        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1_427_433_010)
+        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1_559_967_326)
     }
 
     func testLibraryContents_seasons() throws {
@@ -567,13 +568,13 @@ extension ResponseTests {
         XCTAssertEqual(item.index, 1)
         XCTAssertEqual(item.parentIndex, 1)
         XCTAssertEqual(item.viewCount, 8)
-        XCTAssertEqual(item.lastViewedAt?.timeIntervalSince1970, 1477036961)
+        XCTAssertEqual(item.lastViewedAt?.timeIntervalSince1970, 1_477_036_961)
         XCTAssertEqual(item.thumb, "/library/metadata/37251/thumb/1559967326")
         XCTAssertEqual(item.art, "/library/metadata/37250/art/1559967326")
         XCTAssertEqual(item.parentThumb, "/library/metadata/37250/thumb/1559967326")
         XCTAssertEqual(item.parentTheme, "/library/metadata/37250/theme/1559967326")
-        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1427433010)
-        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1559967326)
+        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1_427_433_010)
+        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1_559_967_326)
     }
 
     func testLibraryContents_episodes() throws {
@@ -608,7 +609,7 @@ extension ResponseTests {
         XCTAssertEqual(item.parentIndex, 1)
         XCTAssertEqual(item.rating, 8.4)
         XCTAssertEqual(item.viewCount, 1)
-        XCTAssertEqual(item.lastViewedAt?.timeIntervalSince1970, 1472114415)
+        XCTAssertEqual(item.lastViewedAt?.timeIntervalSince1970, 1_472_114_415)
         XCTAssertEqual(item.year, 2001)
         XCTAssertEqual(item.thumb, "/library/metadata/37262/thumb/1590057326")
         XCTAssertEqual(item.art, "/library/metadata/37250/art/1559967326")
@@ -616,15 +617,15 @@ extension ResponseTests {
         XCTAssertEqual(item.grandparentThumb, "/library/metadata/37250/thumb/1559967326")
         XCTAssertEqual(item.grandparentArt, "/library/metadata/37250/art/1559967326")
         XCTAssertEqual(item.grandparentTheme, "/library/metadata/37250/theme/1559967326")
-        XCTAssertEqual(item.duration, 4394123)
+        XCTAssertEqual(item.duration, 4_394_123)
         XCTAssertEqual(item.originallyAvailableAt, "2001-09-09")
-        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1427434150)
-        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1590057326)
+        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1_427_434_150)
+        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1_590_057_326)
 
         let media = item.media.first
 
         XCTAssertEqual(media?.id, 32610)
-        XCTAssertEqual(media?.duration, 4394123)
+        XCTAssertEqual(media?.duration, 4_394_123)
         XCTAssertEqual(media?.bitrate, 8000)
         XCTAssertEqual(media?.width, 1280)
         XCTAssertEqual(media?.height, 720)
@@ -642,9 +643,9 @@ extension ResponseTests {
 
         XCTAssertEqual(part?.id, 35221)
         XCTAssertEqual(part?.key, "/library/parts/35221/1427352014/file.mkv")
-        XCTAssertEqual(part?.duration, 4394123)
+        XCTAssertEqual(part?.duration, 4_394_123)
         XCTAssertEqual(part?.file, "/mnt/tv/Band of Brothers/Season 1/Band of Brothers - 01x01 - Currahee.mkv")
-        XCTAssertEqual(part?.size, 4394246749)
+        XCTAssertEqual(part?.size, 4_394_246_749)
         XCTAssertEqual(part?.audioProfile, "dts")
         XCTAssertEqual(part?.container, "mkv")
         XCTAssertEqual(part?.videoProfile, "high")
@@ -716,11 +717,11 @@ extension ResponseTests {
         XCTAssertEqual(item.playlistType, .audio)
         XCTAssertEqual(item.composite, "/playlists/404337/composite/1524830850")
         XCTAssertEqual(item.viewCount, 5)
-        XCTAssertEqual(item.lastViewedAt?.timeIntervalSince1970, 1524734209)
-        XCTAssertEqual(item.duration, 4107000)
+        XCTAssertEqual(item.lastViewedAt?.timeIntervalSince1970, 1_524_734_209)
+        XCTAssertEqual(item.duration, 4_107_000)
         XCTAssertEqual(item.leafCount, 9)
-        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1523543021)
-        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1524830850)
+        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1_523_543_021)
+        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1_524_830_850)
     }
 
     func testPlaylistItems() throws {
@@ -749,6 +750,7 @@ extension ResponseTests {
         XCTAssertEqual(container.title, "Test Playlist")
     }
 }
+
 // MARK: - Related Media.
 
 extension ResponseTests {
@@ -788,11 +790,11 @@ extension ResponseTests {
         XCTAssertEqual(collection?.title, "Science Fiction")
         XCTAssertEqual(collection?.subtype, .album)
         XCTAssertEqual(collection?.summary, "")
-        XCTAssertEqual(collection?.index, 197069)
+        XCTAssertEqual(collection?.index, 197_069)
         XCTAssertEqual(collection?.ratingCount, 109)
         XCTAssertEqual(collection?.thumb, "/library/collections/594667/composite/1634550705?width=400&height=600")
-        XCTAssertEqual(collection?.addedAt?.timeIntervalSince1970, 1634550705)
-        XCTAssertEqual(collection?.updatedAt?.timeIntervalSince1970, 1634550705)
+        XCTAssertEqual(collection?.addedAt?.timeIntervalSince1970, 1_634_550_705)
+        XCTAssertEqual(collection?.updatedAt?.timeIntervalSince1970, 1_634_550_705)
         XCTAssertEqual(collection?.childCount, "15")
     }
 

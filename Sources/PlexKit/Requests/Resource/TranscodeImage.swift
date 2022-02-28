@@ -6,8 +6,8 @@
 //  Copyright © 2020 Lachlan Charlick. All rights reserved.
 //
 
-import Foundation
 import CoreGraphics
+import Foundation
 
 public extension Plex.Request {
     struct TranscodeImage: PlexResourceRequest {
@@ -17,13 +17,13 @@ public extension Plex.Request {
         public var queryItems: [URLQueryItem]? {
             var items: [URLQueryItem] = [
                 .init(name: "url", value: key),
-                .init(name: "minSize", value: minSize)
+                .init(name: "minSize", value: minSize),
             ]
 
             if let size = size {
                 items.append(contentsOf: [
                     .init(name: "width", value: Int(ceil(size.width))),
-                    .init(name: "height", value: Int(ceil(size.height)))
+                    .init(name: "height", value: Int(ceil(size.height))),
                 ])
             }
 

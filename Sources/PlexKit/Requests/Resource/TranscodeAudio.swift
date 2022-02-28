@@ -22,10 +22,10 @@ public extension Plex.Request {
                 .init(name: "maxAudioBitrate", value: preferredBitrate), // I don't think this has any effect.
                 .init(name: "directStreamAudio", value: true),
                 .init(name: "mediaBufferSize", value: mediaBufferSize),
-                .init(name: "session", value: UUID().uuidString),        // Always(?) create a new transcode session.
+                .init(name: "session", value: UUID().uuidString), // Always(?) create a new transcode session.
                 .init(name: "protocol", value: `protocol`),
                 .init(name: "directPlay", value: false),
-                .init(name: "hasMDE", value: true)
+                .init(name: "hasMDE", value: true),
             ]
 
             items.append(
@@ -90,7 +90,7 @@ public extension Plex.Request {
             guard let token = clientInfo.token else {
                 throw PlexError.notAuthenticated
             }
-            return try self.asURLRequest(from: url, using: token)
+            return try asURLRequest(from: url, using: token)
         }
 
         public static func response(from data: Data) throws -> Data {

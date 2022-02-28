@@ -17,12 +17,12 @@ client.request(
     token: token
 ) { result in
     switch result {
-    case .success(let response):
+    case let .success(response):
         let libraries = response.mediaContainer.directory
         print("Found \(libraries.count) libraries")
         let musicLibraries = libraries.filter { $0.type == .artist }
         print("\(musicLibraries.count) are music libraries")
-    case .failure(let error):
+    case let .failure(error):
         print("An error occurred: \(error)")
     }
 }

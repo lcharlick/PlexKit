@@ -6,8 +6,8 @@
 //  Copyright © 2020 Lachlan Charlick. All rights reserved.
 //
 
-import XCTest
 @testable import PlexKit
+import XCTest
 
 class RequestTests: XCTestCase {
     private let testURL = URL(string: "http://192.168.0.100:32400")!
@@ -15,15 +15,15 @@ class RequestTests: XCTestCase {
     private struct RequestData {
         init(request: URLRequest) {
             let url = request.url!
-            self.baseURL = url.removingQueryItems()
-            self.httpMethod = request.httpMethod
-            self.headers = request.allHTTPHeaderFields
+            baseURL = url.removingQueryItems()
+            httpMethod = request.httpMethod
+            headers = request.allHTTPHeaderFields
 
             let items = url.queryItems?.map {
                 ($0.name, $0.value)
             } ?? []
 
-            self.queryItems = Dictionary(uniqueKeysWithValues: items)
+            queryItems = Dictionary(uniqueKeysWithValues: items)
         }
 
         let baseURL: URL
@@ -50,11 +50,11 @@ extension RequestTests {
         )
 
         XCTAssertEqual(data.headers, [
-            "Accept": "application/json"
+            "Accept": "application/json",
         ])
 
         XCTAssertEqual(data.queryItems, [
-            "strong": "1"
+            "strong": "1",
         ])
     }
 
@@ -73,7 +73,7 @@ extension RequestTests {
         )
 
         XCTAssertEqual(data.headers, [
-            "Accept": "application/json"
+            "Accept": "application/json",
         ])
 
         XCTAssertEqual(data.queryItems, [:])
@@ -119,7 +119,7 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "application/json",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token,
         ])
 
         XCTAssertEqual(data.queryItems, [:])
@@ -143,7 +143,7 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "application/json",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token,
         ])
 
         XCTAssertEqual(data.queryItems, [:])
@@ -168,7 +168,7 @@ extension RequestTests {
         )
 
         XCTAssertEqual(data.headers, [
-            "Accept": "application/json"
+            "Accept": "application/json",
         ])
 
         XCTAssertEqual(data.queryItems, [:])
@@ -183,7 +183,7 @@ extension RequestTests {
         let data = RequestData(request: request)
 
         XCTAssertEqual(data.queryItems, [
-            "pin": passCode
+            "pin": passCode,
         ])
     }
 }
@@ -205,12 +205,12 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "application/json",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token,
         ])
 
         XCTAssertEqual(data.queryItems, [
             "includeHttps": "1",
-            "includeRelay": "1"
+            "includeRelay": "1",
         ])
     }
 }
@@ -238,12 +238,12 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "application/json",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token,
         ])
 
         XCTAssertEqual(data.queryItems, [
             "type": String(mediaType.key),
-            "excludeFields": "file"
+            "excludeFields": "file",
         ])
     }
 
@@ -251,7 +251,7 @@ extension RequestTests {
         let request = try Plex.Request.LibraryItems(
             key: "key",
             mediaType: .album,
-            range: 5...100
+            range: 5 ... 100
         ).asURLRequest(from: testURL, using: "")
 
         let data = RequestData(request: request)
@@ -290,11 +290,11 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "application/json",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token,
         ])
 
         XCTAssertEqual(data.queryItems, [
-            "playlistType": playlistType.rawValue
+            "playlistType": playlistType.rawValue,
         ])
     }
 
@@ -306,7 +306,7 @@ extension RequestTests {
             type: playlistType,
             libraryKey: libraryKey
         )
-            .asURLRequest(from: testURL, using: token)
+        .asURLRequest(from: testURL, using: token)
 
         let data = RequestData(request: request)
         XCTAssertEqual(data.queryItems["sectionID"], String(libraryKey))
@@ -320,7 +320,7 @@ extension RequestTests {
             type: playlistType,
             smart: false
         )
-            .asURLRequest(from: testURL, using: token)
+        .asURLRequest(from: testURL, using: token)
 
         let data = RequestData(request: request)
         XCTAssertEqual(data.queryItems["smart"], "0")
@@ -334,7 +334,7 @@ extension RequestTests {
             type: playlistType,
             smart: true
         )
-            .asURLRequest(from: testURL, using: token)
+        .asURLRequest(from: testURL, using: token)
 
         let data = RequestData(request: request)
         XCTAssertEqual(data.queryItems["smart"], "1")
@@ -355,13 +355,13 @@ extension RequestTests {
                 itemRatingKeys: items
             )
         )
-            .asURLRequest(from: testURL, using: token)
+        .asURLRequest(from: testURL, using: token)
 
         let data = RequestData(request: request)
         XCTAssertEqual(data.queryItems, [
             "title": title,
             "type": playlistType.rawValue,
-            "uri": "server://\(resource)/com.plexapp.plugins.library/library/metadata/\(items.joined(separator: ","))"
+            "uri": "server://\(resource)/com.plexapp.plugins.library/library/metadata/\(items.joined(separator: ","))",
         ])
         XCTAssertEqual(data.httpMethod, "POST")
     }
@@ -383,7 +383,7 @@ extension RequestTests {
                 ratingKey: "key"
             )
         )
-            .asURLRequest(from: testURL, using: "")
+        .asURLRequest(from: testURL, using: "")
 
         let data = RequestData(request: request)
         XCTAssertEqual(request.url?.path, "/playlists/key")
@@ -411,7 +411,7 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "application/json",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token,
         ])
 
         XCTAssertEqual(data.queryItems, [:])
@@ -438,7 +438,7 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "image/*",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token,
         ])
 
         XCTAssertEqual(data.queryItems, [:])
@@ -465,12 +465,12 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "image/*",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token,
         ])
 
         XCTAssertEqual(data.queryItems, [
             "url": path,
-            "minSize": "1"
+            "minSize": "1",
         ])
     }
 
@@ -500,7 +500,7 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "image/*",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token,
         ])
 
         XCTAssertEqual(data.queryItems, [
@@ -510,7 +510,7 @@ extension RequestTests {
             "height": "\(Int(size.height))",
             "blur": "\(blur)",
             "saturation": "\(saturation)",
-            "opacity": "\(opacity)"
+            "opacity": "\(opacity)",
         ])
     }
 }
@@ -545,7 +545,7 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "application/xml",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token,
         ])
 
         XCTAssertEqual(data.queryItems, [
@@ -556,7 +556,7 @@ extension RequestTests {
             "time": String(currentTime),
             "duration": String(duration),
             "continuing": "1",
-            "hasMDE": "1"
+            "hasMDE": "1",
         ])
     }
 }
@@ -583,13 +583,13 @@ extension RequestTests {
 
         XCTAssertEqual(data.headers, [
             "Accept": "*/*",
-            Plex.Header.token.rawValue: token
+            Plex.Header.token.rawValue: token,
         ])
 
         XCTAssertEqual(data.queryItems, [
             "key": key,
             "rating": String(rating),
-            "identifier": "com.plexapp.plugins.library"
+            "identifier": "com.plexapp.plugins.library",
         ])
     }
 
@@ -608,7 +608,7 @@ extension RequestTests {
         XCTAssertEqual(data.queryItems, [
             "key": key,
             "rating": "10", // Clamp to 0...10
-            "identifier": "com.plexapp.plugins.library"
+            "identifier": "com.plexapp.plugins.library",
         ])
     }
 }
@@ -653,7 +653,7 @@ extension RequestTests {
         let data = RequestData(request: request)
         XCTAssertEqual(request.url?.path, "/playlists/woof/items/2/move")
         XCTAssertEqual(data.queryItems, [
-            "after": "1"
+            "after": "1",
         ])
         XCTAssertEqual(data.httpMethod, "PUT")
     }
@@ -685,12 +685,12 @@ extension RequestTests {
                 ratingKeys: itemRatingKeys
             )
         )
-            .asURLRequest(from: testURL, using: "")
+        .asURLRequest(from: testURL, using: "")
 
         let data = RequestData(request: request)
         XCTAssertEqual(request.url?.path, "/playlists/\(ratingKey)/items")
         XCTAssertEqual(data.queryItems, [
-            "uri": "server://\(resource)/com.plexapp.plugins.library/library/metadata/\(itemRatingKeys.joined(separator: ","))"
+            "uri": "server://\(resource)/com.plexapp.plugins.library/library/metadata/\(itemRatingKeys.joined(separator: ","))",
         ])
         XCTAssertEqual(data.httpMethod, "PUT")
     }
@@ -705,7 +705,7 @@ extension RequestTests {
                 ratingKey: itemRatingKey
             )
         )
-            .asURLRequest(from: testURL, using: "")
+        .asURLRequest(from: testURL, using: "")
 
         let data = RequestData(request: request)
         XCTAssertEqual(request.url?.path, "/playlists/\(ratingKey)/items/\(itemRatingKey)")

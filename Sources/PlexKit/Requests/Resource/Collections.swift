@@ -55,7 +55,7 @@ public extension Plex.Request.Collections {
         private let Directory: [PlexCollection]?
 
         public var directory: [PlexCollection] {
-            self.Directory ?? []
+            Directory ?? []
         }
     }
 }

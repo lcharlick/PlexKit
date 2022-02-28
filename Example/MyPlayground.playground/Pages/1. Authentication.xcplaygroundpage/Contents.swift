@@ -13,10 +13,10 @@ client.request(
     )
 ) { result in
     switch result {
-    case .success(let response):
+    case let .success(response):
         print("Hello, \(response.user.title)!")
         print("Your authentication token is \(response.user.authenticationToken)")
-    case .failure(let error):
+    case let .failure(error):
         print("An error occurred: \(error)")
     }
 }

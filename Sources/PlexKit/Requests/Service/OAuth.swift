@@ -47,7 +47,7 @@ public extension Plex.ServiceRequest {
         }
 
         public init(response: Response) {
-            self.id = response.id
+            id = response.id
         }
 
         /// Builds an authentication URL from an OAuth response.

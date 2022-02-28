@@ -16,7 +16,7 @@ public extension Plex.ServiceRequest {
         public var queryItems: [URLQueryItem]? {
             [
                 URLQueryItem(name: "user[login]", value: username),
-                URLQueryItem(name: "user[password]", value: password)
+                URLQueryItem(name: "user[password]", value: password),
             ]
         }
 

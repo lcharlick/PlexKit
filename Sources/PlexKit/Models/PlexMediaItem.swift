@@ -116,7 +116,7 @@ public struct PlexMediaItem: PlexMediaItemType {
         private let Part: [Part]?
 
         public var parts: [Part] {
-            self.Part ?? []
+            Part ?? []
         }
     }
 
@@ -141,7 +141,7 @@ public struct PlexMediaItem: PlexMediaItemType {
         /// When a media file contains only a single stream, `streams` will be empty. In this case,
         /// stream data can be read directly from the `Media` or `Part`.
         public var streams: [Stream] {
-            self.Stream ?? []
+            Stream ?? []
         }
     }
 
@@ -218,31 +218,31 @@ public extension PlexMediaItem {
     }
 
     var genres: [Tag] {
-        self.Genre ?? []
+        Genre ?? []
     }
 
     var countries: [Tag] {
-        self.Country ?? []
+        Country ?? []
     }
 
     var styles: [Tag] {
-        self.Style ?? []
+        Style ?? []
     }
 
     var moods: [Tag] {
-        self.Mood ?? []
+        Mood ?? []
     }
 
     var directors: [Tag] {
-        self.Director ?? []
+        Director ?? []
     }
 
     var writers: [Tag] {
-        self.Writer ?? []
+        Writer ?? []
     }
 
     var roles: [Tag] {
-        self.Role ?? []
+        Role ?? []
     }
 
     var originallyReleasedAt: Date? {

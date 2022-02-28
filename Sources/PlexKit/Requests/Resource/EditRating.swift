@@ -18,7 +18,7 @@ public extension Plex.Request {
             [
                 .init(name: "key", value: ratingKey),
                 .init(name: "rating", value: rating),
-                .init(name: "identifier", value: "com.plexapp.plugins.library")
+                .init(name: "identifier", value: "com.plexapp.plugins.library"),
             ]
         }
 
@@ -28,7 +28,7 @@ public extension Plex.Request {
 
         public init(ratingKey: String, rating: Int) {
             self.ratingKey = ratingKey
-            self.rating = rating.clamped(to: 0...10)
+            self.rating = rating.clamped(to: 0 ... 10)
         }
 
         public static func response(from data: Data) throws -> Data {

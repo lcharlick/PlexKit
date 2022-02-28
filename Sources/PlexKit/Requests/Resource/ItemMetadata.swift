@@ -25,7 +25,7 @@ public extension Plex.Request {
                 .init(name: "includePreferences", value: includePreferences),
                 .init(name: "includeChapters", value: includeChapters),
                 .init(name: "includeStations", value: includeStations),
-                .init(name: "includeExternalMedia", value: includeExternalMedia)
+                .init(name: "includeExternalMedia", value: includeExternalMedia),
             ]
         }
 
@@ -88,7 +88,7 @@ public extension Plex.Request._ItemMetadata.Response {
         private let Metadata: [MediaItem]?
 
         public var metadata: [MediaItem] {
-            self.Metadata ?? []
+            Metadata ?? []
         }
     }
 }

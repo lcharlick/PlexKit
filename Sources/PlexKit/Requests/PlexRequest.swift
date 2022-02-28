@@ -55,7 +55,8 @@ extension PlexResourceRequest {
         using token: String?
     ) throws -> URLRequest {
         guard let url = url.appendingPathComponent(path)
-            .appendingQueryItems(queryItems ?? []) else {
+            .appendingQueryItems(queryItems ?? [])
+        else {
             throw PlexError.invalidRequest(.invalidQueryItems(queryItems ?? []))
         }
 

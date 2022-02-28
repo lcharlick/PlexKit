@@ -76,7 +76,7 @@ public enum PlexMediaType: Hashable {
 
     public var rawValue: String {
         switch self {
-        case .unknown(let rawValue):
+        case let .unknown(rawValue):
             return rawValue
         case .movie:
             return RawValue.movie.rawValue

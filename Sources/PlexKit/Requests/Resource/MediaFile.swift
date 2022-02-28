@@ -18,8 +18,8 @@ public extension Plex.Request {
             [
                 token.map { .init(name: Plex.Header.token.rawValue, value: $0) },
                 .init(name: "download", value: download),
-                .init(name: "stripTags", value: stripTags)
-            ].compactMap { $0}
+                .init(name: "stripTags", value: stripTags),
+            ].compactMap { $0 }
         }
 
         /// A token value to use in the URL query. Useful for when the session token can't be used.
