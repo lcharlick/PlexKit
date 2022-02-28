@@ -10,7 +10,9 @@ import Foundation
 
 public extension Plex.Request {
     /// Fetches a library's contents.
-    struct LibraryItems: PlexResourceRequest {
+    typealias LibraryItems = _LibraryItems<PlexMediaItem>
+
+    struct _LibraryItems<MediaItem: PlexMediaItemType>: PlexResourceRequest {
         public var path: String { "library/sections/\(key)/all" }
         public var queryItems: [URLQueryItem]? {
             var items: [URLQueryItem] = [
@@ -72,7 +74,7 @@ public extension Plex.Request {
     }
 }
 
-public extension Plex.Request.LibraryItems {
+public extension Plex.Request._LibraryItems {
     /// Filters the results of a `LibraryItems` request.
     enum Filter {
         /// Requests items in a specific set.
@@ -109,7 +111,7 @@ public extension Plex.Request.LibraryItems {
     }
 }
 
-public extension Plex.Request.LibraryItems.Response {
+public extension Plex.Request._LibraryItems.Response {
     enum CodingKeys: String, CodingKey {
         case mediaContainer = "MediaContainer"
     }
@@ -133,9 +135,9 @@ public extension Plex.Request.LibraryItems.Response {
         public let viewGroup: PlexMediaType?
         public let viewMode: Int?
 
-        private let Metadata: [PlexMediaItem]?
+        private let Metadata: [MediaItem]?
 
-        public var metadata: [PlexMediaItem] {
+        public var metadata: [MediaItem] {
             self.Metadata ?? []
         }
     }

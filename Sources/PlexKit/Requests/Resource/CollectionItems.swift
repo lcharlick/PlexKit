@@ -10,14 +10,15 @@ import Foundation
 
 public extension Plex.Request {
     /// Requires Plex Media Server 1.22.3.4392.
-    struct CollectionItems: PlexResourceRequest {
+    typealias CollectionItems = _CollectionItems<PlexMediaItem>
+
+    struct _CollectionItems<MediaItem: PlexMediaItemType>: PlexResourceRequest {
         public var path: String { "library/collections/\(ratingKey)/children" }
         private let ratingKey: String
 
         public init(ratingKey: String) {
             self.ratingKey = ratingKey
         }
-
 
         public struct Response: Codable {
             public let mediaContainer: MediaContainer
@@ -29,14 +30,14 @@ public extension Plex.Request {
     }
 }
 
-public extension Plex.Request.CollectionItems {
+public extension Plex.Request._CollectionItems {
     struct MediaContainer: Codable {
         public let size: Int
         public let totalSize: Int?
         public let offset: Int?
-        private let Metadata: [PlexMediaItem]?
+        private let Metadata: [MediaItem]?
 
-        public var metadata: [PlexMediaItem] {
+        public var metadata: [MediaItem] {
             Metadata ?? []
         }
     }

@@ -10,7 +10,9 @@ import Foundation
 
 public extension Plex.Request {
     /// Perform an action on a playlist's contents.
-    struct PlaylistItems: PlexResourceRequest {
+    typealias PlaylistItems = _PlaylistItems<PlexMediaItem>
+
+    struct _PlaylistItems<MediaItem: PlexMediaItemType>: PlexResourceRequest {
         public var path: String {
             let path = "playlists/\(ratingKey)/items"
             switch action {
@@ -73,6 +75,26 @@ public extension Plex.Request {
             }
         }
 
+        public struct MediaContainer: Codable {
+            public let size: Int
+            public let totalSize: Int?
+            public let allowSync: Bool?
+            public let composite: String?
+            public let duration: Int?
+            public let leafCount: Int?
+            public let offset: Int?
+            public let playlistType: PlexPlaylistType?
+            public let ratingKey: String?
+            public let smart: Bool?
+            public let title: String?
+
+            private let Metadata: [MediaItem]?
+
+            public var metadata: [MediaItem] {
+                self.Metadata ?? []
+            }
+        }
+
         public enum Action {
             /// Get the items in the playlist.
             case get
@@ -87,24 +109,3 @@ public extension Plex.Request {
     }
 }
 
-public extension Plex.Request.PlaylistItems {
-    struct MediaContainer: Codable {
-        public let size: Int
-        public let totalSize: Int?
-        public let allowSync: Bool?
-        public let composite: String?
-        public let duration: Int?
-        public let leafCount: Int?
-        public let offset: Int?
-        public let playlistType: PlexPlaylistType?
-        public let ratingKey: String?
-        public let smart: Bool?
-        public let title: String?
-
-        private let Metadata: [PlexMediaItem]?
-
-        public var metadata: [PlexMediaItem] {
-            self.Metadata ?? []
-        }
-    }
-}
