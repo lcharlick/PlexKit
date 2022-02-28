@@ -14,10 +14,19 @@ public extension Plex.Request {
 
     struct _CollectionItems<MediaItem: PlexMediaItemType>: PlexResourceRequest {
         public var path: String { "library/collections/\(ratingKey)/children" }
-        private let ratingKey: String
 
-        public init(ratingKey: String) {
+        public var queryItems: [URLQueryItem]? {
+            range.map {
+                pageQueryItems(for: $0)
+            }
+        }
+
+        private let ratingKey: String
+        private let range: CountableClosedRange<Int>?
+
+        public init(ratingKey: String, range: CountableClosedRange<Int>? = nil) {
             self.ratingKey = ratingKey
+            self.range = range
         }
 
         public struct Response: Codable {

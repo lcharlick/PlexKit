@@ -19,11 +19,8 @@ public extension Plex.Request {
                 URLQueryItem(name: "type", value: mediaType.key)
             ]
 
-            if let range = range, let start = range.first, let end = range.last {
-                items.append(contentsOf: [
-                    URLQueryItem(name: "X-Plex-Container-Start", value: start),
-                    URLQueryItem(name: "X-Plex-Container-Size", value: end - start)
-                ])
+            if let range = range {
+                items.append(contentsOf: pageQueryItems(for: range))
             }
 
             for filter in filters {
