@@ -36,6 +36,8 @@ public extension Plex.Request {
                         value: afterRatingKey
                     )
                 ]
+            case .getRange(let range):
+                return pageQueryItems(for: range)
             default:
                 return nil
             }
@@ -43,7 +45,7 @@ public extension Plex.Request {
 
         public var httpMethod: String {
             switch action {
-            case .get:
+            case .get, .getRange:
                 return "GET"
             case .add, .move:
                 return "PUT"
@@ -76,6 +78,8 @@ public extension Plex.Request {
         public enum Action {
             /// Get the items in the playlist.
             case get
+            /// Get paged items in the playlist.
+            case getRange(CountableClosedRange<Int>)
             /// Add one or more items to the playlist.
             case add(resource: String, ratingKeys: [String])
             /// Remove an item from the playlist.

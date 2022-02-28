@@ -12,12 +12,20 @@ public extension Plex.Request {
     /// Requires Plex Media Server 1.22.3.4392.
     struct CollectionItems: PlexResourceRequest {
         public var path: String { "library/collections/\(ratingKey)/children" }
-        private let ratingKey: String
 
-        public init(ratingKey: String) {
-            self.ratingKey = ratingKey
+        public var queryItems: [URLQueryItem]? {
+            range.map {
+                pageQueryItems(for: $0)
+            }
         }
 
+        private let ratingKey: String
+        private let range: CountableClosedRange<Int>?
+
+        public init(ratingKey: String, range: CountableClosedRange<Int>? = nil) {
+            self.ratingKey = ratingKey
+            self.range = range
+        }
 
         public struct Response: Codable {
             public let mediaContainer: MediaContainer
