@@ -28,6 +28,7 @@ public struct PlexLibrary: Codable {
     private let Location: [Location]?
 
     public var locations: [Location]? {
+        // swiftformat:disable:next redundantSelf
         self.Location
     }
 
