@@ -214,7 +214,8 @@ public struct PlexMediaItem: PlexMediaItemType {
 
 public extension PlexMediaItem {
     var media: [Media] {
-        Media ?? []
+        // swiftformat:disable:next redundantSelf
+        self.Media ?? []
     }
 
     var genres: [Tag] {
