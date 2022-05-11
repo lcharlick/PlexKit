@@ -272,6 +272,72 @@ extension RequestTests {
     }
 }
 
+// MARK: - Folders.
+
+extension RequestTests {
+    func testFolder() throws {
+        let key = "key"
+        let mediaType = PlexMediaType.album
+        let token = "token"
+        let url = URL(string: "http://192.168.0.100:32400")!
+
+        let request = try Plex.Request.Folder(
+            key: key,
+            mediaType: mediaType,
+            parentRatingKey: nil
+        ).asURLRequest(from: url, using: token)
+
+        let data = RequestData(request: request)
+
+        XCTAssertEqual(
+            data.baseURL,
+            url.appendingPathComponent("library/sections/\(key)/folder")
+        )
+
+        XCTAssertEqual(data.headers, [
+            "Accept": "application/json",
+            Plex.Header.token.rawValue: token,
+        ])
+
+        XCTAssertEqual(data.queryItems, [
+            "type": String(mediaType.key),
+            "excludeFields": "file",
+        ])
+    }
+
+    func testFolder_withParent() throws {
+        let key = "key"
+        let mediaType = PlexMediaType.album
+        let token = "token"
+        let parentRatingKey = "abc123"
+        let url = URL(string: "http://192.168.0.100:32400")!
+
+        let request = try Plex.Request.Folder(
+            key: key,
+            mediaType: mediaType,
+            parentRatingKey: parentRatingKey
+        ).asURLRequest(from: url, using: token)
+
+        let data = RequestData(request: request)
+
+        XCTAssertEqual(
+            data.baseURL,
+            url.appendingPathComponent("library/sections/\(key)/folder")
+        )
+
+        XCTAssertEqual(data.headers, [
+            "Accept": "application/json",
+            Plex.Header.token.rawValue: token,
+        ])
+
+        XCTAssertEqual(data.queryItems, [
+            "type": String(mediaType.key),
+            "parent": parentRatingKey,
+            "excludeFields": "file",
+        ])
+    }
+}
+
 // MARK: - Playlists.
 
 extension RequestTests {

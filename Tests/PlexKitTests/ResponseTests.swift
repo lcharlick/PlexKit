@@ -674,6 +674,42 @@ extension ResponseTests {
         XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1635255119)
         XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1652187905)
     }
+
+    func testFolder() throws {
+        let response = try loadResponse(
+            "folder",
+            for: Plex.Request.Folder.self
+        )
+
+        XCTAssertEqual(
+            response.mediaContainer.size,
+            response.mediaContainer.metadata.count
+        )
+
+        guard case let .folder(folder) = response.mediaContainer.metadata[0] else {
+            XCTFail("Expected a folder item: \(response.mediaContainer.metadata[0])")
+            return
+        }
+
+        XCTAssertEqual(folder.key, "/library/sections/48/folder?parent=109506")
+        XCTAssertEqual(folder.ratingKey, "109506")
+        XCTAssertEqual(folder.title, "Juno")
+
+        guard case let .mediaItem(item) = response.mediaContainer.metadata[1] else {
+            XCTFail("Expected a mediaItem item: \(response.mediaContainer.metadata[1])")
+            return
+        }
+
+        XCTAssertEqual(item.ratingKey, "596582")
+        XCTAssertEqual(item.key, "/library/metadata/596582")
+        XCTAssertEqual(item.guid, "local://596582")
+        XCTAssertEqual(item.type, .photo)
+        XCTAssertEqual(item.title, "0D166616-0D4C-45DD-9F43-C1D40DBCD06F")
+        XCTAssertEqual(item.summary, "")
+        XCTAssertEqual(item.thumb, "/library/metadata/596582/thumb/1652187905")
+        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1635255222)
+        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1652187905)
+    }
 }
 
 // MARK: - Item Metadata.
