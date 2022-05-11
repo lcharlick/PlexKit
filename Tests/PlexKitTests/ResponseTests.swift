@@ -650,6 +650,30 @@ extension ResponseTests {
         XCTAssertEqual(part?.container, "mkv")
         XCTAssertEqual(part?.videoProfile, "high")
     }
+
+    func testLibraryContents_photos() throws {
+        let response = try loadResponse(
+            "photos",
+            for: Plex.Request.LibraryItems.self
+        )
+
+        XCTAssertEqual(
+            response.mediaContainer.size,
+            response.mediaContainer.metadata.count
+        )
+
+        let item = response.mediaContainer.metadata[0]
+
+        XCTAssertEqual(item.ratingKey, "596581")
+        XCTAssertEqual(item.key, "/library/metadata/596581")
+        XCTAssertEqual(item.guid, "local://596581")
+        XCTAssertEqual(item.type, .photo)
+        XCTAssertEqual(item.title, "0CFA6CA8-0452-4149-9746-106F745F4D65")
+        XCTAssertEqual(item.summary, "sample photo")
+        XCTAssertEqual(item.thumb, "/library/metadata/596581/thumb/1652187905")
+        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1635255119)
+        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1652187905)
+    }
 }
 
 // MARK: - Item Metadata.
