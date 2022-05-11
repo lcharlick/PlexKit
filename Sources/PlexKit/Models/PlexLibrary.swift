@@ -28,7 +28,7 @@ public struct PlexLibrary: Codable {
     private let Location: [Location]?
 
     public var locations: [Location]? {
-        self.Location
+        Location
     }
 
     public struct Location: Codable {

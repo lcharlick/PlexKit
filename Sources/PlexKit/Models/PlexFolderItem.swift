@@ -6,7 +6,6 @@
 //  Copyright © 2022 Lachlan Charlick. All rights reserved.
 //
 
-
 import Foundation
 
 /// Represents a filesystem folder containing other folders and media items.

@@ -671,8 +671,8 @@ extension ResponseTests {
         XCTAssertEqual(item.title, "0CFA6CA8-0452-4149-9746-106F745F4D65")
         XCTAssertEqual(item.summary, "sample photo")
         XCTAssertEqual(item.thumb, "/library/metadata/596581/thumb/1652187905")
-        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1635255119)
-        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1652187905)
+        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1_635_255_119)
+        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1_652_187_905)
     }
 
     func testFolder() throws {
@@ -707,8 +707,8 @@ extension ResponseTests {
         XCTAssertEqual(item.title, "0D166616-0D4C-45DD-9F43-C1D40DBCD06F")
         XCTAssertEqual(item.summary, "")
         XCTAssertEqual(item.thumb, "/library/metadata/596582/thumb/1652187905")
-        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1635255222)
-        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1652187905)
+        XCTAssertEqual(item.addedAt?.timeIntervalSince1970, 1_635_255_222)
+        XCTAssertEqual(item.updatedAt?.timeIntervalSince1970, 1_652_187_905)
     }
 }
 

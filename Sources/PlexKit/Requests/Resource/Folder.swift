@@ -118,9 +118,9 @@ public extension Plex.Request.Folder.Response {
         public func encode(to encoder: Encoder) throws {
             var container = encoder.singleValueContainer()
             switch self {
-            case .folder(let folder):
+            case let .folder(folder):
                 try container.encode(folder)
-            case .mediaItem(let mediaItem):
+            case let .mediaItem(mediaItem):
                 try container.encode(mediaItem)
             }
         }
