@@ -1,0 +1,91 @@
+{
+  "MediaContainer": {
+    "size": 2,
+    "allowSync": true,
+    "art": "/:/resources/photo-fanart.jpg",
+    "identifier": "com.plexapp.plugins.library",
+    "librarySectionID": 48,
+    "librarySectionTitle": "Photos",
+    "librarySectionUUID": "f6916b2d-09b3-49ee-a4e5-02197af06b6c",
+    "mediaTagPrefix": "/system/bundle/media/flags/",
+    "mediaTagVersion": 1649153867,
+    "nocache": true,
+    "thumb": "/:/resources/photo.png",
+    "title1": "Photos",
+    "title2": "All Photos",
+    "viewGroup": "photo",
+    "viewMode": 131633,
+    "Metadata": [
+      {
+        "ratingKey": "596581",
+        "key": "/library/metadata/596581",
+        "guid": "local://596581",
+        "type": "photo",
+        "title": "0CFA6CA8-0452-4149-9746-106F745F4D65",
+        "summary": "sample photo",
+        "index": 1,
+        "year": 2018,
+        "thumb": "/library/metadata/596581/thumb/1652187905",
+        "originallyAvailableAt": "2018-04-26",
+        "addedAt": 1635255119,
+        "updatedAt": 1652187905,
+        "createdAtAccuracy": "local",
+        "createdAtTZOffset": "34200",
+        "Media": [
+          {
+            "id": 599261,
+            "width": 4032,
+            "height": 3024,
+            "aspectRatio": 1.33,
+            "container": "jpeg",
+            "Part": [
+              {
+                "id": 988756,
+                "key": "/library/parts/988756/1635255119/file.jpeg",
+                "file": "/media/photos/0CFA6CA8-0452-4149-9746-106F745F4D65.jpeg",
+                "size": 2215055,
+                "container": "jpeg",
+                "orientation": 1
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ratingKey": "596582",
+        "key": "/library/metadata/596582",
+        "guid": "local://596582",
+        "type": "photo",
+        "title": "0D166616-0D4C-45DD-9F43-C1D40DBCD06F",
+        "summary": "",
+        "index": 1,
+        "year": 2018,
+        "thumb": "/library/metadata/596582/thumb/1652187905",
+        "originallyAvailableAt": "2018-07-09",
+        "addedAt": 1635255222,
+        "updatedAt": 1652187905,
+        "createdAtAccuracy": "local",
+        "createdAtTZOffset": "34200",
+        "Media": [
+          {
+            "id": 599262,
+            "width": 4032,
+            "height": 3024,
+            "aspectRatio": 1.33,
+            "container": "jpeg",
+            "Part": [
+              {
+                "id": 988757,
+                "key": "/library/parts/988757/1635255222/file.jpeg",
+                "file": "/media/photos/0D166616-0D4C-45DD-9F43-C1D40DBCD06F.jpeg",
+                "size": 1361797,
+                "container": "jpeg",
+                "orientation": 1
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
