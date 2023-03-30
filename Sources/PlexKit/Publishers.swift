@@ -41,7 +41,10 @@ public extension Plex {
             }
         }
         .mapError { error in
-            .networkError(urlRequest.url!, .httpError(error))
+            if let plexError = error as? PlexError {
+                return plexError
+            }
+            return .networkError(urlRequest.url!, .httpError(error))
         }
         .eraseToAnyPublisher()
     }
@@ -75,7 +78,10 @@ public extension Plex {
             }
         }
         .mapError { error in
-            .networkError(urlRequest.url!, .httpError(error))
+            if let plexError = error as? PlexError {
+                return plexError
+            }
+            return .networkError(urlRequest.url!, .httpError(error))
         }
         .eraseToAnyPublisher()
     }
