@@ -6,6 +6,7 @@
 //  Copyright © 2020 Lachlan Charlick. All rights reserved.
 //
 
+import Foundation
 @testable import PlexKit
 import XCTest
 
@@ -748,6 +749,21 @@ extension ResponseTests {
         XCTAssertEqual(streams.count, 2)
         XCTAssertEqual(streams.filter { $0.type == .audio }.count, 1)
         XCTAssertEqual(streams.filter { $0.type == .lyrics }.count, 1)
+    }
+
+
+    func testItemMetadataWithBrokenEncoding() throws {
+        do {
+            _ = try loadResponse(
+                "item_metadata_with_broken_encoding",
+                for: Plex.Request.ItemMetadata.self
+            )
+            XCTFail("No error thrown")
+        } catch DecodingError.dataCorrupted {
+            // Ok.
+        } catch {
+            XCTFail("Unexpected error thrown: \(error)")
+        }
     }
 }
 

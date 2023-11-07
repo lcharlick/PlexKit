@@ -1,0 +1,68 @@
+{
+  "MediaContainer": {
+    "size": 250,
+    "totalSize": 60260,
+    "offset": 58500,
+    "allowSync": true,
+    "art": "/:/resources/artist-fanart.jpg",
+    "identifier": "com.plexapp.plugins.library",
+    "librarySectionID": 4,
+    "librarySectionTitle": "Audio Books",
+    "librarySectionUUID": "F0BDC555-D989-4C77-8DE7-BEECD4917AE6",
+    "mediaTagPrefix": "/system/bundle/media/flags/",
+    "mediaTagVersion": 1698171566,
+    "nocache": true,
+    "thumb": "/:/resources/artist.png",
+    "title1": "Audio Books",
+    "title2": "All Artists",
+    "viewGroup": "artist",
+    "viewMode": 65592,
+    "Metadata": [
+      {
+        "ratingKey": "104802",
+        "key": "/library/metadata/104802",
+        "parentRatingKey": "103931",
+        "grandparentRatingKey": "103930",
+        "guid": "local://104802",
+        "parentGuid": "local://103931",
+        "grandparentGuid": "local://103930",
+        "type": "track",
+        "title": "Murder On Wall Street 7-05",
+        "grandparentKey": "/library/metadata/103930",
+        "parentKey": "/library/metadata/103931",
+        "grandparentTitle": "Victoria Thompson",
+        "parentTitle": "Murder on Wall Street",
+        "originalTitle": "Victoria Thompson, Suzanne Toren",
+        "summary": "",
+        "index": 158,
+        "parentIndex": 1,
+        "parentYear": 2021,
+        "thumb": "/library/metadata/103931/thumb/1675026738",
+        "parentThumb": "/library/metadata/103931/thumb/1675026738",
+        "duration": 150517,
+        "addedAt": 1675027303,
+        "Media": [
+          {
+            "id": 146171,
+            "duration": 150517,
+            "bitrate": 64,
+            "audioChannels": 2,
+            "audioCodec": "mp3",
+            "container": "mp3",
+            "Part": [
+              {
+                "id": 146173,
+                "key": "/library/parts/146173/1675026776/file.mp3",
+                "duration": 150517,
+                "size": 1277693,
+                "container": "mp3",
+                "ma¿3AhasThumbnail": "1",
+                "pv\u0003deepAnalysisDate": "1675026776"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

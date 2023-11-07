@@ -31,6 +31,13 @@ public extension BasePlexRequest where Response: Codable {
     static func _response(from data: Data) throws -> Response {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
+
+        // Check that we have valid utf8 data.
+        // Internal JSONSerialization can crash under certain circumstances if `data` can't be decoded as utf8.
+        guard String(data: data, encoding: .utf8) != nil else {
+            throw DecodingError.dataCorrupted(.init(codingPath: [], debugDescription: "Can't convert data to utf8 string"))
+        }
+
         return try decoder.decode(Response.self, from: data)
     }
 
