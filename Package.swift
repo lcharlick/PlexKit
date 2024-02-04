@@ -1,16 +1,13 @@
-// swift-tools-version:5.3
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "PlexKit",
     platforms: [
-        // Add support for all platforms starting from a specific version.
-        .macOS(.v10_12),
-        .iOS(.v10),
+        .macOS(.v10_13),
+        .iOS(.v12),
         .watchOS(.v5),
-        .tvOS(.v10),
+        .tvOS(.v12),
     ],
     products: [
         .library(
