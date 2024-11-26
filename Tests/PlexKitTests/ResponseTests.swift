@@ -871,7 +871,17 @@ extension ResponseTests {
         XCTAssertEqual(collection?.thumb, "/library/collections/594667/composite/1634550705?width=400&height=600")
         XCTAssertEqual(collection?.addedAt?.timeIntervalSince1970, 1_634_550_705)
         XCTAssertEqual(collection?.updatedAt?.timeIntervalSince1970, 1_634_550_705)
-        XCTAssertEqual(collection?.childCount, "15")
+        XCTAssertEqual(collection?.childCount, 15)
+    }
+
+    func testCollections2_with_integer_childCount() throws {
+        let response = try loadResponse(
+            "collections2_with_integer_childCount",
+            for: Plex.Request.Collections2.self
+        )
+
+        XCTAssertEqual(response.mediaContainer.metadata.count, 1)
+        XCTAssertEqual(response.mediaContainer.metadata[0].childCount, 3)
     }
 
     func testCollectionItems() throws {
