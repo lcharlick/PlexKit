@@ -1,0 +1,38 @@
+{
+  "MediaContainer": {
+    "size": 23,
+    "allowSync": true,
+    "art": "/:/resources/artist-fanart.jpg",
+    "content": "secondary",
+    "identifier": "com.plexapp.plugins.library",
+    "librarySectionID": 34,
+    "librarySectionTitle": "Audiobooks",
+    "librarySectionUUID": "4c545a30-0295-43e4-88b9-05776d2bb8e1",
+    "mediaTagPrefix": "/system/bundle/media/flags/",
+    "mediaTagVersion": 1731522690,
+    "nocache": true,
+    "thumb": "/:/resources/artist.png",
+    "title1": "Audiobooks",
+    "title2": "All Artists",
+    "viewGroup": "artist",
+    "Metadata": [
+      {
+        "ratingKey": "620661",
+        "key": "/library/collections/620661/children",
+        "guid": "collection://c80150c3-986f-419c-ae39-457e6731120e",
+        "type": "collection",
+        "title": "Discworld: Moist von Lipwig",
+        "subtype": "album",
+        "summary": "",
+        "index": 343191,
+        "ratingCount": 9,
+        "thumb": "/library/collections/620661/composite/1700043843?width=400&height=400",
+        "addedAt": 1700043843,
+        "updatedAt": 1700043843,
+        "childCount": 3,
+        "maxYear": "2013",
+        "minYear": "2004"
+      }
+    ]
+  }
+}
