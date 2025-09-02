@@ -9,8 +9,8 @@
 import Foundation
 
 /// Describes a single Plex request.
-public protocol BasePlexRequest {
-    associatedtype Response
+public protocol BasePlexRequest: Sendable {
+    associatedtype Response: Sendable
 
     var path: String { get }
     var queryItems: [URLQueryItem]? { get }

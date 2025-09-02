@@ -10,11 +10,9 @@ import Foundation
 
 // MARK: - Client.
 
-public final class Plex {
+public struct Plex: Sendable {
     private let sessionConfiguration: URLSessionConfiguration
-    lazy var session = URLSession(
-        configuration: sessionConfiguration
-    )
+    let session: URLSession
 
     enum Constants {
         // Taken from Alamofire.
@@ -29,6 +27,9 @@ public final class Plex {
             headers[key.rawValue] = value
         }
         sessionConfiguration.httpAdditionalHeaders = headers
+        self.session = URLSession(
+            configuration: sessionConfiguration
+        )
     }
 
     private func request<Response>(
