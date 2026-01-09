@@ -38,10 +38,6 @@ public extension Plex.ServiceRequest {
 
         private let id: Int64?
 
-        /// Plex *does* seem to support redirect after login, but only for whitelisted URL schemes (e.g. infuse://).
-        /// For the rest of us, we have to poll the server periodically to determine the authentication result.
-        // private let redirectUrl: URL
-
         public init(id: Int64? = nil) {
             self.id = id
         }
@@ -51,8 +47,18 @@ public extension Plex.ServiceRequest {
         }
 
         /// Builds an authentication URL from an OAuth response.
-        public static func authenticationURL(for response: Response) -> URL {
-            URL(string: "https://app.plex.tv/auth#?clientID=\(response.clientIdentifier)&code=\(response.code)")!
+        public static func authenticationURL(
+            for response: Response,
+            forwardUrl: URL? = nil
+        ) -> URL {
+            var urlString = "https://app.plex.tv/auth#?clientID=\(response.clientIdentifier)&code=\(response.code)"
+
+            if let forwardUrl = forwardUrl,
+               let encoded = forwardUrl.absoluteString.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) {
+                urlString += "&forwardUrl=\(encoded)"
+            }
+
+            return URL(string: urlString)!
         }
 
         public static func response(from data: Data) throws -> Response {
