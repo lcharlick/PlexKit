@@ -83,6 +83,9 @@ public extension Plex.Request._LibraryItems {
         /// Requests items in a specific set.
         case keys(Set<String>)
 
+        /// Requests items where a property is in a specific set of values.
+        case propertyKeys(name: String, Set<String>)
+
         /// Filters by a field in the result type.
         case property(name: String, Comparison, String)
 
@@ -97,6 +100,9 @@ public extension Plex.Request._LibraryItems {
             case let .keys(keys):
                 guard !keys.isEmpty else { return nil }
                 return .init(name: "id", value: keys.joined(separator: ","))
+            case let .propertyKeys(name, keys):
+                guard !keys.isEmpty else { return nil }
+                return .init(name: name, value: keys.joined(separator: ","))
             case let .property(name, comparison, value):
                 return .init(name: name + comparison.rawValue, value: value)
             case let .dateProperty(name, comparison, value):
@@ -107,9 +113,12 @@ public extension Plex.Request._LibraryItems {
         }
 
         public enum Comparison: String {
-            case greaterThan = ">"
-            case lessThan = "<"
+            case greaterThan = ">>"
+            case greaterThanOrEqual = ">"
+            case lessThan = "<<"
+            case lessThanOrEqual = "<"
             case equal = ""
+            case notEqual = "!"
         }
     }
 }

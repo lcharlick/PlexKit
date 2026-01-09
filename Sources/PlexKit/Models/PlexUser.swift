@@ -19,7 +19,6 @@ public struct PlexUser: Codable {
     public let hasPassword: Bool
     public let authToken: String?
     public let authenticationToken: String?
-    public let subscription: Subscription?
     public let entitlements: [String]?
     public let confirmedAt: Date?
     public let forumID: Int?
@@ -30,19 +29,63 @@ public struct PlexUser: Codable {
     public let admin: Bool?
     public let guest: Bool?
     public let protected: Bool?
+    
+    #if DEBUG
+    public init(
+        id: Int,
+        uuid: String,
+        email: String? = nil,
+        joinedAt: Date? = nil,
+        username: String? = nil,
+        title: String,
+        thumb: String? = nil,
+        hasPassword: Bool,
+        authToken: String? = nil,
+        authenticationToken: String? = nil,
+        entitlements: [String]? = nil,
+        confirmedAt: Date? = nil,
+        forumID: Int? = nil,
+        ssoCookie: Bool? = nil,
+        rememberMe: Bool? = nil,
+        restricted: Bool? = nil,
+        home: Bool? = nil,
+        admin: Bool? = nil,
+        guest: Bool? = nil,
+        protected: Bool? = nil
+    ) {
+        self.id = id
+        self.uuid = uuid
+        self.email = email
+        self.joinedAt = joinedAt
+        self.username = username
+        self.title = title
+        self.thumb = thumb
+        self.hasPassword = hasPassword
+        self.authToken = authToken
+        self.authenticationToken = authenticationToken
+        self.entitlements = entitlements
+        self.confirmedAt = confirmedAt
+        self.forumID = forumID
+        self.ssoCookie = ssoCookie
+        self.rememberMe = rememberMe
+        self.restricted = restricted
+        self.home = home
+        self.admin = admin
+        self.guest = guest
+        self.protected = protected
+    }
+    #endif
 
-    /* `Roles` data is different depending on the route used,
-      * so I've removed it for now.
-     public let roles: Roles?
-     public struct Roles: Codable {
+    /* Data is different depending on the route used, so I've removed these for now.
+         public let roles: Roles?
+         public struct Roles: Codable {
          public let roles: [String]
      }
+     
+     public let subscription: Subscription?
+     public struct Subscription: Codable {
+         let state: String?
+         let type: String?
+     }
      */
-
-    public struct Subscription: Codable {
-        public let active: Bool
-        public let status: String
-        public let plan: String?
-        public let features: [String]
-    }
 }
