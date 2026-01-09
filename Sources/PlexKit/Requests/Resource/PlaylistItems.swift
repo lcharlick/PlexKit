@@ -38,8 +38,15 @@ public extension Plex.Request {
                         value: afterRatingKey
                     ),
                 ]
-            case let .getRange(range):
-                return pageQueryItems(for: range)
+            case let .getRange(start, size):
+                var items: [URLQueryItem] = []
+                if let start {
+                    items.append(URLQueryItem(name: "X-Plex-Container-Start", value: start))
+                }
+                if let size {
+                    items.append(URLQueryItem(name: "X-Plex-Container-Size", value: size))
+                }
+                return items.isEmpty ? nil : items
             default:
                 return nil
             }
@@ -101,7 +108,7 @@ public extension Plex.Request {
             /// Get the items in the playlist.
             case get
             /// Get paged items in the playlist.
-            case getRange(CountableClosedRange<Int>)
+            case getRange(start: Int?, size: Int?)
             /// Add one or more items to the playlist.
             case add(resource: String, ratingKeys: [String])
             /// Remove an item from the playlist.

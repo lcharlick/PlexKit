@@ -19,8 +19,11 @@ public extension Plex.Request {
                 URLQueryItem(name: "type", value: mediaType.key),
             ]
 
-            if let range = range {
-                items.append(contentsOf: pageQueryItems(for: range))
+            if let start = containerStart {
+                items.append(URLQueryItem(name: "X-Plex-Container-Start", value: start))
+            }
+            if let size = containerSize {
+                items.append(URLQueryItem(name: "X-Plex-Container-Size", value: size))
             }
 
             for filter in filters {
@@ -47,20 +50,23 @@ public extension Plex.Request {
 
         var key: String
         var mediaType: PlexMediaType
-        var range: CountableClosedRange<Int>?
+        var containerStart: Int?
+        var containerSize: Int?
         var excludeFields: [String] = []
         var filters: [Filter] = []
 
         public init(
             key: String,
             mediaType: PlexMediaType,
-            range: CountableClosedRange<Int>? = nil,
+            containerStart: Int? = nil,
+            containerSize: Int? = nil,
             excludeFields: [String] = [],
             filters: [Filter] = []
         ) {
             self.key = key
             self.mediaType = mediaType
-            self.range = range
+            self.containerStart = containerStart
+            self.containerSize = containerSize
             self.excludeFields = excludeFields
             self.filters = filters
         }

@@ -20,8 +20,11 @@ public extension Plex.Request {
                 items.append(URLQueryItem(name: "parent", value: parentRatingKey))
             }
 
-            if let range = range {
-                items.append(contentsOf: pageQueryItems(for: range))
+            if let start = containerStart {
+                items.append(URLQueryItem(name: "X-Plex-Container-Start", value: start))
+            }
+            if let size = containerSize {
+                items.append(URLQueryItem(name: "X-Plex-Container-Size", value: size))
             }
 
             items.append(
@@ -38,14 +41,16 @@ public extension Plex.Request {
         var mediaType: PlexMediaType
         /// The ratingKey of the parent folder. When nil, fetch the root folder of the library.
         var parentRatingKey: String?
-        var range: CountableClosedRange<Int>?
+        var containerStart: Int?
+        var containerSize: Int?
         var excludeFields: [String] = []
 
         public init(
             key: String,
             mediaType: PlexMediaType,
             parentRatingKey: String?,
-            range: CountableClosedRange<Int>? = nil,
+            containerStart: Int? = nil,
+            containerSize: Int? = nil,
             excludeFields: [String] = [
                 // This field can contain invalid unicode characters, causing
                 // JSON decode errors. Exclude it by default.
@@ -55,7 +60,8 @@ public extension Plex.Request {
             self.key = key
             self.mediaType = mediaType
             self.parentRatingKey = parentRatingKey
-            self.range = range
+            self.containerStart = containerStart
+            self.containerSize = containerSize
             self.excludeFields = excludeFields
         }
 

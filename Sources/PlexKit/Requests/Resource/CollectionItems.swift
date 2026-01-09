@@ -16,17 +16,28 @@ public extension Plex.Request {
         public var path: String { "library/collections/\(ratingKey)/children" }
 
         public var queryItems: [URLQueryItem]? {
-            range.map {
-                pageQueryItems(for: $0)
+            var items: [URLQueryItem] = []
+            if let start = containerStart {
+                items.append(URLQueryItem(name: "X-Plex-Container-Start", value: start))
             }
+            if let size = containerSize {
+                items.append(URLQueryItem(name: "X-Plex-Container-Size", value: size))
+            }
+            return items.isEmpty ? nil : items
         }
 
         private let ratingKey: String
-        private let range: CountableClosedRange<Int>?
+        private let containerStart: Int?
+        private let containerSize: Int?
 
-        public init(ratingKey: String, range: CountableClosedRange<Int>? = nil) {
+        public init(
+            ratingKey: String,
+            containerStart: Int? = nil,
+            containerSize: Int? = nil
+        ) {
             self.ratingKey = ratingKey
-            self.range = range
+            self.containerStart = containerStart
+            self.containerSize = containerSize
         }
 
         public struct Response: Codable {

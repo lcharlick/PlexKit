@@ -251,12 +251,13 @@ extension RequestTests {
         let request = try Plex.Request.LibraryItems(
             key: "key",
             mediaType: .album,
-            range: 5 ... 100
+            containerStart: 5,
+            containerSize: 96
         ).asURLRequest(from: testURL, using: "")
 
         let data = RequestData(request: request)
         XCTAssertEqual(data.queryItems["X-Plex-Container-Start"], "5")
-        XCTAssertEqual(data.queryItems["X-Plex-Container-Size"], "95")
+        XCTAssertEqual(data.queryItems["X-Plex-Container-Size"], "96")
     }
 
     func testLibraryContents_withExcludeFields() throws {
