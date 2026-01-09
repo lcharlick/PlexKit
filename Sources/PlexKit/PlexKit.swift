@@ -120,7 +120,7 @@ public struct Plex: Sendable {
 // MARK: - Client Info.
 
 public extension Plex {
-    struct ClientInfo: Codable {
+    struct ClientInfo: Codable, Sendable {
         public init(
             clientIdentifier: String,
             product: String? = nil,
