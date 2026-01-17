@@ -1,0 +1,22 @@
+{
+  "MediaContainer": {
+    "size": 1,
+    "totalSize": 1,
+    "offset": 0,
+    "allowSync": true,
+    "art": "/:/resources/artist-fanart.jpg",
+    "identifier": "com.plexapp.plugins.library",
+    "librarySectionID": 7,
+    "librarySectionTitle": "Äänikirjat",
+    "librarySectionUUID": "048086bd-c7b6-48b4-a4e1-8485279ab025",
+    "mediaTagPrefix": "/system/bundle/media/flags/",
+    "mediaTagVersion": 1758205129,
+    "nocache": true,
+    "thumb": "/:/resources/artist.png",
+    "title1": "Äänikirjat",
+    "title2": "All Artists",
+    "viewGroup": "artist",
+    "viewMode": 65592,
+    "Metadata": []
+  }
+}

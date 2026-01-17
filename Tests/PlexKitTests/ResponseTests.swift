@@ -752,18 +752,28 @@ extension ResponseTests {
     }
 
 
-    func testItemMetadataWithBrokenEncoding() throws {
-        do {
-            _ = try loadResponse(
-                "item_metadata_with_broken_encoding",
-                for: Plex.Request.ItemMetadata.self
-            )
-            XCTFail("No error thrown")
-        } catch DecodingError.dataCorrupted {
-            // Ok.
-        } catch {
-            XCTFail("Unexpected error thrown: \(error)")
-        }
+    /// Tests that Latin-1 encoded responses are decoded correctly.
+    /// This file contains a Latin-1 byte (0xbf) that previously caused decoding to fail.
+    func testItemMetadataWithLatin1Fallback() throws {
+        let response = try loadResponse(
+            "item_metadata_with_broken_encoding",
+            for: Plex.Request.ItemMetadata.self
+        )
+
+        XCTAssertEqual(response.mediaContainer.size, 250)
+    }
+
+    /// Tests that Latin-1 encoded responses are decoded correctly.
+    /// Plex servers sometimes return Latin-1 encoded data instead of UTF-8.
+    func testItemMetadataWithLatin1Encoding() throws {
+        let response = try loadResponse(
+            "item_metadata_with_latin1_encoding",
+            for: Plex.Request.LibraryItems.self
+        )
+
+        // Verify the Finnish text "Äänikirjat" was decoded correctly
+        XCTAssertEqual(response.mediaContainer.librarySectionTitle, "Äänikirjat")
+        XCTAssertEqual(response.mediaContainer.title1, "Äänikirjat")
     }
 }
 

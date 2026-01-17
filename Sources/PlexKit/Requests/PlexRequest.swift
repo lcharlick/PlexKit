@@ -32,13 +32,20 @@ public extension BasePlexRequest where Response: Codable {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
 
-        // Check that we have valid utf8 data.
-        // Internal JSONSerialization can crash under certain circumstances if `data` can't be decoded as utf8.
-        guard String(data: data, encoding: .utf8) != nil else {
+        // Plex sometimes returns Latin-1 encoded data instead of UTF-8.
+        // JSONDecoder requires valid UTF-8, so convert Latin-1 to UTF-8 if needed.
+        let jsonData: Data
+        if String(data: data, encoding: .utf8) != nil {
+            jsonData = data
+        } else if let latin1String = String(data: data, encoding: .isoLatin1),
+                  let utf8Data = latin1String.data(using: .utf8)
+        {
+            jsonData = utf8Data
+        } else {
             throw DecodingError.dataCorrupted(.init(codingPath: [], debugDescription: "Can't convert data to utf8 string"))
         }
 
-        return try decoder.decode(Response.self, from: data)
+        return try decoder.decode(Response.self, from: jsonData)
     }
 
     static func response(from data: Data) throws -> Response {
