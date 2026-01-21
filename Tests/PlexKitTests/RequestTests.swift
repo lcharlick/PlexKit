@@ -586,7 +586,6 @@ extension RequestTests {
 
 extension RequestTests {
     func testTimeline() throws {
-        let session = UUID()
         let key = "woof"
         let state = Plex.Request.Timeline.State.playing
         let currentTime = 60
@@ -594,7 +593,6 @@ extension RequestTests {
         let token = "token"
 
         let request = try Plex.Request.Timeline(
-            session: session,
             ratingKey: key,
             state: .playing,
             currentTime: currentTime,
@@ -616,7 +614,6 @@ extension RequestTests {
         ])
 
         XCTAssertEqual(data.queryItems, [
-            Plex.Header.sessionIdentifier.rawValue: session.uuidString,
             "ratingKey": key,
             "key": "/library/metadata/\(key)",
             "state": state.rawValue,
