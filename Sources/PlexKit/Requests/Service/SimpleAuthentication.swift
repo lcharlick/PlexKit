@@ -35,7 +35,7 @@ public extension Plex.ServiceRequest {
             return try decoder.decode(Response.self, from: data)
         }
 
-        public struct Response: Codable {
+        public struct Response: Codable, Sendable {
             public let user: PlexUser
         }
     }

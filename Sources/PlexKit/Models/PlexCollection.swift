@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct PlexCollection: Codable, Hashable {
+public struct PlexCollection: Codable, Hashable, Sendable {
     public let key: String
     public let title: String
 

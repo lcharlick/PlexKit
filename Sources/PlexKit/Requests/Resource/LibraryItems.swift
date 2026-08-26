@@ -71,7 +71,7 @@ public extension Plex.Request {
             self.filters = filters
         }
 
-        public struct Response: Codable {
+        public struct Response: Codable, Sendable {
             public let mediaContainer: MediaContainer
         }
     }
@@ -79,7 +79,7 @@ public extension Plex.Request {
 
 public extension Plex.Request._LibraryItems {
     /// Filters the results of a `LibraryItems` request.
-    enum Filter {
+    enum Filter: Sendable {
         /// Requests items in a specific set.
         case keys(Set<String>)
 
@@ -112,7 +112,7 @@ public extension Plex.Request._LibraryItems {
             }
         }
 
-        public enum Comparison: String {
+        public enum Comparison: String, Sendable {
             case greaterThan = ">>"
             case greaterThanOrEqual = ">"
             case lessThan = "<<"
@@ -128,7 +128,7 @@ public extension Plex.Request._LibraryItems.Response {
         case mediaContainer = "MediaContainer"
     }
 
-    struct MediaContainer: Codable, Hashable {
+    struct MediaContainer: Codable, Hashable, Sendable {
         public let size: Int
         public let totalSize: Int?
         public let allowSync: Bool?

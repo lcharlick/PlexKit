@@ -8,19 +8,19 @@
 
 import Foundation
 
-public protocol PlexMediaItemType: Codable, Hashable {
+public protocol PlexMediaItemType: Codable, Hashable, Sendable {
     var ratingKey: String { get }
     var key: String { get }
 }
 
 /// The most basic media item type.
 /// Handy for performance-critical requests.
-public struct BasicPlexMediaItem: PlexMediaItemType {
+public struct BasicPlexMediaItem: PlexMediaItemType, Sendable {
     public let ratingKey: String
     public let key: String
 }
 
-public struct PlexMediaItem: PlexMediaItemType {
+public struct PlexMediaItem: PlexMediaItemType, Sendable {
     public let ratingKey: String
     public let key: String
     public let parentRatingKey: String?
@@ -86,12 +86,12 @@ public struct PlexMediaItem: PlexMediaItemType {
     public let playlistType: PlexPlaylistType?
     public let composite: String?
 
-    public struct Tag: Codable, Hashable {
+    public struct Tag: Codable, Hashable, Sendable {
         public let id: Int?
         public let tag: String
     }
 
-    public struct Media: Codable, Hashable {
+    public struct Media: Codable, Hashable, Sendable {
         public let id: Int
         public let duration: Int?
         public let bitrate: Int?
@@ -121,7 +121,7 @@ public struct PlexMediaItem: PlexMediaItemType {
     }
 
     /// A single media part, generally representing a single file.
-    public struct Part: Codable, Hashable {
+    public struct Part: Codable, Hashable, Sendable {
         public let id: Int
         public let key: String
         public let duration: Int?
@@ -146,7 +146,7 @@ public struct PlexMediaItem: PlexMediaItemType {
     }
 
     /// Represents a video, audio, subtitle or lyric stream.
-    public struct Stream: Codable, Hashable {
+    public struct Stream: Codable, Hashable, Sendable {
         public let id: Int
         private let streamType: Int
         public let streamDefault: Bool?
@@ -182,7 +182,7 @@ public struct PlexMediaItem: PlexMediaItemType {
             .init(rawValue: streamType)
         }
 
-        public enum StreamType: Hashable {
+        public enum StreamType: Hashable, Sendable {
             /// A video stream.
             case video
             /// An audio stream.

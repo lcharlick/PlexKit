@@ -14,7 +14,7 @@ public extension Plex.Request {
 
         public init() {}
 
-        public struct Response: Codable {
+        public struct Response: Codable, Sendable {
             public let mediaContainer: MediaContainer
         }
     }
@@ -25,7 +25,7 @@ public extension Plex.Request.Libraries.Response {
         case mediaContainer = "MediaContainer"
     }
 
-    struct MediaContainer: Codable {
+    struct MediaContainer: Codable, Sendable {
         public let size: Int
         public let allowSync: Bool?
         public let identifier: String?

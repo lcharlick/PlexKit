@@ -9,7 +9,7 @@
 import Foundation
 
 @dynamicMemberLookup
-public struct PlexResource: Codable {
+public struct PlexResource: Codable, Sendable {
     private let model: PlexResourceModel
 
     public init(from decoder: Decoder) throws {
@@ -37,7 +37,7 @@ public struct PlexResource: Codable {
             .compactMap(Capability.init(rawValue:)))
     }
 
-    public enum Capability: String {
+    public enum Capability: String, Sendable {
         case client
         case server
         case player
@@ -48,7 +48,7 @@ public struct PlexResource: Codable {
     }
 }
 
-public struct PlexResourceModel: Codable {
+public struct PlexResourceModel: Codable, Sendable {
     public let clientIdentifier: String
     public let name: String
     public let product: String?
@@ -75,7 +75,7 @@ public struct PlexResourceModel: Codable {
     public let natLoopbackSupported: Bool?
 }
 
-public struct PlexConnection: Codable {
+public struct PlexConnection: Codable, Sendable {
     public let `protocol`: NetworkProtocol?
     public let address: String
     public let port: Int
@@ -84,7 +84,7 @@ public struct PlexConnection: Codable {
     public let relay: Bool?
     public let IPv6: Bool?
 
-    public enum NetworkProtocol: String, Codable {
+    public enum NetworkProtocol: String, Codable, Sendable {
         case http
         case https
     }

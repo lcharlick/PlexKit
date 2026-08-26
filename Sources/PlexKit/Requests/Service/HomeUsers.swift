@@ -15,7 +15,7 @@ public extension Plex.ServiceRequest {
 
         public init() {}
 
-        public struct Response: Codable {
+        public struct Response: Codable, Sendable {
             public let id: Int?
             public let name: String?
             public let guestUserID: Int?

@@ -65,7 +65,7 @@ public extension Plex.Request {
             self.excludeFields = excludeFields
         }
 
-        public struct Response: Codable {
+        public struct Response: Codable, Sendable {
             public let mediaContainer: MediaContainer
         }
     }
@@ -76,7 +76,7 @@ public extension Plex.Request.Folder.Response {
         case mediaContainer = "MediaContainer"
     }
 
-    struct MediaContainer: Codable, Hashable {
+    struct MediaContainer: Codable, Hashable, Sendable {
         public let size: Int
         public let totalSize: Int?
         public let allowSync: Bool?
@@ -102,7 +102,7 @@ public extension Plex.Request.Folder.Response {
         }
     }
 
-    enum ItemType: Codable, Hashable {
+    enum ItemType: Codable, Hashable, Sendable {
         case folder(PlexFolderItem)
         case mediaItem(PlexMediaItem)
 

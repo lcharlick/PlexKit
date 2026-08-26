@@ -27,7 +27,7 @@ public extension Plex.Request {
             self.mediaType = mediaType
         }
 
-        public struct Response: Codable {
+        public struct Response: Codable, Sendable {
             public let mediaContainer: MediaContainer
 
             enum CodingKeys: String, CodingKey {
@@ -38,7 +38,7 @@ public extension Plex.Request {
 }
 
 public extension Plex.Request.Collections {
-    struct MediaContainer: Codable {
+    struct MediaContainer: Codable, Sendable {
         public let size: Int
         public let allowSync: Bool?
         public let art: String?

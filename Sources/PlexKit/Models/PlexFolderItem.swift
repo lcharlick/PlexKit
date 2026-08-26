@@ -9,7 +9,7 @@
 import Foundation
 
 /// Represents a filesystem folder containing other folders and media items.
-public struct PlexFolderItem: Codable, Hashable {
+public struct PlexFolderItem: Codable, Hashable, Sendable {
     public let key: String
     public let title: String
 

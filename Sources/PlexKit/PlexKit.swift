@@ -34,8 +34,8 @@ public struct Plex: Sendable {
 
     private func request<Response>(
         _ request: URLRequest,
-        transformer: @escaping (Data) throws -> Response,
-        completion: @escaping (Result<Response, PlexError>) -> Void
+        transformer: @escaping @Sendable (Data) throws -> Response,
+        completion: @escaping @Sendable (Result<Response, PlexError>) -> Void
     ) -> URLSessionTask? {
         let task = session.dataTask(with: request) { data, response, error in
             guard let data = data, let response = response as? HTTPURLResponse else {
@@ -67,7 +67,7 @@ public struct Plex: Sendable {
     @discardableResult public func request<Request: PlexServiceRequest>(
         _ request: Request,
         token: String? = nil,
-        completion: @escaping (Result<Request.Response, PlexError>) -> Void
+        completion: @escaping @Sendable (Result<Request.Response, PlexError>) -> Void
     ) -> URLSessionTask? {
         let urlRequest: URLRequest
 
@@ -92,7 +92,7 @@ public struct Plex: Sendable {
         _ request: Request,
         from url: URL,
         token: String? = nil,
-        completion: @escaping (Result<Request.Response, PlexError>) -> Void
+        completion: @escaping @Sendable (Result<Request.Response, PlexError>) -> Void
     ) -> URLSessionTask? {
         let urlRequest: URLRequest
 
@@ -197,7 +197,7 @@ public extension Plex {
 
 // MARK: - Errors.
 
-public enum PlexError: Error {
+public enum PlexError: Error, @unchecked Sendable {
     /// An error occurred while constructing the request.
     case invalidRequest(RequestFailureReason)
     /// An networking error occurred.

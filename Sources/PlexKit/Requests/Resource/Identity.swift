@@ -15,7 +15,7 @@ public extension Plex.Request {
 
         public init() {}
 
-        public struct Response: Codable {
+        public struct Response: Codable, Sendable {
             public let mediaContainer: MediaContainer
         }
     }
@@ -26,7 +26,7 @@ public extension Plex.Request.Identity.Response {
         case mediaContainer = "MediaContainer"
     }
 
-    struct MediaContainer: Codable {
+    struct MediaContainer: Codable, Sendable {
         public let size: Int
         public let machineIdentifier: String
         public let version: String

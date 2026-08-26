@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct PlexUser: Codable {
+public struct PlexUser: Codable, Sendable {
     public let id: Int
     public let uuid: String
     public let email: String?

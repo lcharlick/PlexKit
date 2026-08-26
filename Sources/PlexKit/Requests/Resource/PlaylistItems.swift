@@ -76,7 +76,7 @@ public extension Plex.Request {
             self.action = action
         }
 
-        public struct Response: Codable {
+        public struct Response: Codable, Sendable {
             public let mediaContainer: MediaContainer
 
             enum CodingKeys: String, CodingKey {
@@ -84,7 +84,7 @@ public extension Plex.Request {
             }
         }
 
-        public struct MediaContainer: Codable {
+        public struct MediaContainer: Codable, Sendable {
             public let size: Int
             public let totalSize: Int?
             public let allowSync: Bool?
@@ -104,7 +104,7 @@ public extension Plex.Request {
             }
         }
 
-        public enum Action {
+        public enum Action: Sendable {
             /// Get the items in the playlist.
             case get
             /// Get paged items in the playlist.

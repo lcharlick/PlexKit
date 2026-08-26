@@ -99,7 +99,7 @@ public extension Plex.Request {
                 : try _response(from: data)
         }
 
-        public struct Response: Codable {
+        public struct Response: Codable, Sendable {
             public let mediaContainer: MediaContainer
 
             enum CodingKeys: String, CodingKey {
@@ -118,7 +118,7 @@ func uriForResource(_ resource: String, itemRatingKeys: [String]) -> URLQueryIte
 }
 
 public extension Plex.Request.Playlists {
-    struct MediaContainer: Codable {
+    struct MediaContainer: Codable, Sendable {
         init(
             size: Int,
             totalSize: Int?,
@@ -147,7 +147,7 @@ public extension Plex.Request.Playlists {
         }
     }
 
-    enum Action {
+    enum Action: Sendable {
         /// Fetch playlists.
         case get(
             type: PlexPlaylistType,

@@ -9,7 +9,7 @@
 import Foundation
 
 /// - Note: https://github.com/Arcanemagus/plex-api/wiki/MediaTypes
-public enum PlexMediaType: Hashable {
+public enum PlexMediaType: Hashable, Sendable {
     case unknown(String)
 
     case movie

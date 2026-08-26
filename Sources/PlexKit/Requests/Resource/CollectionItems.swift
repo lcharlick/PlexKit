@@ -40,7 +40,7 @@ public extension Plex.Request {
             self.containerSize = containerSize
         }
 
-        public struct Response: Codable {
+        public struct Response: Codable, Sendable {
             public let mediaContainer: MediaContainer
 
             enum CodingKeys: String, CodingKey {
@@ -51,7 +51,7 @@ public extension Plex.Request {
 }
 
 public extension Plex.Request._CollectionItems {
-    struct MediaContainer: Codable {
+    struct MediaContainer: Codable, Sendable {
         public let size: Int
         public let totalSize: Int?
         public let offset: Int?

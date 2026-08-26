@@ -26,7 +26,7 @@ public extension Plex.Request {
             self.excludeFields = excludeFields
         }
 
-        public struct Response: Codable {
+        public struct Response: Codable, Sendable {
             public let mediaContainer: MediaContainer
         }
     }
@@ -37,7 +37,7 @@ public extension Plex.Request._RelatedMedia.Response {
         case mediaContainer = "MediaContainer"
     }
 
-    struct MediaContainer: Codable {
+    struct MediaContainer: Codable, Sendable {
         public let size: Int
         public let totalSize: Int?
         public let allowSync: Bool?
@@ -51,7 +51,7 @@ public extension Plex.Request._RelatedMedia.Response {
         }
     }
 
-    struct Hub: Codable {
+    struct Hub: Codable, Sendable {
         public let size: Int
         public let hubKey: String?
         public let key: String

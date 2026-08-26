@@ -71,7 +71,7 @@ public extension Plex.Request {
             data
         }
 
-        public enum State: String {
+        public enum State: String, Sendable {
             case paused
             case playing
             case buffering
