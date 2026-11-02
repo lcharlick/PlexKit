@@ -7,6 +7,9 @@
 //
 
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 public extension Plex.Request {
     /// - Note: Not designed to be consumed for anything other than playback (e.g. via AVPlayer).

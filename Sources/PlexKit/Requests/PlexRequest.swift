@@ -7,6 +7,9 @@
 //
 
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 /// Describes a single Plex request.
 public protocol BasePlexRequest: Sendable {

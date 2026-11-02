@@ -6,7 +6,9 @@
 //  Copyright © 2020 Lachlan Charlick. All rights reserved.
 //
 
+#if canImport(CoreGraphics)
 import CoreGraphics
+#endif
 import Foundation
 
 public extension Plex.Request {
